@@ -29,9 +29,6 @@ from pptx.util import Emu, Pt
 
 from theme import (
     CYAN_ACCENT,
-    CYAN_ACCENT_HEX,
-    CYAN_SOFT,
-    CYAN_SOFT_HEX,
     FONT_FAMILY,
     FOOTER_H,
     FOOTER_TEXT,
@@ -44,17 +41,19 @@ from theme import (
     FS_INITIALS,
     FS_SECTION,
     FS_TITLE,
+    GRADIENT_STOPS,
     HEADER_H,
     MARGIN,
+    MAX_BULLET_CHARS,
     MAX_BULLETS_PER_EXP,
+    MAX_DEGREE_CHARS,
+    MAX_ENGAGEMENT_DESC_CHARS,
     MAX_ENGAGEMENTS,
     MAX_EXPERIENCES,
     MAX_EXPERTISE,
     MAX_HOBBIES,
     MAX_SUMMARY_CHARS,
-    NAVY_DEEP_HEX,
     NAVY_SIDEBAR,
-    NAVY_SIDEBAR_HEX,
     SIDEBAR_W,
     SLIDE_H,
     SLIDE_W,
@@ -73,21 +72,22 @@ def _warn(msg: str) -> None:
 
 
 # ─── XML helpers (gradient + min-font check) ─────────────────────────────────
-def _apply_diagonal_gradient(shape, start_hex: str, end_hex: str) -> None:
-    """Replace shape fill with a diagonal gradient TL → BR (45°)."""
+def _apply_diagonal_gradient(shape, stops: list[tuple[int, str]]) -> None:
+    """Diagonal gradient TL→BR (45°) with arbitrary stops (pos in 0..100000)."""
     spPr = shape.fill._xPr
     for tag in ("a:noFill", "a:solidFill", "a:gradFill", "a:blipFill",
                 "a:pattFill"):
         existing = spPr.find(qn(tag))
         if existing is not None:
             spPr.remove(existing)
+    gs_xml = "".join(
+        f'<a:gs pos="{pos}"><a:srgbClr val="{hexv}"/></a:gs>'
+        for pos, hexv in stops
+    )
     grad_xml = (
         '<a:gradFill xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"'
         ' flip="none" rotWithShape="1">'
-        '<a:gsLst>'
-        f'<a:gs pos="0"><a:srgbClr val="{start_hex}"/></a:gs>'
-        f'<a:gs pos="100000"><a:srgbClr val="{end_hex}"/></a:gs>'
-        '</a:gsLst>'
+        f'<a:gsLst>{gs_xml}</a:gsLst>'
         '<a:lin ang="2700000" scaled="0"/>'
         '</a:gradFill>'
     )
@@ -191,7 +191,14 @@ def _truncate_payload(payload: dict, who: str) -> dict:
         if len(ach) > MAX_BULLETS_PER_EXP:
             _warn(f"{who}: {e.get('employer', '?')} — "
                   f"{len(ach) - MAX_BULLETS_PER_EXP} bullet(s) trimmed")
-            e["achievements"] = ach[:MAX_BULLETS_PER_EXP]
+            ach = ach[:MAX_BULLETS_PER_EXP]
+        # Trim overly-long single bullets
+        ach = [
+            (b if len(b) <= MAX_BULLET_CHARS
+             else b[:MAX_BULLET_CHARS].rstrip() + "…")
+            for b in ach
+        ]
+        e["achievements"] = ach
     out["experiences"] = exp
 
     for key, cap in (("expertise", MAX_EXPERTISE),
@@ -201,6 +208,30 @@ def _truncate_payload(payload: dict, who: str) -> dict:
             _warn(f"{who}: {key} capped to {cap} (was {len(out[key])})")
             out[key] = out[key][:cap]
 
+    # Engagement descriptions: keep them short for the sidebar.
+    if "engagements" in out:
+        trimmed = []
+        for e in out["engagements"]:
+            if isinstance(e, dict):
+                e = dict(e)
+                desc = (e.get("description") or "").strip()
+                if len(desc) > MAX_ENGAGEMENT_DESC_CHARS:
+                    e["description"] = desc[:MAX_ENGAGEMENT_DESC_CHARS].rstrip() + "…"
+            trimmed.append(e)
+        out["engagements"] = trimmed
+
+    # Education: cap degree line length
+    if "education" in out:
+        trimmed = []
+        for e in out["education"]:
+            if isinstance(e, dict):
+                e = dict(e)
+                deg = (e.get("degree") or "").strip()
+                if len(deg) > MAX_DEGREE_CHARS:
+                    e["degree"] = deg[:MAX_DEGREE_CHARS].rstrip() + "…"
+            trimmed.append(e)
+        out["education"] = trimmed
+
     summary = (out.get("summary") or "").strip()
     if len(summary) > MAX_SUMMARY_CHARS:
         _warn(f"{who}: summary truncated to {MAX_SUMMARY_CHARS} chars")
@@ -208,13 +239,98 @@ def _truncate_payload(payload: dict, who: str) -> dict:
     return out
 
 
+# ─── Overflow estimator ──────────────────────────────────────────────────────
+# Each column has a vertical budget (in pt). We estimate the rendered height
+# from font sizes and wrap, and warn if we exceed the budget.
+
+# Char widths derived empirically for ~10pt Alegreya Sans / sans fallbacks.
+# CPL recalibrated on 10pt Alegreya Sans / sans-serif (real measured ~5.5 pt
+# average advance width, sidebar 35.2% × 13.33" = 4.7", main 64.8% × 13.33" = 8.6")
+_CPL_SIDEBAR_BODY  = 50   # chars per line in sidebar at 10pt
+_CPL_MAIN_BODY     = 95   # chars per line in main at 10pt
+_LINE_PT           = 12   # 10pt + 20% leading (PowerPoint compact spacing)
+_SECTION_PT        = 16
+_PARA_GAP_PT       = 1
+
+# EMU per pt = 12700
+_AVAIL_PT_MAIN    = (SLIDE_H - HEADER_H - FOOTER_H - 160000) / 12700
+_AVAIL_PT_SIDEBAR = _AVAIL_PT_MAIN - 70  # initials block (~0.83") eats the top
+
+
+def _wrapped_lines(text: str, cpl: int) -> int:
+    if not text:
+        return 0
+    # naive: count chars / cpl, min 1
+    return max(1, (len(text) + cpl - 1) // cpl)
+
+
+def _estimate_sidebar_pt(payload: dict) -> float:
+    pt = 0.0
+    if payload.get("expertise"):
+        pt += _SECTION_PT + len(payload["expertise"]) * _LINE_PT
+    if payload.get("languages"):
+        pt += _SECTION_PT + len(payload["languages"]) * _LINE_PT
+    if payload.get("education"):
+        pt += _SECTION_PT
+        for e in payload["education"]:
+            year = (e.get("year", "") if isinstance(e, dict) else "")
+            school = (e.get("school", "") if isinstance(e, dict) else str(e))
+            degree = (e.get("degree", "") if isinstance(e, dict) else "")
+            pt += _wrapped_lines(f"{year} {school}", _CPL_SIDEBAR_BODY) * _LINE_PT
+            if degree:
+                pt += _wrapped_lines(degree, _CPL_SIDEBAR_BODY) * _LINE_PT
+    if payload.get("hobbies"):
+        pt += _SECTION_PT + sum(
+            _wrapped_lines(h, _CPL_SIDEBAR_BODY) for h in payload["hobbies"]
+        ) * _LINE_PT
+    if payload.get("engagements"):
+        pt += _SECTION_PT
+        for e in payload["engagements"]:
+            if isinstance(e, dict):
+                line = f"{e.get('title','')} {e.get('description','')}"
+            else:
+                line = str(e)
+            pt += _wrapped_lines(line, _CPL_SIDEBAR_BODY) * _LINE_PT + _PARA_GAP_PT
+    return pt
+
+
+def _estimate_main_pt(payload: dict) -> float:
+    pt = 0.0
+    if (payload.get("summary") or "").strip():
+        pt += _SECTION_PT + _wrapped_lines(payload["summary"], _CPL_MAIN_BODY) * _LINE_PT
+    if payload.get("experiences"):
+        pt += _SECTION_PT
+        for exp in payload["experiences"]:
+            header = (f"{exp.get('employer','')} {exp.get('role','')} "
+                      f"{exp.get('duration','')}")
+            pt += _wrapped_lines(header, _CPL_MAIN_BODY) * _LINE_PT + _PARA_GAP_PT
+            for b in exp.get("achievements", []):
+                pt += _wrapped_lines(b, _CPL_MAIN_BODY - 4) * _LINE_PT + _PARA_GAP_PT
+    if payload.get("references"):
+        ref = ", ".join(payload["references"])
+        pt += _SECTION_PT + _wrapped_lines(ref, _CPL_MAIN_BODY) * _LINE_PT
+    return pt
+
+
+def _check_overflow(payload: dict, who: str) -> None:
+    main_pt = _estimate_main_pt(payload)
+    side_pt = _estimate_sidebar_pt(payload)
+    if main_pt > _AVAIL_PT_MAIN:
+        _warn(f"{who}: main column estimated {main_pt:.0f}pt > "
+              f"budget {_AVAIL_PT_MAIN:.0f}pt — risque de débordement")
+    if side_pt > _AVAIL_PT_SIDEBAR:
+        _warn(f"{who}: sidebar estimated {side_pt:.0f}pt > "
+              f"budget {_AVAIL_PT_SIDEBAR:.0f}pt — risque de débordement")
+
+
 # ─── Slide builders ──────────────────────────────────────────────────────────
 def _build_background(slide):
-    """Slide-wide diagonal gradient — NAVY_DEEP (top-left) → CYAN_SOFT (bottom-right)."""
+    """Slide-wide diagonal gradient. Stops defined in theme.GRADIENT_STOPS so
+    the cyan ne soit présent que dans le coin bas-droite (cf. template)."""
     bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, SLIDE_W, SLIDE_H)
     bg.line.fill.background()
     bg.shadow.inherit = False
-    _apply_diagonal_gradient(bg, NAVY_DEEP_HEX, CYAN_SOFT_HEX)
+    _apply_diagonal_gradient(bg, GRADIENT_STOPS)
 
 
 def _build_sidebar(slide):
@@ -321,6 +437,22 @@ def _build_sidebar_content(slide, cv: dict, lang: str):
                 _bullet(tf, h, size=FS_BODY)
         section(L["hobbies"], _r)
 
+    if cv.get("engagements"):
+        def _r():
+            for e in cv["engagements"]:
+                if isinstance(e, dict):
+                    title, desc = e.get("title", ""), e.get("description", "")
+                    p = _new_para(tf, space_after=Pt(2))
+                    _run(p, "• ", bold=True, size=FS_BODY, color=CYAN_ACCENT)
+                    if title:
+                        _run(p, title, bold=True, size=FS_BODY, color=WHITE)
+                    if desc:
+                        _run(p, f" — {desc}", size=FS_BODY, color=WHITE_SOFT,
+                             italic=True)
+                else:
+                    _bullet(tf, str(e), size=FS_BODY)
+        section(L["engagements"], _r)
+
 
 def _build_main_content(slide, cv: dict, lang: str):
     L = LABELS[lang]
@@ -371,21 +503,6 @@ def _build_main_content(slide, cv: dict, lang: str):
                  color=WHITE, italic=True)
         section(L["references"], _r)
 
-    if cv.get("engagements"):
-        def _r():
-            for e in cv["engagements"]:
-                if isinstance(e, dict):
-                    title, desc = e.get("title", ""), e.get("description", "")
-                    p = _new_para(tf, space_after=Pt(1))
-                    _run(p, "• ", bold=True, size=FS_BODY, color=CYAN_ACCENT)
-                    if title:
-                        _run(p, title, bold=True, size=FS_BODY, color=WHITE)
-                    if desc:
-                        _run(p, f" — {desc}", size=FS_BODY, color=WHITE_SOFT)
-                else:
-                    _bullet(tf, str(e), size=FS_BODY)
-        section(L["engagements"], _r)
-
 
 # ─── Top-level render ────────────────────────────────────────────────────────
 def _build_slide(prs: Presentation, cv: dict, lang: str):
@@ -401,6 +518,7 @@ def _build_slide(prs: Presentation, cv: dict, lang: str):
     _build_header(slide, initials, title, domain)
 
     payload = _truncate_payload(cv.get(lang, cv), f"{initials} [{lang}]")
+    _check_overflow(payload, f"{initials} [{lang}]")
     _build_sidebar_content(slide, payload, lang)
     _build_main_content(slide, payload, lang)
 

@@ -17,6 +17,8 @@ from pathlib import Path
 
 from theme import (
     MAX_BULLETS_PER_EXP,
+    MAX_DEGREE_CHARS,
+    MAX_ENGAGEMENT_DESC_CHARS,
     MAX_ENGAGEMENTS,
     MAX_EXPERIENCES,
     MAX_EXPERTISE,
@@ -80,6 +82,26 @@ def _truncate(payload: dict) -> dict:
                      ("engagements", MAX_ENGAGEMENTS)):
         if key in out:
             out[key] = out[key][:cap]
+    if "engagements" in out:
+        trimmed = []
+        for e in out["engagements"]:
+            if isinstance(e, dict):
+                e = dict(e)
+                desc = (e.get("description") or "").strip()
+                if len(desc) > MAX_ENGAGEMENT_DESC_CHARS:
+                    e["description"] = desc[:MAX_ENGAGEMENT_DESC_CHARS].rstrip() + "…"
+            trimmed.append(e)
+        out["engagements"] = trimmed
+    if "education" in out:
+        trimmed = []
+        for e in out["education"]:
+            if isinstance(e, dict):
+                e = dict(e)
+                deg = (e.get("degree") or "").strip()
+                if len(deg) > MAX_DEGREE_CHARS:
+                    e["degree"] = deg[:MAX_DEGREE_CHARS].rstrip() + "…"
+            trimmed.append(e)
+        out["education"] = trimmed
     summary = (out.get("summary") or "").strip()
     if len(summary) > MAX_SUMMARY_CHARS:
         out["summary"] = summary[:MAX_SUMMARY_CHARS].rstrip() + "…"
@@ -143,6 +165,23 @@ def _render_sidebar(payload, labels) -> str:
         parts.append(_section_title(labels["hobbies"]))
         parts.append(_bullet_list(payload["hobbies"]))
 
+    if payload.get("engagements"):
+        parts.append(_section_title(labels["engagements"]))
+        rows = []
+        for e in payload["engagements"]:
+            if isinstance(e, dict):
+                t = _esc(e.get("title", ""))
+                d = _esc(e.get("description", ""))
+                rows.append(
+                    f'<li class="bullet"><span class="dot">•</span>'
+                    f'<span><strong>{t}</strong>'
+                    + (f' — <em class="muted">{d}</em>' if d else "")
+                    + "</span></li>"
+                )
+            else:
+                rows.append(f'<li class="bullet"><span class="dot">•</span><span>{_esc(e)}</span></li>')
+        parts.append(f'<ul class="bullet-list">{"".join(rows)}</ul>')
+
     return "\n".join(parts)
 
 
@@ -177,23 +216,6 @@ def _render_main(payload, labels) -> str:
     if payload.get("references"):
         parts.append(_section_title(labels["references"]))
         parts.append(f'<p class="references">{_esc(", ".join(payload["references"]))}</p>')
-
-    if payload.get("engagements"):
-        parts.append(_section_title(labels["engagements"]))
-        rows = []
-        for e in payload["engagements"]:
-            if isinstance(e, dict):
-                t = _esc(e.get("title", ""))
-                d = _esc(e.get("description", ""))
-                rows.append(
-                    f'<li class="bullet"><span class="dot">•</span>'
-                    f'<span><strong>{t}</strong>'
-                    + (f' — <span class="muted">{d}</span>' if d else "")
-                    + "</span></li>"
-                )
-            else:
-                rows.append(f'<li class="bullet"><span class="dot">•</span><span>{_esc(e)}</span></li>')
-        parts.append(f'<ul class="bullet-list">{"".join(rows)}</ul>')
 
     return "\n".join(parts)
 
@@ -267,16 +289,19 @@ body {{
   padding-left: 4px;
 }}
 
-/* The slide. 16:9 box with diagonal gradient TL→BR. */
+/* The slide. 16:9 box. Gradient holds navy until ~70% then transitions to
+   cyan only in the bottom-right corner — matches Inside Circle template. */
 .slide {{
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background:
-    linear-gradient(135deg, var(--navy-deep) 0%, var(--cyan-soft) 100%);
+  background: linear-gradient(135deg,
+    var(--navy-deep) 0%,
+    var(--navy-deep) 70%,
+    var(--cyan-soft) 100%);
   color: var(--white);
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 35.2% 64.8%;
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 12px 38px rgba(8, 18, 60, 0.20);

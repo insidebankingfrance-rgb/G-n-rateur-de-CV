@@ -14,11 +14,13 @@ SLIDE_H = Emu(6858000)   # 7.5"
 
 
 # ─── Colors ──────────────────────────────────────────────────────────────────
-# Gradient endpoints (TL → BR)
+# Gradient — calibré sur le slide tarification Inside Circle :
+# le fond reste NAVY_DEEP sur ~70 % de la diagonale, puis bascule
+# vers CYAN_SOFT uniquement dans le coin bas-droite.
 NAVY_DEEP     = RGBColor(0x0C, 0x2A, 0x8E)   # top-left, bleu royal profond
 CYAN_SOFT     = RGBColor(0x1F, 0xCB, 0xD9)   # bottom-right, cyan turquoise
 
-# Sidebar (un cran plus sombre que NAVY_DEEP pour la lisibilité)
+# Sidebar — un cran plus sombre pour la lisibilité du texte clair
 NAVY_SIDEBAR  = RGBColor(0x07, 0x1F, 0x66)
 
 # Cyan d'accent — titres, KPI, initiales, puces
@@ -34,6 +36,13 @@ NAVY_DEEP_HEX    = "0C2A8E"
 NAVY_SIDEBAR_HEX = "071F66"
 CYAN_SOFT_HEX    = "1FCBD9"
 CYAN_ACCENT_HEX  = "3AEDE5"
+
+# Gradient stops (positions in 0-100000) — mostly navy, cyan corner only.
+GRADIENT_STOPS = [
+    (0,      NAVY_DEEP_HEX),
+    (70000,  NAVY_DEEP_HEX),   # hold navy until ~70% diagonal
+    (100000, CYAN_SOFT_HEX),
+]
 
 
 # ─── Font ────────────────────────────────────────────────────────────────────
@@ -55,7 +64,7 @@ FS_FLOOR       = Pt(10)   # plancher contrôlé par _check_min_font()
 
 # ─── Layout (en EMU — 914400 = 1 pouce) ──────────────────────────────────────
 MARGIN          = Emu(228600)         # 0.25"
-SIDEBAR_W       = Emu(3600000)        # ~3.94"
+SIDEBAR_W       = Emu(4300000)        # ~4.70" (35.2% — wider to host engagements)
 HEADER_H        = Emu(1100000)        # ~1.20"
 FOOTER_H        = Emu(280000)         # ~0.31"
 
@@ -66,11 +75,14 @@ CONTENT_BOTTOM  = SLIDE_H - FOOTER_H
 # ─── Capacity / truncation ───────────────────────────────────────────────────
 # Pour garantir 1 page : on cape le contenu à ces valeurs.
 MAX_EXPERIENCES        = 4
-MAX_BULLETS_PER_EXP    = 3
-MAX_EXPERTISE          = 6
-MAX_HOBBIES            = 6
-MAX_ENGAGEMENTS        = 4
-MAX_SUMMARY_CHARS      = 320
+MAX_BULLETS_PER_EXP    = 2     # 2 bullets per experience to guarantee 1 page
+MAX_EXPERTISE          = 5
+MAX_HOBBIES            = 4
+MAX_ENGAGEMENTS        = 3
+MAX_SUMMARY_CHARS      = 220
+MAX_BULLET_CHARS       = 160   # achievement bullet — trim with ellipsis above
+MAX_ENGAGEMENT_DESC_CHARS = 40 # engagement description — short tag only
+MAX_DEGREE_CHARS       = 45    # education degree line (single sidebar line)
 
 
 # ─── Confidentiality footer text ─────────────────────────────────────────────
