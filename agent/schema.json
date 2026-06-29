@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Inside Circle — Normalized CV",
+  "description": "Structure normalisée produite par l'agent d'extraction. Une seule entrée par CV. Le rendu produit 1 slide FR + 1 slide EN.",
+  "type": "object",
+  "required": ["initials", "fr", "en"],
+  "properties": {
+    "initials": {
+      "type": "string",
+      "description": "Initiale prénom + . + initiale nom + . (ex: 'R.M.')",
+      "pattern": "^[A-Z]\\.[A-Z]\\.$"
+    },
+    "first_name": { "type": "string", "description": "Prénom — usage interne pour génération des initiales, NON affiché." },
+    "last_name":  { "type": "string", "description": "Nom — usage interne, NON affiché." },
+
+    "title_fr":  { "type": "string", "description": "Titre / poste — version FR (ex: 'Consultant Senior')." },
+    "title_en":  { "type": "string", "description": "Titre / poste — version EN." },
+    "domain_fr": { "type": "string", "description": "Domaine d'expertise — version FR (ex: 'Risk & Regulatory — Banque')." },
+    "domain_en": { "type": "string", "description": "Domaine d'expertise — version EN." },
+
+    "fr": { "$ref": "#/$defs/CVContent" },
+    "en": { "$ref": "#/$defs/CVContent" }
+  },
+
+  "$defs": {
+    "CVContent": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "2-4 lignes de résumé. Reprendre la source si elle existe, sinon laisser vide."
+        },
+        "expertise": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "3-6 domaines d'expertise (puces sidebar)."
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name":  { "type": "string" },
+              "level": { "type": "string", "description": "Niveau libre (ex: 'Courant', 'B2', 'TOEIC 955/990', 'Native')." }
+            },
+            "required": ["name"]
+          }
+        },
+        "education": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year":   { "type": "string", "description": "Année ou plage (ex: '2020', '2015 - 2020')." },
+              "school": { "type": "string" },
+              "degree": { "type": "string", "description": "Diplôme OU certification. Les certifications sont listées dans cette même section." }
+            }
+          }
+        },
+        "experiences": {
+          "type": "array",
+          "description": "Une entrée par mission (consultant) OU par employeur (junior). Ordre antéchronologique. Couper les plus anciennes si le CV ne tient pas en 1 page.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "employer":     { "type": "string", "description": "Employeur ou client final." },
+              "role":         { "type": "string" },
+              "duration":     { "type": "string", "description": "Durée libre (ex: '18 mois', 'Sept 17 — Oct. 19', '2 ans')." },
+              "achievements": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Puces de réalisations. NE PAS reformuler la source ; quantifier quand l'info existe."
+              }
+            },
+            "required": ["employer"]
+          }
+        },
+        "references": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Clients ou employeurs notables, séparés par virgule à l'affichage."
+        },
+        "engagements": {
+          "type": "array",
+          "description": "Engagements, rôles extras, réalisations différenciantes (podcast, jury, conseil municipal, etc.). À garder uniquement si pertinent pour un livrable consulting financier.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title":       { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "hobbies": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Centres d'intérêt — différenciant. 3-6 maximum, formulés simplement."
+        }
+      }
+    }
+  }
+}
