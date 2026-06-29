@@ -3,6 +3,11 @@
 Usage:
     python renderer/generate_cv.py <input.json> [--out outputs/<name>.pptx]
     python renderer/generate_cv.py data/ --out outputs/    # batch mode
+
+Garanties contrôlées en sortie :
+- Toute typo de contenu est ≥ 10pt (`FS_FLOOR`). Lève AssertionError sinon.
+- Le contenu est plafonné via `MAX_*` dans `theme.py` pour rentrer en 1 page.
+  Les éléments tronqués sont loggués (stderr).
 """
 
 from __future__ import annotations
@@ -10,19 +15,23 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Iterable
 
+from lxml import etree
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
-from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
+from pptx.enum.text import PP_ALIGN
+from pptx.oxml.ns import qn
 from pptx.util import Emu, Pt
 
 from theme import (
-    BLUE_ROYAL,
     CYAN_ACCENT,
+    CYAN_ACCENT_HEX,
     CYAN_SOFT,
+    CYAN_SOFT_HEX,
     FONT_FAMILY,
     FOOTER_H,
     FOOTER_TEXT,
@@ -30,14 +39,22 @@ from theme import (
     FS_BODY,
     FS_BODY_SMALL,
     FS_DOMAIN,
+    FS_FLOOR,
     FS_FOOTER,
     FS_INITIALS,
     FS_SECTION,
     FS_TITLE,
     HEADER_H,
     MARGIN,
-    NAVY_DEEP,
-    NAVY_MID,
+    MAX_BULLETS_PER_EXP,
+    MAX_ENGAGEMENTS,
+    MAX_EXPERIENCES,
+    MAX_EXPERTISE,
+    MAX_HOBBIES,
+    MAX_SUMMARY_CHARS,
+    NAVY_DEEP_HEX,
+    NAVY_SIDEBAR,
+    NAVY_SIDEBAR_HEX,
     SIDEBAR_W,
     SLIDE_H,
     SLIDE_W,
@@ -45,6 +62,45 @@ from theme import (
     WHITE_SOFT,
 )
 from i18n import LABELS
+
+
+_warnings: list[str] = []
+
+
+def _warn(msg: str) -> None:
+    _warnings.append(msg)
+    print(f"  ⚠ {msg}", file=sys.stderr)
+
+
+# ─── XML helpers (gradient + min-font check) ─────────────────────────────────
+def _apply_diagonal_gradient(shape, start_hex: str, end_hex: str) -> None:
+    """Replace shape fill with a diagonal gradient TL → BR (45°)."""
+    spPr = shape.fill._xPr
+    for tag in ("a:noFill", "a:solidFill", "a:gradFill", "a:blipFill",
+                "a:pattFill"):
+        existing = spPr.find(qn(tag))
+        if existing is not None:
+            spPr.remove(existing)
+    grad_xml = (
+        '<a:gradFill xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"'
+        ' flip="none" rotWithShape="1">'
+        '<a:gsLst>'
+        f'<a:gs pos="0"><a:srgbClr val="{start_hex}"/></a:gs>'
+        f'<a:gs pos="100000"><a:srgbClr val="{end_hex}"/></a:gs>'
+        '</a:gsLst>'
+        '<a:lin ang="2700000" scaled="0"/>'
+        '</a:gradFill>'
+    )
+    spPr.append(etree.fromstring(grad_xml))
+
+
+def _check_min_font(size, where: str) -> None:
+    if size is None:
+        return
+    if size < FS_FLOOR:
+        raise AssertionError(
+            f"Font size {size.pt}pt below floor {FS_FLOOR.pt}pt at {where}"
+        )
 
 
 # ─── Low-level helpers ───────────────────────────────────────────────────────
@@ -67,13 +123,14 @@ def _add_textbox(slide, left, top, width, height):
     tf.word_wrap = True
     tf.margin_left = tf.margin_right = Emu(0)
     tf.margin_top = tf.margin_bottom = Emu(0)
-    # Clear default paragraph
     tf.paragraphs[0].text = ""
     return tb, tf
 
 
 def _run(paragraph, text: str, *, bold=False, italic=False,
-         size=FS_BODY, color=WHITE, font=FONT_FAMILY):
+         size=FS_BODY, color=WHITE, font=FONT_FAMILY, allow_small=False):
+    if not allow_small:
+        _check_min_font(size, f'run "{text[:40]}"')
     r = paragraph.add_run()
     r.text = text
     f = r.font
@@ -86,7 +143,6 @@ def _run(paragraph, text: str, *, bold=False, italic=False,
 
 
 def _new_para(tf, *, align=PP_ALIGN.LEFT, space_after=Pt(2), level=0):
-    """Add a new paragraph (skipping the empty default one on first call)."""
     if not tf.paragraphs[0].runs and tf.paragraphs[0].text == "":
         p = tf.paragraphs[0]
     else:
@@ -97,76 +153,91 @@ def _new_para(tf, *, align=PP_ALIGN.LEFT, space_after=Pt(2), level=0):
     return p
 
 
-def _section_title(tf, label: str):
-    p = _new_para(tf, space_after=Pt(4))
+def _section_title(tf, label: str, *, first=False):
+    p = _new_para(tf, space_after=Pt(3))
+    if not first:
+        p.space_before = Pt(6)
     _run(p, label, bold=True, size=FS_SECTION, color=CYAN_ACCENT)
-    # underline-like accent: small cyan bar below — implemented as next paragraph
-    return p
 
 
 def _bullet(tf, text: str, *, size=FS_BODY, color=WHITE, level=0,
             bold=False, italic=False):
-    p = _new_para(tf, space_after=Pt(2), level=level)
+    p = _new_para(tf, space_after=Pt(1), level=level)
     _run(p, "•  ", bold=True, size=size, color=CYAN_ACCENT)
     _run(p, text, size=size, color=color, bold=bold, italic=italic)
-    return p
 
 
-# ─── Anonymization helper ────────────────────────────────────────────────────
+# ─── Anonymization / truncation ──────────────────────────────────────────────
 def initials_from_name(first: str, last: str) -> str:
-    f = (first or "").strip()
-    l = (last or "").strip()
+    f, l = (first or "").strip(), (last or "").strip()
     if not f and not l:
         return "?.?."
     return f"{f[:1].upper()}.{l[:1].upper()}."
 
 
+def _truncate_payload(payload: dict, who: str) -> dict:
+    """Apply MAX_* caps. Warn when content is dropped."""
+    out = dict(payload)
+
+    exp = out.get("experiences", [])
+    if len(exp) > MAX_EXPERIENCES:
+        dropped = [e.get("employer", "?") for e in exp[MAX_EXPERIENCES:]]
+        _warn(f"{who}: {len(exp) - MAX_EXPERIENCES} experience(s) dropped "
+              f"(oldest first): {', '.join(dropped)}")
+        exp = exp[:MAX_EXPERIENCES]
+    exp = [dict(e) for e in exp]
+    for e in exp:
+        ach = e.get("achievements", [])
+        if len(ach) > MAX_BULLETS_PER_EXP:
+            _warn(f"{who}: {e.get('employer', '?')} — "
+                  f"{len(ach) - MAX_BULLETS_PER_EXP} bullet(s) trimmed")
+            e["achievements"] = ach[:MAX_BULLETS_PER_EXP]
+    out["experiences"] = exp
+
+    for key, cap in (("expertise", MAX_EXPERTISE),
+                     ("hobbies", MAX_HOBBIES),
+                     ("engagements", MAX_ENGAGEMENTS)):
+        if key in out and len(out[key]) > cap:
+            _warn(f"{who}: {key} capped to {cap} (was {len(out[key])})")
+            out[key] = out[key][:cap]
+
+    summary = (out.get("summary") or "").strip()
+    if len(summary) > MAX_SUMMARY_CHARS:
+        _warn(f"{who}: summary truncated to {MAX_SUMMARY_CHARS} chars")
+        out["summary"] = summary[:MAX_SUMMARY_CHARS].rstrip() + "…"
+    return out
+
+
 # ─── Slide builders ──────────────────────────────────────────────────────────
 def _build_background(slide):
-    """Solid navy background + cyan accent in bottom-right corner."""
-    # Full background
-    bg = _add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, NAVY_DEEP)
-    # Diagonal accent — large soft cyan oval in bottom-right
-    accent = slide.shapes.add_shape(
-        MSO_SHAPE.OVAL,
-        SLIDE_W - Emu(3500000), SLIDE_H - Emu(2800000),
-        Emu(5500000), Emu(5500000),
-    )
-    _set_fill(accent, CYAN_SOFT)
-    accent.fill.transparency = 0  # python-pptx ignores; visual effect from color
-    accent.line.fill.background()
-    # Layer a navy oval slightly offset to fake a soft gradient
-    soft = slide.shapes.add_shape(
-        MSO_SHAPE.OVAL,
-        SLIDE_W - Emu(4500000), SLIDE_H - Emu(3800000),
-        Emu(5500000), Emu(5500000),
-    )
-    _set_fill(soft, NAVY_MID)
-    soft.line.fill.background()
+    """Slide-wide diagonal gradient — NAVY_DEEP (top-left) → CYAN_SOFT (bottom-right)."""
+    bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, SLIDE_W, SLIDE_H)
+    bg.line.fill.background()
+    bg.shadow.inherit = False
+    _apply_diagonal_gradient(bg, NAVY_DEEP_HEX, CYAN_SOFT_HEX)
 
 
 def _build_sidebar(slide):
-    """Sidebar panel — left column, semi-distinct fill."""
-    _add_rect(slide, 0, 0, SIDEBAR_W, SLIDE_H, NAVY_MID)
+    """Solid sidebar panel — readability of light text against the gradient."""
+    _add_rect(slide, 0, 0, SIDEBAR_W, SLIDE_H, NAVY_SIDEBAR)
 
 
 def _build_header(slide, initials: str, title: str, domain: str):
-    """Initials (top-left) + title and domain (right of initials)."""
-    # Initials block — inside the sidebar
+    # Initiales dans la sidebar
     tb, tf = _add_textbox(
         slide,
-        MARGIN, Emu(280000),
-        SIDEBAR_W - 2 * MARGIN, Emu(900000),
+        MARGIN, Emu(260000),
+        SIDEBAR_W - 2 * MARGIN, Emu(800000),
     )
     p = tf.paragraphs[0]
     p.alignment = PP_ALIGN.LEFT
     _run(p, initials, bold=True, size=FS_INITIALS, color=CYAN_ACCENT)
 
-    # Title + domain — to the right of the sidebar
+    # Titre + domaine
     tb, tf = _add_textbox(
         slide,
         SIDEBAR_W + MARGIN, Emu(300000),
-        SLIDE_W - SIDEBAR_W - 2 * MARGIN, Emu(900000),
+        SLIDE_W - SIDEBAR_W - 2 * MARGIN, Emu(800000),
     )
     p = tf.paragraphs[0]
     _run(p, title or "", bold=True, size=FS_TITLE, color=WHITE)
@@ -185,116 +256,101 @@ def _build_footer(slide, lang: str):
     )
     p = tf.paragraphs[0]
     p.alignment = PP_ALIGN.CENTER
-    _run(p, text, italic=True, size=FS_FOOTER, color=WHITE_SOFT)
+    # FS_FOOTER (9pt) — exception assumée pour la mention légale.
+    _run(p, text, italic=True, size=FS_FOOTER, color=WHITE_SOFT,
+         allow_small=True)
 
 
 def _build_sidebar_content(slide, cv: dict, lang: str):
     L = LABELS[lang]
-    top = HEADER_H + Emu(100000)
-    height = SLIDE_H - top - FOOTER_H - Emu(100000)
+    top = HEADER_H + Emu(80000)
+    height = SLIDE_H - top - FOOTER_H - Emu(80000)
     tb, tf = _add_textbox(
-        slide,
-        MARGIN, top,
-        SIDEBAR_W - 2 * MARGIN, height,
+        slide, MARGIN, top, SIDEBAR_W - 2 * MARGIN, height,
     )
     tf.word_wrap = True
     first = True
 
-    def section(label, items_renderer):
+    def section(label, render):
         nonlocal first
-        if first:
-            _section_title(tf, label)
-            first = False
-        else:
-            # add some space before next section
-            spacer = _new_para(tf, space_after=Pt(2))
-            _run(spacer, " ", size=Pt(4), color=NAVY_MID)
-            _section_title(tf, label)
-        items_renderer()
+        _section_title(tf, label, first=first)
+        first = False
+        render()
 
-    # Expertise
-    expertise = cv.get("expertise", [])
-    if expertise:
-        def _render():
-            for e in expertise:
+    if cv.get("expertise"):
+        def _r():
+            for e in cv["expertise"]:
                 _bullet(tf, e, size=FS_BODY)
-        section(L["expertise"], _render)
+        section(L["expertise"], _r)
 
-    # Languages
-    languages = cv.get("languages", [])
-    if languages:
-        def _render():
-            for lng in languages:
-                name = lng.get("name", "") if isinstance(lng, dict) else str(lng)
-                level = lng.get("level", "") if isinstance(lng, dict) else ""
-                txt = f"{name} — {level}" if level else name
+    if cv.get("languages"):
+        def _r():
+            for lng in cv["languages"]:
+                if isinstance(lng, dict):
+                    name, level = lng.get("name", ""), lng.get("level", "")
+                    txt = f"{name} — {level}" if level else name
+                else:
+                    txt = str(lng)
                 _bullet(tf, txt, size=FS_BODY)
-        section(L["languages"], _render)
+        section(L["languages"], _r)
 
-    # Education & certifications (merged)
-    edu = cv.get("education", [])
-    if edu:
-        def _render():
-            for item in edu:
-                if isinstance(item, dict):
-                    year = item.get("year", "")
-                    school = item.get("school", "")
-                    degree = item.get("degree", "")
+    if cv.get("education"):
+        def _r():
+            for it in cv["education"]:
+                if isinstance(it, dict):
+                    year, school, degree = (it.get("year", ""),
+                                            it.get("school", ""),
+                                            it.get("degree", ""))
                     p = _new_para(tf, space_after=Pt(1))
                     if year:
-                        _run(p, f"{year}  ", bold=True, size=FS_BODY_SMALL,
+                        _run(p, f"{year}  ", bold=True, size=FS_BODY,
                              color=CYAN_ACCENT)
                     if school:
-                        _run(p, school, bold=True, size=FS_BODY_SMALL,
-                             color=WHITE)
+                        _run(p, school, bold=True, size=FS_BODY, color=WHITE)
                     if degree:
                         p2 = _new_para(tf, space_after=Pt(3))
-                        _run(p2, degree, size=FS_BODY_SMALL, color=WHITE_SOFT,
+                        _run(p2, degree, size=FS_BODY, color=WHITE_SOFT,
                              italic=True)
                 else:
-                    _bullet(tf, str(item), size=FS_BODY_SMALL)
-        section(L["education"], _render)
+                    _bullet(tf, str(it), size=FS_BODY)
+        section(L["education"], _r)
+
+    if cv.get("hobbies"):
+        def _r():
+            for h in cv["hobbies"]:
+                _bullet(tf, h, size=FS_BODY)
+        section(L["hobbies"], _r)
 
 
 def _build_main_content(slide, cv: dict, lang: str):
     L = LABELS[lang]
     left = SIDEBAR_W + MARGIN
-    top = HEADER_H + Emu(100000)
+    top = HEADER_H + Emu(80000)
     width = SLIDE_W - SIDEBAR_W - 2 * MARGIN
-    height = SLIDE_H - top - FOOTER_H - Emu(100000)
+    height = SLIDE_H - top - FOOTER_H - Emu(80000)
     tb, tf = _add_textbox(slide, left, top, width, height)
     tf.word_wrap = True
     first = True
 
-    def section(label, items_renderer):
+    def section(label, render):
         nonlocal first
-        if first:
-            _section_title(tf, label)
-            first = False
-        else:
-            spacer = _new_para(tf, space_after=Pt(2))
-            _run(spacer, " ", size=Pt(4), color=NAVY_DEEP)
-            _section_title(tf, label)
-        items_renderer()
+        _section_title(tf, label, first=first)
+        first = False
+        render()
 
-    # Summary
-    summary = cv.get("summary", "").strip()
+    summary = (cv.get("summary") or "").strip()
     if summary:
-        def _render():
+        def _r():
             p = _new_para(tf, space_after=Pt(3))
             _run(p, summary, size=FS_BODY, color=WHITE)
-        section(L["summary"], _render)
+        section(L["summary"], _r)
 
-    # Experience
-    experiences = cv.get("experiences", [])
-    if experiences:
-        def _render():
-            for exp in experiences:
-                # Header line: employer — role  + duration (right side, but
-                # python-pptx tabs are flaky → put duration in italic at end).
-                employer = exp.get("employer", "")
-                role = exp.get("role", "")
-                duration = exp.get("duration", "")
+    if cv.get("experiences"):
+        def _r():
+            for exp in cv["experiences"]:
+                employer, role, duration = (exp.get("employer", ""),
+                                            exp.get("role", ""),
+                                            exp.get("duration", ""))
                 p = _new_para(tf, space_after=Pt(1))
                 _run(p, "▸ ", bold=True, size=FS_BODY, color=CYAN_ACCENT)
                 if employer:
@@ -304,55 +360,36 @@ def _build_main_content(slide, cv: dict, lang: str):
                 if duration:
                     _run(p, f"  ({duration})", italic=True,
                          size=FS_BODY_SMALL, color=CYAN_ACCENT)
-                # Achievements / bullets
                 for bul in exp.get("achievements", []):
                     _bullet(tf, bul, size=FS_BODY_SMALL, level=1)
-        section(L["experience"], _render)
+        section(L["experience"], _r)
 
-    # References
-    refs = cv.get("references", [])
-    if refs:
-        def _render():
-            text = ", ".join(refs)
+    if cv.get("references"):
+        def _r():
             p = _new_para(tf, space_after=Pt(2))
-            _run(p, text, size=FS_BODY, color=WHITE, italic=True)
-        section(L["references"], _render)
+            _run(p, ", ".join(cv["references"]), size=FS_BODY,
+                 color=WHITE, italic=True)
+        section(L["references"], _r)
 
-    # Engagements & extras
-    engagements = cv.get("engagements", [])
-    if engagements:
-        def _render():
-            for e in engagements:
+    if cv.get("engagements"):
+        def _r():
+            for e in cv["engagements"]:
                 if isinstance(e, dict):
-                    title = e.get("title", "")
-                    desc = e.get("description", "")
+                    title, desc = e.get("title", ""), e.get("description", "")
                     p = _new_para(tf, space_after=Pt(1))
-                    _run(p, "• ", bold=True, size=FS_BODY_SMALL,
-                         color=CYAN_ACCENT)
+                    _run(p, "• ", bold=True, size=FS_BODY, color=CYAN_ACCENT)
                     if title:
-                        _run(p, title, bold=True, size=FS_BODY_SMALL,
-                             color=WHITE)
+                        _run(p, title, bold=True, size=FS_BODY, color=WHITE)
                     if desc:
-                        _run(p, f" — {desc}", size=FS_BODY_SMALL,
-                             color=WHITE_SOFT)
+                        _run(p, f" — {desc}", size=FS_BODY, color=WHITE_SOFT)
                 else:
-                    _bullet(tf, str(e), size=FS_BODY_SMALL)
-        section(L["engagements"], _render)
-
-    # Hobbies
-    hobbies = cv.get("hobbies", [])
-    if hobbies:
-        def _render():
-            txt = "  •  ".join(hobbies)
-            p = _new_para(tf, space_after=Pt(1))
-            _run(p, txt, size=FS_BODY_SMALL, color=WHITE)
-        section(L["hobbies"], _render)
+                    _bullet(tf, str(e), size=FS_BODY)
+        section(L["engagements"], _r)
 
 
 # ─── Top-level render ────────────────────────────────────────────────────────
 def _build_slide(prs: Presentation, cv: dict, lang: str):
-    blank = prs.slide_layouts[6]  # blank
-    slide = prs.slides.add_slide(blank)
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
     _build_background(slide)
     _build_sidebar(slide)
 
@@ -363,7 +400,7 @@ def _build_slide(prs: Presentation, cv: dict, lang: str):
     domain = cv.get(f"domain_{lang}") or cv.get("domain", "")
     _build_header(slide, initials, title, domain)
 
-    payload = cv.get(lang, cv)  # if cv has 'fr'/'en' keys, use lang-specific
+    payload = _truncate_payload(cv.get(lang, cv), f"{initials} [{lang}]")
     _build_sidebar_content(slide, payload, lang)
     _build_main_content(slide, payload, lang)
 
@@ -389,9 +426,7 @@ def _slug(s: str) -> str:
 
 
 def _iter_jsons(path: Path) -> Iterable[Path]:
-    if path.is_dir():
-        return sorted(p for p in path.glob("*.json"))
-    return [path]
+    return sorted(p for p in path.glob("*.json")) if path.is_dir() else [path]
 
 
 def main() -> None:
@@ -406,13 +441,15 @@ def main() -> None:
         raise SystemExit("In batch mode, --out must be a directory")
 
     for j in _iter_jsons(args.input):
+        _warnings.clear()
         cv = json.loads(j.read_text(encoding="utf-8"))
         if multiple:
             out_file = (out if out.is_dir() else Path("outputs")) / f"{_slug(j.stem)}.pptx"
         else:
             out_file = out
         rendered = render(cv, out_file)
-        print(f"✓ {j.name} → {rendered}")
+        suffix = f"  ({len(_warnings)} warnings)" if _warnings else ""
+        print(f"✓ {j.name} → {rendered}{suffix}")
 
 
 if __name__ == "__main__":

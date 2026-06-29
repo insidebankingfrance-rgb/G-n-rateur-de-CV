@@ -6,10 +6,10 @@ LABELS = {
         "expertise":    "DOMAINES D'EXPERTISE",
         "languages":    "LANGUES",
         "education":    "FORMATION & CERTIFICATIONS",
+        "hobbies":      "CENTRES D'INTÉRÊT",
         "experience":   "EXPÉRIENCE PROFESSIONNELLE",
         "references":   "RÉFÉRENCES",
         "engagements":  "ENGAGEMENTS & RÉALISATIONS",
-        "hobbies":      "CENTRES D'INTÉRÊT",
         "available":    "Disponibilité",
     },
     "en": {
@@ -17,10 +17,10 @@ LABELS = {
         "expertise":    "MAIN AREAS OF EXPERTISE",
         "languages":    "LANGUAGES",
         "education":    "EDUCATION & CERTIFICATIONS",
+        "hobbies":      "INTERESTS",
         "experience":   "PROFESSIONAL EXPERIENCE",
         "references":   "MAIN REFERENCES",
         "engagements":  "ENGAGEMENTS & ACHIEVEMENTS",
-        "hobbies":      "INTERESTS",
         "available":    "Availability",
     },
 }

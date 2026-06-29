@@ -3,9 +3,8 @@
 <meta name="description" content="Aperçu visuel du CV harmonisé Inside Circle (FR + EN).">
 <style>
 :root {
-  --navy-deep: #061A4D;
-  --navy-mid: #0B2A8A;
-  --blue-royal: #1E3FA8;
+  --navy-deep: #0C2A8E;
+  --navy-sidebar: #071F66;
   --cyan-acc: #3AEDE5;
   --cyan-soft: #1FCBD9;
   --white: #FFFFFF;
@@ -16,7 +15,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; font-family: var(--body-font); }
 body {
-  background: #f4f5f8;
+  background: #eef0f4;
   padding: 36px 20px 60px;
   display: flex;
   flex-direction: column;
@@ -26,12 +25,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .page-title {
-  text-align: center;
-  margin: 0 0 8px;
-  font-size: 20px;
-  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+  font-size: 13px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #4a5266;
+  color: #6b7280;
+  font-weight: 600;
 }
 .slide-wrap { width: 100%; max-width: 1280px; }
 .slide-meta {
@@ -42,56 +41,47 @@ body {
   margin-bottom: 8px;
   padding-left: 4px;
 }
+
+/* The slide. 16:9 box with diagonal gradient TL→BR. */
 .slide {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: var(--navy-deep);
+  background:
+    linear-gradient(135deg, var(--navy-deep) 0%, var(--cyan-soft) 100%);
   color: var(--white);
   display: grid;
   grid-template-columns: 30% 70%;
   overflow: hidden;
   border-radius: 4px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.18);
-}
-.bg-accent {
-  position: absolute;
-  right: -8%;
-  bottom: -14%;
-  width: 55%;
-  aspect-ratio: 1;
-  background: radial-gradient(circle at 40% 40%, var(--cyan-soft) 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 0;
+  box-shadow: 0 12px 38px rgba(8, 18, 60, 0.20);
 }
 .sidebar {
-  background: var(--navy-mid);
-  padding: 28px 26px 18px;
+  background: var(--navy-sidebar);
+  padding: 22px 22px 16px;
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 1;
 }
 .header-initials {
-  font-size: 56px;
+  font-size: 60px;
   font-weight: 800;
   color: var(--cyan-acc);
   letter-spacing: 0.02em;
   line-height: 1;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 .sidebar-inner {
-  font-size: 11.5px;
-  line-height: 1.45;
+  font-size: 13px;          /* ≥ PPT 10pt visually */
+  line-height: 1.4;
 }
-.sidebar-inner h3 { margin: 14px 0 6px; }
+.sidebar-inner h3 { margin: 12px 0 4px; }
 .sidebar-inner h3:first-child { margin-top: 0; }
 .content {
-  padding: 24px 30px 18px;
+  padding: 22px 28px 18px;
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 1;
   min-height: 0;
 }
 .content-header h1 {
@@ -106,76 +96,78 @@ body {
   margin-top: 2px;
   color: var(--cyan-acc);
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
 }
 .content-inner {
-  margin-top: 12px;
-  font-size: 11.5px;
-  line-height: 1.45;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.4;
   flex: 1;
   min-height: 0;
 }
 .section {
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--cyan-acc);
-  margin: 12px 0 5px;
+  margin: 10px 0 4px;
   padding-bottom: 3px;
   border-bottom: 1px solid rgba(58, 237, 229, 0.4);
 }
-.sidebar .section { font-size: 11px; }
 .content-inner .section:first-child,
 .sidebar-inner .section:first-child { margin-top: 0; }
+
 .bullet-list { list-style: none; padding: 0; margin: 0; }
 .bullet {
   display: grid;
-  grid-template-columns: 14px 1fr;
-  align-items: start;
+  grid-template-columns: 12px 1fr;
   gap: 4px;
+  align-items: start;
   padding: 1px 0;
 }
 .bullet .dot { color: var(--cyan-acc); font-weight: 700; }
-.bullet-list.sub { padding-left: 16px; margin-top: 2px; }
+.bullet-list.sub { padding-left: 14px; margin-top: 2px; }
+
 .summary { margin: 0 0 4px; }
-.experience { margin-top: 8px; }
+.experience { margin-top: 6px; }
 .experience:first-child { margin-top: 0; }
-.exp-header { font-size: 12px; }
+.exp-header { font-size: 13px; }
 .exp-marker { color: var(--cyan-acc); font-weight: 700; margin-right: 4px; }
 .exp-employer { font-weight: 700; }
 .exp-sep { color: var(--white-soft); }
-.exp-duration { color: var(--cyan-acc); font-style: italic; font-size: 10.5px; margin-left: 4px; }
+.exp-duration {
+  color: var(--cyan-acc); font-style: italic; font-size: 11.5px;
+  margin-left: 4px;
+}
 .references { margin: 0; font-style: italic; color: var(--white-soft); }
-.hobbies { margin: 0; }
 .muted { color: var(--white-soft); }
-.edu-list { display: flex; flex-direction: column; gap: 4px; }
-.edu-row { display: grid; gap: 1px; }
-.edu-year { color: var(--cyan-acc); font-weight: 700; font-size: 10.5px; }
+.edu-list { display: flex; flex-direction: column; gap: 3px; }
+.edu-row { display: grid; gap: 0; }
+.edu-line { }
+.edu-year { color: var(--cyan-acc); font-weight: 700; margin-right: 4px; }
 .edu-school { font-weight: 700; }
-.edu-degree { color: var(--white-soft); font-style: italic; font-size: 10.5px; }
+.edu-degree { color: var(--white-soft); font-style: italic; font-size: 12px; }
 .confidential {
   position: absolute;
-  bottom: 6px;
-  left: 0; right: 0;
+  bottom: 6px; left: 0; right: 0;
   text-align: center;
-  font-size: 9px;
+  font-size: 9.5px;
   color: var(--white-soft);
   font-style: italic;
   padding: 0 28px;
   z-index: 2;
 }
 @media (max-width: 900px) {
-  .slide { font-size: 0.9em; }
-  .header-initials { font-size: 42px; }
+  .slide { font-size: 0.92em; }
+  .header-initials { font-size: 46px; }
   .content-header h1 { font-size: 20px; }
 }
 </style>
-<h1 class="page-title">CV A.P. — Aperçu Inside Circle</h1>
+<div class="page-title">CV A.P. — Aperçu Inside Circle</div>
 
 <section class="slide-wrap" aria-label="Slide 1 — Français">
   <div class="slide-meta">Slide 1 — Français</div>
   <article class="slide">
-    <div class="bg-accent"></div>
     <aside class="sidebar">
       <div class="header-initials">A.P.</div>
       <div class="sidebar-inner"><h3 class="section">DOMAINES D&#x27;EXPERTISE</h3>
@@ -183,7 +175,7 @@ body {
 <h3 class="section">LANGUES</h3>
 <ul class="bullet-list"><li class="bullet"><span class="dot">•</span><span>Français — Langue maternelle</span></li><li class="bullet"><span class="dot">•</span><span>Anglais — TOEIC 955/990</span></li></ul>
 <h3 class="section">FORMATION &amp; CERTIFICATIONS</h3>
-<div class="edu-list"><div class="edu-row"><div class="edu-year">2024</div><div class="edu-school">EDHEC Business School</div><div class="edu-degree">Certification Digital Ethics Officer (avec Mention)</div></div><div class="edu-row"><div class="edu-year">2015 — 2020</div><div class="edu-school">Sciences Po Saint-Germain-en-Laye</div><div class="edu-degree">Master II Affaires européennes et internationales (avec Mention)</div></div><div class="edu-row"><div class="edu-year">2020</div><div class="edu-school">Université de Versailles Saint-Quentin-en-Yvelines</div><div class="edu-degree">Master II Influence &amp; Affaires publiques (avec Mention)</div></div></div></div>
+<div class="edu-list"><div class="edu-row"><div class="edu-line"><span class="edu-year">2024</span> <span class="edu-school">EDHEC Business School</span></div><div class="edu-degree">Certification Digital Ethics Officer (avec Mention)</div></div><div class="edu-row"><div class="edu-line"><span class="edu-year">2015 — 2020</span> <span class="edu-school">Sciences Po Saint-Germain-en-Laye</span></div><div class="edu-degree">Master II Affaires européennes et internationales (avec Mention)</div></div><div class="edu-row"><div class="edu-line"><span class="edu-year">2020</span> <span class="edu-school">Université de Versailles Saint-Quentin-en-Yvelines</span></div><div class="edu-degree">Master II Influence &amp; Affaires publiques (avec Mention)</div></div></div></div>
     </aside>
     <main class="content">
       <header class="content-header">
@@ -193,11 +185,10 @@ body {
       <div class="content-inner"><h3 class="section">RÉSUMÉ</h3>
 <p class="summary">Expert en gouvernance de l&#x27;IA, AI Risk Management et conformité réglementaire, avec près de 8 ans d&#x27;expérience auprès de grandes institutions bancaires. Spécialisé dans l&#x27;EU AI Act et le déploiement de dispositifs de gouvernance IA à l&#x27;échelle internationale.</p>
 <h3 class="section">EXPÉRIENCE PROFESSIONNELLE</h3>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Top-tier CIB européenne</span> <span class="exp-sep">—</span> <span class="exp-role">AI Compliance Lead (consultant)</span> <span class="exp-duration">(8 mois — en cours)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Finalisation et mise en œuvre du cadre de gouvernance des risques IA : politiques internes, cartographie des risques, comitologie et coordination des fonctions support et métiers.</span></li><li class="bullet sub"><span class="dot">•</span><span>Pilotage opérationnel de la gouvernance : identification, évaluation, priorisation, validation et remédiation des systèmes d&#x27;IA.</span></li><li class="bullet sub"><span class="dot">•</span><span>Contribution au déploiement international du dispositif dans plus de 40 entités, dont USA, UK, APAC et MEA.</span></li><li class="bullet sub"><span class="dot">•</span><span>Configuration agile et pilotage métier de l&#x27;outil supportant les processus de gouvernance, documentation, validation et maîtrise des risques IA.</span></li></ul></div>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Sia Partners</span> <span class="exp-sep">—</span> <span class="exp-role">Associate Manager</span> <span class="exp-duration">(10 mois — en cours)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Responsable de l&#x27;offre AI Risk Management : coordination des réponses aux appels d&#x27;offres, veille stratégique et réglementaire, développement commercial et animation de l&#x27;écosystème financier.</span></li><li class="bullet sub"><span class="dot">•</span><span>Pilotage et animation du groupe de travail IA de l&#x27;association Paris Europlace (+40 responsables du secteur financier) : rédaction de position papers et de réponses aux consultations européennes, benchmarks.</span></li></ul></div>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Groupe BPCE</span> <span class="exp-sep">—</span> <span class="exp-role">Group EU AI Act Project Manager</span> <span class="exp-duration">(18 mois)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Responsable du programme de mise en conformité EU AI Act du Groupe BPCE et de ses entités (Natixis, Oney, BRED, etc.) : cartographie et évaluation des risques IA, définition de la politique et du cadre normatif Groupe, évolution des processus opérationnels, animation du comité de pilotage.</span></li><li class="bullet sub"><span class="dot">•</span><span>Coordination et accompagnement de plus de 35 décideurs locaux (DPO, Chief Compliance Officer, CDO, etc.) dans la déclinaison du cadre normatif Groupe.</span></li><li class="bullet sub"><span class="dot">•</span><span>Conseil stratégique auprès des dirigeants et des métiers pour interpréter et décliner les exigences réglementaires applicables aux systèmes d&#x27;IA.</span></li></ul></div>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Oney / Oneytrust</span> <span class="exp-sep">—</span> <span class="exp-role">Expert Leader — Digital &amp; AI Compliance Officer</span> <span class="exp-duration">(38 mois)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Structuration du cadre de gouvernance des risques IA avec le Chief Data Officer : inventaire des systèmes, formation des référents métiers et pilotage de la conformité EU AI Act dans plus de 10 entités internationales.</span></li><li class="bullet sub"><span class="dot">•</span><span>Ambassadeur des outils d&#x27;IA Générative Groupe auprès de 3 000 collaborateurs Oney.</span></li><li class="bullet sub"><span class="dot">•</span><span>Pilotage des activités RGPD de la filiale Oneytrust : rédaction et mise à jour AIPD, clauses contractuelles, formation, contrôles RGPD, référent privacy by design dans les projets de lutte contre la fraude.</span></li></ul></div>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Groupe BPCE</span> <span class="exp-sep">—</span> <span class="exp-role">Public Affairs Project Manager</span> <span class="exp-duration">(36 mois)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Coordination des contributions stratégiques du Groupe BPCE aux initiatives réglementaires européennes sur le numérique (EU AI Act, Digital Euro, EUDI Wallet, Data Act, PSD3, AI Trustworthy Guidelines).</span></li><li class="bullet sub"><span class="dot">•</span><span>Rédaction de la Charte éthique en matière d&#x27;IA du Groupe BPCE en collaboration avec les métiers.</span></li><li class="bullet sub"><span class="dot">•</span><span>Représentation du Groupe BPCE sur la place financière dans les associations professionnelles européennes (EBF, EACB, ESBG, MEDEF, FBF, AFEP).</span></li></ul></div>
+<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Top-tier CIB européenne</span> <span class="exp-sep">—</span> <span class="exp-role">AI Compliance Lead (consultant)</span> <span class="exp-duration">(8 mois — en cours)</span></div><ul class="bullet-list sub"><li class="bullet"><span class="dot">•</span><span>Finalisation et mise en œuvre du cadre de gouvernance des risques IA : politiques internes, cartographie des risques, comitologie et coordination des fonctions support et métiers.</span></li><li class="bullet"><span class="dot">•</span><span>Pilotage opérationnel de la gouvernance : identification, évaluation, priorisation, validation et remédiation des systèmes d&#x27;IA.</span></li><li class="bullet"><span class="dot">•</span><span>Contribution au déploiement international du dispositif dans plus de 40 entités, dont USA, UK, APAC et MEA.</span></li></ul></div>
+<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Sia Partners</span> <span class="exp-sep">—</span> <span class="exp-role">Associate Manager</span> <span class="exp-duration">(10 mois — en cours)</span></div><ul class="bullet-list sub"><li class="bullet"><span class="dot">•</span><span>Responsable de l&#x27;offre AI Risk Management : coordination des réponses aux appels d&#x27;offres, veille stratégique et réglementaire, développement commercial et animation de l&#x27;écosystème financier.</span></li><li class="bullet"><span class="dot">•</span><span>Pilotage et animation du groupe de travail IA de l&#x27;association Paris Europlace (+40 responsables du secteur financier) : rédaction de position papers et de réponses aux consultations européennes, benchmarks.</span></li></ul></div>
+<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Groupe BPCE</span> <span class="exp-sep">—</span> <span class="exp-role">Group EU AI Act Project Manager</span> <span class="exp-duration">(18 mois)</span></div><ul class="bullet-list sub"><li class="bullet"><span class="dot">•</span><span>Responsable du programme de mise en conformité EU AI Act du Groupe BPCE et de ses entités (Natixis, Oney, BRED, etc.) : cartographie et évaluation des risques IA, définition de la politique et du cadre normatif Groupe, évolution des processus opérationnels, animation du comité de pilotage.</span></li><li class="bullet"><span class="dot">•</span><span>Coordination et accompagnement de plus de 35 décideurs locaux (DPO, Chief Compliance Officer, CDO, etc.) dans la déclinaison du cadre normatif Groupe.</span></li><li class="bullet"><span class="dot">•</span><span>Conseil stratégique auprès des dirigeants et des métiers pour interpréter et décliner les exigences réglementaires applicables aux systèmes d&#x27;IA.</span></li></ul></div>
+<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Oney / Oneytrust</span> <span class="exp-sep">—</span> <span class="exp-role">Expert Leader — Digital &amp; AI Compliance Officer</span> <span class="exp-duration">(38 mois)</span></div><ul class="bullet-list sub"><li class="bullet"><span class="dot">•</span><span>Structuration du cadre de gouvernance des risques IA avec le Chief Data Officer : inventaire des systèmes, formation des référents métiers et pilotage de la conformité EU AI Act dans plus de 10 entités internationales.</span></li><li class="bullet"><span class="dot">•</span><span>Ambassadeur des outils d&#x27;IA Générative Groupe auprès de 3 000 collaborateurs Oney.</span></li><li class="bullet"><span class="dot">•</span><span>Pilotage des activités RGPD de la filiale Oneytrust : rédaction et mise à jour AIPD, clauses contractuelles, formation, contrôles RGPD, référent privacy by design dans les projets de lutte contre la fraude.</span></li></ul></div>
 <h3 class="section">RÉFÉRENCES</h3>
 <p class="references">Groupe BPCE, Natixis, Oney, Sia Partners, Paris Europlace</p>
 <h3 class="section">ENGAGEMENTS &amp; RÉALISATIONS</h3>
@@ -211,7 +202,6 @@ body {
 <section class="slide-wrap" aria-label="Slide 2 — English">
   <div class="slide-meta">Slide 2 — English</div>
   <article class="slide">
-    <div class="bg-accent"></div>
     <aside class="sidebar">
       <div class="header-initials">A.P.</div>
       <div class="sidebar-inner"><h3 class="section">MAIN AREAS OF EXPERTISE</h3>
@@ -219,7 +209,7 @@ body {
 <h3 class="section">LANGUAGES</h3>
 <ul class="bullet-list"><li class="bullet"><span class="dot">•</span><span>French — Native</span></li><li class="bullet"><span class="dot">•</span><span>English — TOEIC 955/990</span></li></ul>
 <h3 class="section">EDUCATION &amp; CERTIFICATIONS</h3>
-<div class="edu-list"><div class="edu-row"><div class="edu-year">2024</div><div class="edu-school">EDHEC Business School</div><div class="edu-degree">Digital Ethics Officer certification (with Distinction)</div></div><div class="edu-row"><div class="edu-year">2015 — 2020</div><div class="edu-school">Sciences Po Saint-Germain-en-Laye</div><div class="edu-degree">Master&#x27;s in European &amp; International Affairs (with Distinction)</div></div><div class="edu-row"><div class="edu-year">2020</div><div class="edu-school">University of Versailles Saint-Quentin-en-Yvelines</div><div class="edu-degree">Master&#x27;s in Influence &amp; Public Affairs (with Distinction)</div></div></div></div>
+<div class="edu-list"><div class="edu-row"><div class="edu-line"><span class="edu-year">2024</span> <span class="edu-school">EDHEC Business School</span></div><div class="edu-degree">Digital Ethics Officer certification (with Distinction)</div></div><div class="edu-row"><div class="edu-line"><span class="edu-year">2015 — 2020</span> <span class="edu-school">Sciences Po Saint-Germain-en-Laye</span></div><div class="edu-degree">Master&#x27;s in European &amp; International Affairs (with Distinction)</div></div><div class="edu-row"><div class="edu-line"><span class="edu-year">2020</span> <span class="edu-school">University of Versailles Saint-Quentin-en-Yvelines</span></div><div class="edu-degree">Master&#x27;s in Influence &amp; Public Affairs (with Distinction)</div></div></div></div>
     </aside>
     <main class="content">
       <header class="content-header">
@@ -229,11 +219,10 @@ body {
       <div class="content-inner"><h3 class="section">SUMMARY</h3>
 <p class="summary">Expert in AI Governance, AI Risk Management and regulatory compliance, with nearly 8 years of experience advising major banking institutions. Specialised in the EU AI Act and the international rollout of AI governance frameworks.</p>
 <h3 class="section">PROFESSIONAL EXPERIENCE</h3>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Top-tier European CIB</span> <span class="exp-sep">—</span> <span class="exp-role">AI Compliance Lead (consultant)</span> <span class="exp-duration">(8 months — ongoing)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Finalisation and rollout of the AI risk governance framework: internal policies, risk mapping, committee design, coordination of support and business functions.</span></li><li class="bullet sub"><span class="dot">•</span><span>Operational pilot of AI governance: identification, assessment, prioritisation, validation and remediation of AI systems.</span></li><li class="bullet sub"><span class="dot">•</span><span>Contribution to the international rollout across 40+ entities, including USA, UK, APAC and MEA.</span></li><li class="bullet sub"><span class="dot">•</span><span>Agile configuration and business pilot of the tool supporting governance, documentation, validation and AI risk control.</span></li></ul></div>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Sia Partners</span> <span class="exp-sep">—</span> <span class="exp-role">Associate Manager</span> <span class="exp-duration">(10 months — ongoing)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Head of the AI Risk Management offering: RFP coordination, strategic and regulatory watch, business development and financial-ecosystem animation.</span></li><li class="bullet sub"><span class="dot">•</span><span>Lead of the AI working group at Paris Europlace association (40+ senior financial-sector representatives): position papers, EU consultation responses, benchmarks.</span></li></ul></div>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Groupe BPCE</span> <span class="exp-sep">—</span> <span class="exp-role">Group EU AI Act Project Manager</span> <span class="exp-duration">(18 months)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Lead of the EU AI Act compliance programme for Groupe BPCE and its entities (Natixis, Oney, BRED, etc.): AI risk mapping and assessment, definition of Group policy and standards, operational process evolution, steering-committee animation.</span></li><li class="bullet sub"><span class="dot">•</span><span>Coordination and support of 35+ local decision-makers (DPO, Chief Compliance Officer, CDO, etc.) in deploying the Group framework.</span></li><li class="bullet sub"><span class="dot">•</span><span>Strategic advisory to executives and business lines on interpreting and applying regulatory requirements for AI systems.</span></li></ul></div>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Oney / Oneytrust</span> <span class="exp-sep">—</span> <span class="exp-role">Expert Leader — Digital &amp; AI Compliance Officer</span> <span class="exp-duration">(38 months)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Built the AI risk governance framework with the Chief Data Officer: systems inventory, training of business reference owners, EU AI Act compliance pilot across 10+ international entities.</span></li><li class="bullet sub"><span class="dot">•</span><span>Group GenAI tools ambassador to 3,000 Oney employees.</span></li><li class="bullet sub"><span class="dot">•</span><span>Pilot of Oneytrust&#x27;s GDPR activities: DPIA drafting and updates, contractual clauses, training, GDPR controls, privacy-by-design referent on anti-fraud projects.</span></li></ul></div>
-<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Groupe BPCE</span> <span class="exp-sep">—</span> <span class="exp-role">Public Affairs Project Manager</span> <span class="exp-duration">(36 months)</span></div><ul class="bullet-list sub"><li class="bullet sub"><span class="dot">•</span><span>Coordination of Groupe BPCE&#x27;s strategic contributions to European digital regulation initiatives (EU AI Act, Digital Euro, EUDI Wallet, Data Act, PSD3, AI Trustworthy Guidelines).</span></li><li class="bullet sub"><span class="dot">•</span><span>Co-author of Groupe BPCE&#x27;s AI ethics charter in collaboration with the business lines.</span></li><li class="bullet sub"><span class="dot">•</span><span>Representation of Groupe BPCE in European professional associations (EBF, EACB, ESBG, MEDEF, FBF, AFEP).</span></li></ul></div>
+<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Top-tier European CIB</span> <span class="exp-sep">—</span> <span class="exp-role">AI Compliance Lead (consultant)</span> <span class="exp-duration">(8 months — ongoing)</span></div><ul class="bullet-list sub"><li class="bullet"><span class="dot">•</span><span>Finalisation and rollout of the AI risk governance framework: internal policies, risk mapping, committee design, coordination of support and business functions.</span></li><li class="bullet"><span class="dot">•</span><span>Operational pilot of AI governance: identification, assessment, prioritisation, validation and remediation of AI systems.</span></li><li class="bullet"><span class="dot">•</span><span>Contribution to the international rollout across 40+ entities, including USA, UK, APAC and MEA.</span></li></ul></div>
+<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Sia Partners</span> <span class="exp-sep">—</span> <span class="exp-role">Associate Manager</span> <span class="exp-duration">(10 months — ongoing)</span></div><ul class="bullet-list sub"><li class="bullet"><span class="dot">•</span><span>Head of the AI Risk Management offering: RFP coordination, strategic and regulatory watch, business development and financial-ecosystem animation.</span></li><li class="bullet"><span class="dot">•</span><span>Lead of the AI working group at Paris Europlace association (40+ senior financial-sector representatives): position papers, EU consultation responses, benchmarks.</span></li></ul></div>
+<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Groupe BPCE</span> <span class="exp-sep">—</span> <span class="exp-role">Group EU AI Act Project Manager</span> <span class="exp-duration">(18 months)</span></div><ul class="bullet-list sub"><li class="bullet"><span class="dot">•</span><span>Lead of the EU AI Act compliance programme for Groupe BPCE and its entities (Natixis, Oney, BRED, etc.): AI risk mapping and assessment, definition of Group policy and standards, operational process evolution, steering-committee animation.</span></li><li class="bullet"><span class="dot">•</span><span>Coordination and support of 35+ local decision-makers (DPO, Chief Compliance Officer, CDO, etc.) in deploying the Group framework.</span></li><li class="bullet"><span class="dot">•</span><span>Strategic advisory to executives and business lines on interpreting and applying regulatory requirements for AI systems.</span></li></ul></div>
+<div class="experience"><div class="exp-header"><span class="exp-marker">▸</span><span class="exp-employer">Oney / Oneytrust</span> <span class="exp-sep">—</span> <span class="exp-role">Expert Leader — Digital &amp; AI Compliance Officer</span> <span class="exp-duration">(38 months)</span></div><ul class="bullet-list sub"><li class="bullet"><span class="dot">•</span><span>Built the AI risk governance framework with the Chief Data Officer: systems inventory, training of business reference owners, EU AI Act compliance pilot across 10+ international entities.</span></li><li class="bullet"><span class="dot">•</span><span>Group GenAI tools ambassador to 3,000 Oney employees.</span></li><li class="bullet"><span class="dot">•</span><span>Pilot of Oneytrust&#x27;s GDPR activities: DPIA drafting and updates, contractual clauses, training, GDPR controls, privacy-by-design referent on anti-fraud projects.</span></li></ul></div>
 <h3 class="section">MAIN REFERENCES</h3>
 <p class="references">Groupe BPCE, Natixis, Oney, Sia Partners, Paris Europlace</p>
 <h3 class="section">ENGAGEMENTS &amp; ACHIEVEMENTS</h3>
