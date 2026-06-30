@@ -354,7 +354,7 @@ body {{
 }}
 .content-header h1 {{
   margin: 0;
-  padding-right: 130px;        /* reserve top-right space for the logo */
+  padding-right: 90px;         /* reserve top-right space for the logo */
   font-size: 30px;
   font-weight: 700;
   color: var(--white);
@@ -363,9 +363,9 @@ body {{
 }}
 .logo {{
   position: absolute;
-  top: 20px;
-  right: 28px;
-  height: 88px;                /* visual mass = initials block */
+  top: 22px;
+  right: 22px;
+  height: 50px;                /* compact, aligned on title */
   width: auto;
   z-index: 2;
   pointer-events: none;
