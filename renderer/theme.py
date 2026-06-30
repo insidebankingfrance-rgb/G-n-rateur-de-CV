@@ -71,14 +71,14 @@ HEADER_H        = Emu(1100000)        # ~1.20"
 FOOTER_H        = Emu(280000)         # ~0.31"
 
 # Logo (top-right corner) — calé sur l'exemple manuel du client :
-# petit, en haut à droite, hauteur ≈ celle du titre (pas des initiales).
+# petit, à hauteur du titre, ancré quasi au coin supérieur droit.
+# Le PNG embarqué est croppé à son bbox de contenu (aspect 3.1:1).
 LOGO_FILENAME   = "inside_circle_logo.png"
-LOGO_H          = Emu(530000)         # ~0.58" — compact, aligné sur le titre
-LOGO_TOP        = Emu(230000)         # ~0.25"
-LOGO_RIGHT_PAD  = Emu(200000)         # ~0.22"
-# Horizontal space reserved for the logo so the title doesn't collide.
-# Assumes the logo is roughly square (worst case ≈ LOGO_H wide).
-LOGO_RESERVE_W  = LOGO_H + LOGO_RIGHT_PAD + Emu(150000)
+LOGO_H          = Emu(420000)         # ~0.46" — compact, à hauteur du titre
+LOGO_TOP        = Emu(130000)         # ~0.14" — quasi flush avec le haut
+LOGO_RIGHT_PAD  = Emu(230000)         # ~0.25"
+# Logo réel aspect 3.1 → largeur ≈ 1.42" pour une hauteur de 0.46".
+LOGO_RESERVE_W  = Emu(1700000)        # ~1.86" — reserve incluant le padding
 
 CONTENT_TOP     = HEADER_H + Emu(50000)
 CONTENT_BOTTOM  = SLIDE_H - FOOTER_H
