@@ -30,10 +30,8 @@ from theme import (
 
 
 # ─── Tokens (mirror theme.py) ────────────────────────────────────────────────
-NAVY_DEEP   = "#07227A"
 NAVY_SIDEBAR = "#061A5E"
 CYAN_ACC    = "#3AEDE5"
-CYAN_SOFT   = "#1FCBD9"
 WHITE       = "#FFFFFF"
 WHITE_SOFT  = "#CCD6E8"
 
@@ -312,10 +310,8 @@ def _render_slide(cv: dict, lang: str, logo_uri: str | None) -> str:
 
 PAGE_CSS = f"""
 :root {{
-  --navy-deep: {NAVY_DEEP};
   --navy-sidebar: {NAVY_SIDEBAR};
   --cyan-acc: {CYAN_ACC};
-  --cyan-soft: {CYAN_SOFT};
   --white: {WHITE};
   --white-soft: {WHITE_SOFT};
   --body-font: "Alegreya Sans", -apple-system, BlinkMacSystemFont,
@@ -351,16 +347,13 @@ body {{
   padding-left: 4px;
 }}
 
-/* The slide. 16:9 box. Gradient holds navy until ~85% then transitions to
-   cyan only in the bottom-right corner — matches Inside Circle template. */
+/* The slide. 16:9 box. Fond uniforme navy ; séparateur cyan vertical
+   matérialise la frontière sidebar / main column. */
 .slide {{
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg,
-    var(--navy-deep) 0%,
-    var(--navy-deep) 85%,
-    var(--cyan-soft) 100%);
+  background: var(--navy-sidebar);
   color: var(--white);
   display: grid;
   grid-template-columns: 35.2% 64.8%;
@@ -369,11 +362,11 @@ body {{
   box-shadow: 0 12px 38px rgba(8, 18, 60, 0.20);
 }}
 .sidebar {{
-  background: var(--navy-sidebar);
   padding: 22px 22px 30px;
   display: flex;
   flex-direction: column;
   position: relative;
+  border-right: 1.5px solid var(--cyan-acc);
 }}
 .header-initials {{
   font-size: 64px;
@@ -472,7 +465,7 @@ body {{
 .confidential {{
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: var(--navy-sidebar);
+  background: var(--navy-sidebar);  /* masks any textbox overflow */
   text-align: center;
   font-size: 11px;
   color: var(--white-soft);

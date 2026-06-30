@@ -14,17 +14,12 @@ SLIDE_H = Emu(6858000)   # 7.5"
 
 
 # ─── Colors ──────────────────────────────────────────────────────────────────
-# Gradient — calibré sur le slide tarification Inside Circle :
-# le fond reste NAVY_DEEP sur ~85 % de la diagonale, puis bascule
-# vers CYAN_SOFT uniquement dans le coin bas-droite. Le navy a été assombri
-# pour garantir le contraste avec le texte blanc.
-NAVY_DEEP     = RGBColor(0x07, 0x22, 0x7A)   # top-left, bleu royal profond
-CYAN_SOFT     = RGBColor(0x1F, 0xCB, 0xD9)   # bottom-right, cyan turquoise
+# Fond uniforme bleu foncé sur tout le slide (le gradient cyan a été retiré
+# pour maximiser le contraste du texte blanc). Le séparateur vertical en cyan
+# marque visuellement la frontière sidebar / colonne principale.
+NAVY_SIDEBAR  = RGBColor(0x06, 0x1A, 0x5E)   # fond uniforme du slide
 
-# Sidebar — un cran plus sombre pour la lisibilité du texte clair
-NAVY_SIDEBAR  = RGBColor(0x06, 0x1A, 0x5E)
-
-# Cyan d'accent — titres, KPI, initiales, puces
+# Cyan d'accent — titres, KPI, initiales, puces, séparateur
 CYAN_ACCENT   = RGBColor(0x3A, 0xED, 0xE5)
 
 # Texte
@@ -32,19 +27,12 @@ WHITE         = RGBColor(0xFF, 0xFF, 0xFF)
 WHITE_SOFT    = RGBColor(0xCC, 0xD6, 0xE8)
 
 
-# Hex (for XML gradient + HTML preview parity)
-NAVY_DEEP_HEX    = "07227A"
+# Hex pour la parité HTML preview
 NAVY_SIDEBAR_HEX = "061A5E"
-CYAN_SOFT_HEX    = "1FCBD9"
 CYAN_ACCENT_HEX  = "3AEDE5"
 
-# Gradient stops (positions in 0-100000) — navy holds until 85 %, cyan only
-# in the bottom-right corner. Mirrors the Inside Circle template feel.
-GRADIENT_STOPS = [
-    (0,      NAVY_DEEP_HEX),
-    (85000,  NAVY_DEEP_HEX),
-    (100000, CYAN_SOFT_HEX),
-]
+# Séparateur vertical entre sidebar et main (largeur EMU + couleur cyan).
+SEPARATOR_W   = Emu(15000)   # ~0.016" — trait fin
 
 
 # ─── Font ────────────────────────────────────────────────────────────────────

@@ -19,12 +19,10 @@ import sys
 from pathlib import Path
 from typing import Iterable
 
-from lxml import etree
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import PP_ALIGN
-from pptx.oxml.ns import qn
 from pptx.util import Emu, Pt
 
 from theme import (
@@ -41,7 +39,6 @@ from theme import (
     FS_INITIALS,
     FS_SECTION,
     FS_TITLE,
-    GRADIENT_STOPS,
     HEADER_H,
     LOGO_FILENAME,
     LOGO_H,
@@ -59,6 +56,7 @@ from theme import (
     MAX_HOBBIES,
     MAX_SUMMARY_CHARS,
     NAVY_SIDEBAR,
+    SEPARATOR_W,
     SIDEBAR_W,
     SLIDE_H,
     SLIDE_W,
@@ -74,29 +72,6 @@ _warnings: list[str] = []
 def _warn(msg: str) -> None:
     _warnings.append(msg)
     print(f"  ⚠ {msg}", file=sys.stderr)
-
-
-# ─── XML helpers (gradient + min-font check) ─────────────────────────────────
-def _apply_diagonal_gradient(shape, stops: list[tuple[int, str]]) -> None:
-    """Diagonal gradient TL→BR (45°) with arbitrary stops (pos in 0..100000)."""
-    spPr = shape.fill._xPr
-    for tag in ("a:noFill", "a:solidFill", "a:gradFill", "a:blipFill",
-                "a:pattFill"):
-        existing = spPr.find(qn(tag))
-        if existing is not None:
-            spPr.remove(existing)
-    gs_xml = "".join(
-        f'<a:gs pos="{pos}"><a:srgbClr val="{hexv}"/></a:gs>'
-        for pos, hexv in stops
-    )
-    grad_xml = (
-        '<a:gradFill xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"'
-        ' flip="none" rotWithShape="1">'
-        f'<a:gsLst>{gs_xml}</a:gsLst>'
-        '<a:lin ang="2700000" scaled="0"/>'
-        '</a:gradFill>'
-    )
-    spPr.append(etree.fromstring(grad_xml))
 
 
 def _check_min_font(size, where: str) -> None:
@@ -358,22 +333,18 @@ def _adaptive_sidebar_trim(payload: dict, who: str) -> dict:
 
 # ─── Slide builders ──────────────────────────────────────────────────────────
 def _build_background(slide):
-    """Slide-wide diagonal gradient. Stops defined in theme.GRADIENT_STOPS so
-    the cyan ne soit présent que dans le coin bas-droite (cf. template)."""
-    bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, SLIDE_W, SLIDE_H)
-    bg.line.fill.background()
-    bg.shadow.inherit = False
-    _apply_diagonal_gradient(bg, GRADIENT_STOPS)
+    """Fond uniforme NAVY_SIDEBAR sur tout le slide."""
+    _add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, NAVY_SIDEBAR)
 
 
-def _build_sidebar(slide):
-    """Solid sidebar panel — readability of light text against the gradient."""
-    _add_rect(slide, 0, 0, SIDEBAR_W, SLIDE_H, NAVY_SIDEBAR)
+def _build_separator(slide):
+    """Trait cyan vertical entre la sidebar et la main column."""
+    _add_rect(slide, SIDEBAR_W, 0, SEPARATOR_W, SLIDE_H, CYAN_ACCENT)
 
 
-def _build_footer_band(slide):
-    """Solid navy band across the bottom — hosts the confidentiality footer
-    on a uniform background (avoids the footer crossing two colors)."""
+def _build_footer_mask(slide):
+    """Bandeau navy plein-largeur au-dessus du footer pour masquer
+    tout débordement de textbox dans la zone du bas."""
     _add_rect(slide, 0, SLIDE_H - FOOTER_H, SLIDE_W, FOOTER_H, NAVY_SIDEBAR)
 
 
@@ -574,9 +545,10 @@ def _build_main_content(slide, cv: dict, lang: str):
 def _build_slide(prs: Presentation, cv: dict, lang: str, logo: Path | None):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     _build_background(slide)
-    _build_sidebar(slide)
-    _build_footer_band(slide)
+    _build_separator(slide)
     _build_logo(slide, logo)
+    # Le bandeau footer doit être posé EN DERNIER (z-order top) pour masquer
+    # un éventuel débordement de textbox dans le bas du slide.
 
     initials = cv.get("initials") or initials_from_name(
         cv.get("first_name", ""), cv.get("last_name", "")
@@ -591,6 +563,8 @@ def _build_slide(prs: Presentation, cv: dict, lang: str, logo: Path | None):
     _build_sidebar_content(slide, payload, lang)
     _build_main_content(slide, payload, lang)
 
+    # Bandeau masque + texte footer en dernier (z-order top).
+    _build_footer_mask(slide)
     _build_footer(slide, lang)
 
 

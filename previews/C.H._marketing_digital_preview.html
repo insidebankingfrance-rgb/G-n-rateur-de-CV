@@ -3,10 +3,8 @@
 <meta name="description" content="Aperçu visuel du CV harmonisé Inside Circle (FR + EN).">
 <style>
 :root {
-  --navy-deep: #07227A;
   --navy-sidebar: #061A5E;
   --cyan-acc: #3AEDE5;
-  --cyan-soft: #1FCBD9;
   --white: #FFFFFF;
   --white-soft: #CCD6E8;
   --body-font: "Alegreya Sans", -apple-system, BlinkMacSystemFont,
@@ -42,16 +40,13 @@ body {
   padding-left: 4px;
 }
 
-/* The slide. 16:9 box. Gradient holds navy until ~85% then transitions to
-   cyan only in the bottom-right corner — matches Inside Circle template. */
+/* The slide. 16:9 box. Fond uniforme navy ; séparateur cyan vertical
+   matérialise la frontière sidebar / main column. */
 .slide {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg,
-    var(--navy-deep) 0%,
-    var(--navy-deep) 85%,
-    var(--cyan-soft) 100%);
+  background: var(--navy-sidebar);
   color: var(--white);
   display: grid;
   grid-template-columns: 35.2% 64.8%;
@@ -60,11 +55,11 @@ body {
   box-shadow: 0 12px 38px rgba(8, 18, 60, 0.20);
 }
 .sidebar {
-  background: var(--navy-sidebar);
   padding: 22px 22px 30px;
   display: flex;
   flex-direction: column;
   position: relative;
+  border-right: 1.5px solid var(--cyan-acc);
 }
 .header-initials {
   font-size: 64px;
@@ -163,7 +158,7 @@ body {
 .confidential {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: var(--navy-sidebar);
+  background: var(--navy-sidebar);  /* masks any textbox overflow */
   text-align: center;
   font-size: 11px;
   color: var(--white-soft);
