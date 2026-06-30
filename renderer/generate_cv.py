@@ -244,12 +244,12 @@ def _truncate_payload(payload: dict, who: str) -> dict:
 # from font sizes and wrap, and warn if we exceed the budget.
 
 # Char widths derived empirically for ~10pt Alegreya Sans / sans fallbacks.
-# CPL recalibrated on 10pt Alegreya Sans / sans-serif (real measured ~5.5 pt
-# average advance width, sidebar 35.2% × 13.33" = 4.7", main 64.8% × 13.33" = 8.6")
-_CPL_SIDEBAR_BODY  = 50   # chars per line in sidebar at 10pt
-_CPL_MAIN_BODY     = 95   # chars per line in main at 10pt
-_LINE_PT           = 12   # 10pt + 20% leading (PowerPoint compact spacing)
-_SECTION_PT        = 16
+# CPL recalibrated on 12pt Alegreya Sans / sans-serif. Sidebar 35.2% × 13.33"
+# = 4.7" → ~42 chars/line. Main 64.8% × 13.33" = 8.6" → ~80 chars/line.
+_CPL_SIDEBAR_BODY  = 42
+_CPL_MAIN_BODY     = 80
+_LINE_PT           = 14   # 12pt + ~17% leading
+_SECTION_PT        = 19
 _PARA_GAP_PT       = 1
 
 # EMU per pt = 12700
@@ -336,6 +336,12 @@ def _build_background(slide):
 def _build_sidebar(slide):
     """Solid sidebar panel — readability of light text against the gradient."""
     _add_rect(slide, 0, 0, SIDEBAR_W, SLIDE_H, NAVY_SIDEBAR)
+
+
+def _build_footer_band(slide):
+    """Solid navy band across the bottom — hosts the confidentiality footer
+    on a uniform background (avoids the footer crossing two colors)."""
+    _add_rect(slide, 0, SLIDE_H - FOOTER_H, SLIDE_W, FOOTER_H, NAVY_SIDEBAR)
 
 
 def _build_header(slide, initials: str, title: str, domain: str):
@@ -509,6 +515,7 @@ def _build_slide(prs: Presentation, cv: dict, lang: str):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     _build_background(slide)
     _build_sidebar(slide)
+    _build_footer_band(slide)
 
     initials = cv.get("initials") or initials_from_name(
         cv.get("first_name", ""), cv.get("last_name", "")

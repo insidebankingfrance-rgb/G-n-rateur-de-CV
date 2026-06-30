@@ -28,8 +28,8 @@ from theme import (
 
 
 # ─── Tokens (mirror theme.py) ────────────────────────────────────────────────
-NAVY_DEEP   = "#0C2A8E"
-NAVY_SIDEBAR = "#071F66"
+NAVY_DEEP   = "#07227A"
+NAVY_SIDEBAR = "#061A5E"
 CYAN_ACC    = "#3AEDE5"
 CYAN_SOFT   = "#1FCBD9"
 WHITE       = "#FFFFFF"
@@ -289,7 +289,7 @@ body {{
   padding-left: 4px;
 }}
 
-/* The slide. 16:9 box. Gradient holds navy until ~70% then transitions to
+/* The slide. 16:9 box. Gradient holds navy until ~85% then transitions to
    cyan only in the bottom-right corner — matches Inside Circle template. */
 .slide {{
   position: relative;
@@ -297,7 +297,7 @@ body {{
   aspect-ratio: 16 / 9;
   background: linear-gradient(135deg,
     var(--navy-deep) 0%,
-    var(--navy-deep) 70%,
+    var(--navy-deep) 85%,
     var(--cyan-soft) 100%);
   color: var(--white);
   display: grid;
@@ -308,13 +308,13 @@ body {{
 }}
 .sidebar {{
   background: var(--navy-sidebar);
-  padding: 22px 22px 16px;
+  padding: 22px 22px 30px;
   display: flex;
   flex-direction: column;
   position: relative;
 }}
 .header-initials {{
-  font-size: 60px;
+  font-size: 64px;
   font-weight: 800;
   color: var(--cyan-acc);
   letter-spacing: 0.02em;
@@ -322,13 +322,13 @@ body {{
   margin-bottom: 16px;
 }}
 .sidebar-inner {{
-  font-size: 13px;          /* ≥ PPT 10pt visually */
-  line-height: 1.4;
+  font-size: 15.5px;        /* ≥ PPT 12pt visually */
+  line-height: 1.35;
 }}
 .sidebar-inner h3 {{ margin: 12px 0 4px; }}
 .sidebar-inner h3:first-child {{ margin-top: 0; }}
 .content {{
-  padding: 22px 28px 18px;
+  padding: 22px 28px 30px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -336,7 +336,7 @@ body {{
 }}
 .content-header h1 {{
   margin: 0;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--white);
   letter-spacing: 0.01em;
@@ -346,17 +346,17 @@ body {{
   margin-top: 2px;
   color: var(--cyan-acc);
   font-style: italic;
-  font-size: 16px;
+  font-size: 18px;
 }}
 .content-inner {{
   margin-top: 10px;
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 15.5px;
+  line-height: 1.35;
   flex: 1;
   min-height: 0;
 }}
 .section {{
-  font-size: 12.5px;
+  font-size: 14.5px;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--cyan-acc);
@@ -381,12 +381,12 @@ body {{
 .summary {{ margin: 0 0 4px; }}
 .experience {{ margin-top: 6px; }}
 .experience:first-child {{ margin-top: 0; }}
-.exp-header {{ font-size: 13px; }}
+.exp-header {{ font-size: 15.5px; }}
 .exp-marker {{ color: var(--cyan-acc); font-weight: 700; margin-right: 4px; }}
 .exp-employer {{ font-weight: 700; }}
 .exp-sep {{ color: var(--white-soft); }}
 .exp-duration {{
-  color: var(--cyan-acc); font-style: italic; font-size: 11.5px;
+  color: var(--cyan-acc); font-style: italic; font-size: 14px;
   margin-left: 4px;
 }}
 .references {{ margin: 0; font-style: italic; color: var(--white-soft); }}
@@ -396,16 +396,17 @@ body {{
 .edu-line {{ }}
 .edu-year {{ color: var(--cyan-acc); font-weight: 700; margin-right: 4px; }}
 .edu-school {{ font-weight: 700; }}
-.edu-degree {{ color: var(--white-soft); font-style: italic; font-size: 12px; }}
+.edu-degree {{ color: var(--white-soft); font-style: italic; font-size: 14.5px; }}
 .confidential {{
   position: absolute;
-  bottom: 6px; left: 0; right: 0;
+  bottom: 0; left: 0; right: 0;
+  background: var(--navy-sidebar);
   text-align: center;
-  font-size: 9.5px;
+  font-size: 11px;
   color: var(--white-soft);
   font-style: italic;
-  padding: 0 28px;
-  z-index: 2;
+  padding: 6px 28px;
+  z-index: 3;
 }}
 @media (max-width: 900px) {{
   .slide {{ font-size: 0.92em; }}

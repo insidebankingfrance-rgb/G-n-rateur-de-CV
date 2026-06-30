@@ -15,13 +15,14 @@ SLIDE_H = Emu(6858000)   # 7.5"
 
 # ─── Colors ──────────────────────────────────────────────────────────────────
 # Gradient — calibré sur le slide tarification Inside Circle :
-# le fond reste NAVY_DEEP sur ~70 % de la diagonale, puis bascule
-# vers CYAN_SOFT uniquement dans le coin bas-droite.
-NAVY_DEEP     = RGBColor(0x0C, 0x2A, 0x8E)   # top-left, bleu royal profond
+# le fond reste NAVY_DEEP sur ~85 % de la diagonale, puis bascule
+# vers CYAN_SOFT uniquement dans le coin bas-droite. Le navy a été assombri
+# pour garantir le contraste avec le texte blanc.
+NAVY_DEEP     = RGBColor(0x07, 0x22, 0x7A)   # top-left, bleu royal profond
 CYAN_SOFT     = RGBColor(0x1F, 0xCB, 0xD9)   # bottom-right, cyan turquoise
 
 # Sidebar — un cran plus sombre pour la lisibilité du texte clair
-NAVY_SIDEBAR  = RGBColor(0x07, 0x1F, 0x66)
+NAVY_SIDEBAR  = RGBColor(0x06, 0x1A, 0x5E)
 
 # Cyan d'accent — titres, KPI, initiales, puces
 CYAN_ACCENT   = RGBColor(0x3A, 0xED, 0xE5)
@@ -32,15 +33,16 @@ WHITE_SOFT    = RGBColor(0xCC, 0xD6, 0xE8)
 
 
 # Hex (for XML gradient + HTML preview parity)
-NAVY_DEEP_HEX    = "0C2A8E"
-NAVY_SIDEBAR_HEX = "071F66"
+NAVY_DEEP_HEX    = "07227A"
+NAVY_SIDEBAR_HEX = "061A5E"
 CYAN_SOFT_HEX    = "1FCBD9"
 CYAN_ACCENT_HEX  = "3AEDE5"
 
-# Gradient stops (positions in 0-100000) — mostly navy, cyan corner only.
+# Gradient stops (positions in 0-100000) — navy holds until 85 %, cyan only
+# in the bottom-right corner. Mirrors the Inside Circle template feel.
 GRADIENT_STOPS = [
     (0,      NAVY_DEEP_HEX),
-    (70000,  NAVY_DEEP_HEX),   # hold navy until ~70% diagonal
+    (85000,  NAVY_DEEP_HEX),
     (100000, CYAN_SOFT_HEX),
 ]
 
@@ -50,16 +52,16 @@ FONT_FAMILY = "Alegreya Sans"
 
 
 # ─── Type scale ──────────────────────────────────────────────────────────────
-# Règle : aucune typo de contenu en-dessous de 10pt.
-FS_INITIALS    = Pt(44)   # X.X. dans le header
-FS_TITLE       = Pt(20)   # poste principal
-FS_DOMAIN      = Pt(13)   # domaine d'expertise
-FS_SECTION     = Pt(11)   # titres de section
-FS_BODY        = Pt(10)   # corps de texte — plancher
-FS_BODY_SMALL  = Pt(10)   # même plancher : la hiérarchie passe par couleur/poids
-FS_FOOTER      = Pt(9)    # bandeau confidentialité (mention légale, exception)
+# Règle : aucune typo de contenu en-dessous de 12pt.
+FS_INITIALS    = Pt(48)   # X.X. dans le header
+FS_TITLE       = Pt(24)   # poste principal
+FS_DOMAIN      = Pt(15)   # domaine d'expertise
+FS_SECTION     = Pt(13)   # titres de section
+FS_BODY        = Pt(12)   # corps de texte — plancher
+FS_BODY_SMALL  = Pt(12)   # même plancher
+FS_FOOTER      = Pt(10)   # bandeau confidentialité (mention légale, exception)
 
-FS_FLOOR       = Pt(10)   # plancher contrôlé par _check_min_font()
+FS_FLOOR       = Pt(12)   # plancher contrôlé par _check_min_font()
 
 
 # ─── Layout (en EMU — 914400 = 1 pouce) ──────────────────────────────────────
@@ -79,10 +81,10 @@ MAX_BULLETS_PER_EXP    = 2     # 2 bullets per experience to guarantee 1 page
 MAX_EXPERTISE          = 5
 MAX_HOBBIES            = 4
 MAX_ENGAGEMENTS        = 3
-MAX_SUMMARY_CHARS      = 220
-MAX_BULLET_CHARS       = 160   # achievement bullet — trim with ellipsis above
-MAX_ENGAGEMENT_DESC_CHARS = 40 # engagement description — short tag only
-MAX_DEGREE_CHARS       = 45    # education degree line (single sidebar line)
+MAX_SUMMARY_CHARS      = 200
+MAX_BULLET_CHARS       = 140   # achievement bullet — trim with ellipsis above
+MAX_ENGAGEMENT_DESC_CHARS = 35 # engagement description — short tag only
+MAX_DEGREE_CHARS       = 40    # education degree line (single sidebar line)
 
 
 # ─── Confidentiality footer text ─────────────────────────────────────────────
