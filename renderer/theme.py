@@ -70,6 +70,15 @@ SIDEBAR_W       = Emu(4300000)        # ~4.70" (35.2% — wider to host engageme
 HEADER_H        = Emu(1100000)        # ~1.20"
 FOOTER_H        = Emu(280000)         # ~0.31"
 
+# Logo (top-right corner) — file at assets/inside_circle_logo.png is optional.
+LOGO_FILENAME   = "inside_circle_logo.png"
+LOGO_H          = Emu(900000)         # ~0.98" — visual mass = initials block
+LOGO_TOP        = Emu(200000)         # ~0.22"
+LOGO_RIGHT_PAD  = Emu(280000)         # ~0.31"
+# Horizontal space reserved for the logo so the title doesn't collide.
+# Assumes the logo is roughly square (worst case ≈ LOGO_H wide).
+LOGO_RESERVE_W  = LOGO_H + LOGO_RIGHT_PAD + Emu(150000)
+
 CONTENT_TOP     = HEADER_H + Emu(50000)
 CONTENT_BOTTOM  = SLIDE_H - FOOTER_H
 

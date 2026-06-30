@@ -11,11 +11,13 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import base64
 import html
 import json
 from pathlib import Path
 
 from theme import (
+    LOGO_FILENAME,
     MAX_BULLETS_PER_EXP,
     MAX_DEGREE_CHARS,
     MAX_ENGAGEMENT_DESC_CHARS,
@@ -220,12 +222,27 @@ def _render_main(payload, labels) -> str:
     return "\n".join(parts)
 
 
-def _render_slide(cv: dict, lang: str) -> str:
+def _logo_data_uri() -> str | None:
+    """Locate assets/inside_circle_logo.png and embed as base64 data URI."""
+    here = Path(__file__).resolve().parent
+    path = here.parent / "assets" / LOGO_FILENAME
+    if not path.is_file():
+        return None
+    data = base64.b64encode(path.read_bytes()).decode("ascii")
+    return f"data:image/png;base64,{data}"
+
+
+def _render_slide(cv: dict, lang: str, logo_uri: str | None) -> str:
     labels = SECTION_LABELS[lang]
     initials = _esc(cv.get("initials", ""))
     title = _esc(cv.get(f"title_{lang}") or cv.get("title", ""))
     domain = _esc(cv.get(f"domain_{lang}") or cv.get("domain", ""))
     payload = _truncate(cv.get(lang, cv))
+
+    logo_html = (
+        f'<img class="logo" src="{logo_uri}" alt="Inside Circle">'
+        if logo_uri else ""
+    )
 
     return f"""
 <section class="slide-wrap" aria-label="{labels['lang_tag']}">
@@ -242,6 +259,7 @@ def _render_slide(cv: dict, lang: str) -> str:
       </header>
       <div class="content-inner">{_render_main(payload, labels)}</div>
     </main>
+    {logo_html}
     <footer class="confidential">{_esc(labels['footer'])}</footer>
   </article>
 </section>
@@ -336,11 +354,21 @@ body {{
 }}
 .content-header h1 {{
   margin: 0;
+  padding-right: 130px;        /* reserve top-right space for the logo */
   font-size: 30px;
   font-weight: 700;
   color: var(--white);
   letter-spacing: 0.01em;
   text-wrap: balance;
+}}
+.logo {{
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  height: 88px;                /* visual mass = initials block */
+  width: auto;
+  z-index: 2;
+  pointer-events: none;
 }}
 .content-header .domain {{
   margin-top: 2px;
@@ -418,8 +446,9 @@ body {{
 
 def render_html(cv: dict) -> str:
     initials = cv.get("initials", "CV")
-    fr = _render_slide(cv, "fr")
-    en = _render_slide(cv, "en")
+    logo_uri = _logo_data_uri()
+    fr = _render_slide(cv, "fr", logo_uri)
+    en = _render_slide(cv, "en", logo_uri)
 
     return f"""<meta charset="utf-8">
 <title>CV {html.escape(initials)} — Aperçu Inside Circle</title>

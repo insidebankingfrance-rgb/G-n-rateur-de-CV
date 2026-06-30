@@ -43,6 +43,11 @@ from theme import (
     FS_TITLE,
     GRADIENT_STOPS,
     HEADER_H,
+    LOGO_FILENAME,
+    LOGO_H,
+    LOGO_RESERVE_W,
+    LOGO_RIGHT_PAD,
+    LOGO_TOP,
     MARGIN,
     MAX_BULLET_CHARS,
     MAX_BULLETS_PER_EXP,
@@ -344,6 +349,33 @@ def _build_footer_band(slide):
     _add_rect(slide, 0, SLIDE_H - FOOTER_H, SLIDE_W, FOOTER_H, NAVY_SIDEBAR)
 
 
+def _build_logo(slide, logo_path: Path | None):
+    """Place the Inside Circle logo in the top-right corner of the slide.
+    Silently no-op if the file is missing. The image is resized to LOGO_H
+    keeping its native aspect ratio (so logos of any aspect work)."""
+    if logo_path is None or not logo_path.is_file():
+        return
+    try:
+        from PIL import Image
+        with Image.open(logo_path) as im:
+            w, h = im.size
+    except Exception:
+        # No PIL or unreadable — fall back to assumed square
+        w = h = 1
+    aspect = w / h if h else 1.0
+    logo_w = int(LOGO_H * aspect)
+    left = SLIDE_W - LOGO_RIGHT_PAD - logo_w
+    slide.shapes.add_picture(str(logo_path), left, LOGO_TOP,
+                             width=logo_w, height=LOGO_H)
+
+
+def _resolve_logo() -> Path | None:
+    """Locate assets/inside_circle_logo.png relative to the repo root."""
+    here = Path(__file__).resolve().parent
+    candidate = here.parent / "assets" / LOGO_FILENAME
+    return candidate if candidate.is_file() else None
+
+
 def _build_header(slide, initials: str, title: str, domain: str):
     # Initiales dans la sidebar
     tb, tf = _add_textbox(
@@ -355,11 +387,11 @@ def _build_header(slide, initials: str, title: str, domain: str):
     p.alignment = PP_ALIGN.LEFT
     _run(p, initials, bold=True, size=FS_INITIALS, color=CYAN_ACCENT)
 
-    # Titre + domaine
+    # Titre + domaine — width réduit pour laisser la place au logo top-right
     tb, tf = _add_textbox(
         slide,
         SIDEBAR_W + MARGIN, Emu(300000),
-        SLIDE_W - SIDEBAR_W - 2 * MARGIN, Emu(800000),
+        SLIDE_W - SIDEBAR_W - MARGIN - LOGO_RESERVE_W, Emu(800000),
     )
     p = tf.paragraphs[0]
     _run(p, title or "", bold=True, size=FS_TITLE, color=WHITE)
@@ -511,11 +543,12 @@ def _build_main_content(slide, cv: dict, lang: str):
 
 
 # ─── Top-level render ────────────────────────────────────────────────────────
-def _build_slide(prs: Presentation, cv: dict, lang: str):
+def _build_slide(prs: Presentation, cv: dict, lang: str, logo: Path | None):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     _build_background(slide)
     _build_sidebar(slide)
     _build_footer_band(slide)
+    _build_logo(slide, logo)
 
     initials = cv.get("initials") or initials_from_name(
         cv.get("first_name", ""), cv.get("last_name", "")
@@ -537,8 +570,9 @@ def render(cv_json: dict, out_path: Path) -> Path:
     prs.slide_width = SLIDE_W
     prs.slide_height = SLIDE_H
 
-    _build_slide(prs, cv_json, "fr")
-    _build_slide(prs, cv_json, "en")
+    logo = _resolve_logo()
+    _build_slide(prs, cv_json, "fr", logo)
+    _build_slide(prs, cv_json, "en", logo)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     prs.save(out_path)
