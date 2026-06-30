@@ -259,7 +259,7 @@ _PARA_GAP_PT       = 1
 
 # EMU per pt = 12700
 _AVAIL_PT_MAIN    = (SLIDE_H - HEADER_H - FOOTER_H - 160000) / 12700
-_AVAIL_PT_SIDEBAR = _AVAIL_PT_MAIN - 70  # initials block (~0.83") eats the top
+_AVAIL_PT_SIDEBAR = _AVAIL_PT_MAIN - 40  # initials block (~0.5") eats the top
 
 
 def _wrapped_lines(text: str, cpl: int) -> int:
@@ -326,6 +326,34 @@ def _check_overflow(payload: dict, who: str) -> None:
     if side_pt > _AVAIL_PT_SIDEBAR:
         _warn(f"{who}: sidebar estimated {side_pt:.0f}pt > "
               f"budget {_AVAIL_PT_SIDEBAR:.0f}pt — risque de débordement")
+
+
+def _adaptive_sidebar_trim(payload: dict, who: str) -> dict:
+    """When sidebar overflow is predicted, drop content by descending priority:
+    hobbies first, then engagement descriptions, then engagements entirely.
+    Expertise / languages / education are kept untouched."""
+    payload = dict(payload)
+    if _estimate_sidebar_pt(payload) <= _AVAIL_PT_SIDEBAR:
+        return payload
+    if payload.get("hobbies"):
+        _warn(f"{who}: hobbies dropped to keep sidebar in 1 page")
+        payload["hobbies"] = []
+    if _estimate_sidebar_pt(payload) <= _AVAIL_PT_SIDEBAR:
+        return payload
+    if payload.get("engagements"):
+        new = []
+        for e in payload["engagements"]:
+            if isinstance(e, dict):
+                e = {**e, "description": ""}
+            new.append(e)
+        payload["engagements"] = new
+        _warn(f"{who}: engagement descriptions dropped to keep sidebar in 1 page")
+    if _estimate_sidebar_pt(payload) <= _AVAIL_PT_SIDEBAR:
+        return payload
+    if payload.get("engagements"):
+        payload["engagements"] = payload["engagements"][:2]
+        _warn(f"{who}: engagements capped to 2 to keep sidebar in 1 page")
+    return payload
 
 
 # ─── Slide builders ──────────────────────────────────────────────────────────
@@ -558,6 +586,7 @@ def _build_slide(prs: Presentation, cv: dict, lang: str, logo: Path | None):
     _build_header(slide, initials, title, domain)
 
     payload = _truncate_payload(cv.get(lang, cv), f"{initials} [{lang}]")
+    payload = _adaptive_sidebar_trim(payload, f"{initials} [{lang}]")
     _check_overflow(payload, f"{initials} [{lang}]")
     _build_sidebar_content(slide, payload, lang)
     _build_main_content(slide, payload, lang)

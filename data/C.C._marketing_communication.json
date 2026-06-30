@@ -1,0 +1,140 @@
+{
+  "initials": "C.C.",
+  "first_name": "Célia",
+  "last_name": "Corvisier",
+
+  "title_fr": "Chargée de Communication & Marketing",
+  "title_en": "Communication & Marketing Officer",
+  "domain_fr": "Communication & Marketing — Alternance Sept. 2026",
+  "domain_en": "Communication & Marketing — Work-study Sept. 2026",
+
+  "fr": {
+    "summary": "Curieuse, créative et dotée d'un esprit analytique, je prépare ma dernière année de Master en Communication & Marketing. Mon objectif : rejoindre une équipe ambitieuse où je pourrai transformer les idées en actions concrètes.",
+    "expertise": [
+      "Stratégie de communication",
+      "Organisation & gestion de projet",
+      "Réseaux sociaux",
+      "Création de vidéo & montage",
+      "Coordination d'équipe"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Intermédiaire" }
+    ],
+    "education": [
+      { "year": "2025",          "school": "INSEEC (Paris 15e)",        "degree": "M1 Marketing & Communication" },
+      { "year": "2023 — 2025",   "school": "ESGCI (Paris 11e)",         "degree": "Bachelor 3 Com événementielle & Digital" },
+      { "year": "2022 — 2023",   "school": "UPEC (Créteil)",            "degree": "DEUST 1 Bureautique & Com Multimédia" }
+    ],
+    "experiences": [
+      {
+        "employer": "Leroy Merlin",
+        "role": "Community Manager — alternance",
+        "duration": "Sept. 2025 — Actuel",
+        "achievements": [
+          "Animation et modération des communautés ; création et diffusion de contenus engageants (posts, vidéos, stories).",
+          "Gestion de la e-réputation et de la relation client en ligne ; reporting des actions social media."
+        ]
+      },
+      {
+        "employer": "Technema",
+        "role": "Marketing & Communication interne/externe — alternance",
+        "duration": "2024 — 2025",
+        "achievements": [
+          "Réactualisation en équipe de la base de données fiche client ; refonte des codes articles et familles dans l'ERP.",
+          "Plans de communication sur les thématiques produits (module CO2, coffre en ligne, services d'infogérance)."
+        ]
+      },
+      {
+        "employer": "Rêver d'Ailleurs",
+        "role": "Stage Communication — Événementiel",
+        "duration": "2024 — 4 mois",
+        "achievements": [
+          "Rédaction, planification, organisation et animation d'événements ; création de visuels et de contenus."
+        ]
+      },
+      {
+        "employer": "Athlon",
+        "role": "Stage Communication interne",
+        "duration": "2023 — 4 mois",
+        "achievements": [
+          "Rédaction du livret d'accueil de l'entreprise ; création de visuels et vidéos.",
+          "Recherches interne/externe sur des concepts modernes ; logique rédactionnelle entre thématiques."
+        ]
+      }
+    ],
+    "references": [],
+    "engagements": [],
+    "hobbies": [
+      "Voyage",
+      "Art",
+      "Lecture",
+      "Musique"
+    ]
+  },
+
+  "en": {
+    "summary": "Curious, creative and analytical, I am finishing my Master's in Communication & Marketing. My goal: join an ambitious team where I can turn ideas into concrete actions.",
+    "expertise": [
+      "Communication strategy",
+      "Project organisation & management",
+      "Social media",
+      "Video creation & editing",
+      "Team coordination"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Intermediate" }
+    ],
+    "education": [
+      { "year": "2025",        "school": "INSEEC (Paris 15e)", "degree": "M1 Marketing & Communication" },
+      { "year": "2023 — 2025", "school": "ESGCI (Paris 11e)",  "degree": "Bachelor 3 Event Com & Digital Marketing" },
+      { "year": "2022 — 2023", "school": "UPEC (Créteil)",     "degree": "DEUST 1 Office & Multimedia Com" }
+    ],
+    "experiences": [
+      {
+        "employer": "Leroy Merlin",
+        "role": "Community Manager — work-study",
+        "duration": "Sept. 2025 — present",
+        "achievements": [
+          "Community animation and moderation; creation and distribution of engaging content (posts, videos, stories).",
+          "E-reputation and online customer relations management; social-media performance reporting."
+        ]
+      },
+      {
+        "employer": "Technema",
+        "role": "Internal & External Marketing — work-study",
+        "duration": "2024 — 2025",
+        "achievements": [
+          "Team refresh of the client master data; redesign of product and family codes in the ERP.",
+          "Communication plans for product themes (CO2 module, online vault, IT-managed services)."
+        ]
+      },
+      {
+        "employer": "Rêver d'Ailleurs",
+        "role": "Communication intern — Events",
+        "duration": "2024 — 4 months",
+        "achievements": [
+          "Writing, planning, organising and hosting events; visual and content creation."
+        ]
+      },
+      {
+        "employer": "Athlon",
+        "role": "Internal Communication intern",
+        "duration": "2023 — 4 months",
+        "achievements": [
+          "Drafted the company welcome booklet; created visuals and videos.",
+          "Internal/external research on modern concepts; editorial logic across themes."
+        ]
+      }
+    ],
+    "references": [],
+    "engagements": [],
+    "hobbies": [
+      "Travel",
+      "Art",
+      "Reading",
+      "Music"
+    ]
+  }
+}

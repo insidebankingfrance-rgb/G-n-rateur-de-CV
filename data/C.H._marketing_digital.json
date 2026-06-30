@@ -1,0 +1,124 @@
+{
+  "initials": "C.H.",
+  "first_name": "Célia",
+  "last_name": "Hammar",
+
+  "title_fr": "Chargée de Création de contenu & Marketing Digital",
+  "title_en": "Content Creation & Digital Marketing Officer",
+  "domain_fr": "Marketing Digital — Création de contenu (alternance)",
+  "domain_en": "Digital Marketing — Content Creation (work-study)",
+
+  "fr": {
+    "summary": "",
+    "expertise": [
+      "Création de contenu (réseaux & web)",
+      "Marketing événementiel",
+      "Emailing & campagnes (Mailchimp)",
+      "CRM & relation client",
+      "Reporting (GA, Meta, Excel)"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Courant" },
+      { "name": "Anglais",  "level": "Courant" },
+      { "name": "Arabe",    "level": "Courant" }
+    ],
+    "education": [
+      { "year": "2024 — Présent", "school": "École de commerce INSEEC",          "degree": "Bachelor Resp. de Projet Marketing & Com" },
+      { "year": "Bac+3",          "school": "Université des Sciences & Technologies", "degree": "Recherche Opérationnelle" }
+    ],
+    "experiences": [
+      {
+        "employer": "Galerie Joseph (réseau de 30 espaces, Le Marais)",
+        "role": "Assistante chef de projet Communication / Event",
+        "duration": "Juin — Déc. 2025",
+        "achievements": [
+          "Création de contenus visuels et publications réseaux sociaux, site web, newsletters (Photoshop, Canva, Premiere Pro, Indesign).",
+          "Pilotage d'une campagne emailing Mailchimp : +100 % de fréquentation visiteurs et +60 % d'inscriptions vs édition précédente (1 300 vs 800)."
+        ]
+      },
+      {
+        "employer": "IPM (Groupe presse belge)",
+        "role": "Responsable des relations clients",
+        "duration": "Sept. 2023 — Août 2024",
+        "achievements": [
+          "Contribution à l'optimisation des outils et processus CRM (reporting, tableaux de bord).",
+          "Prise en charge et suivi des demandes clients en Front Office et Back Office (analyse, mise à jour, résolution)."
+        ]
+      },
+      {
+        "employer": "KOMNOW (agence de marketing digital)",
+        "role": "Commercial / Assistante Marketing",
+        "duration": "Janv. 2020 — Août 2023",
+        "achievements": [
+          "Prospection et analyse de marché ; élaboration des propositions commerciales ; suivi et fidélisation clients.",
+          "Création de supports de communication (flyers, visuels, newsletters, contenus digitaux) ; gestion des réseaux sociaux."
+        ]
+      }
+    ],
+    "references": [],
+    "engagements": [],
+    "hobbies": [
+      "Cinéma (Wong Kar-Wai)",
+      "Peinture & croquis",
+      "Mode",
+      "Natation (compétition régionale)"
+    ]
+  },
+
+  "en": {
+    "summary": "",
+    "expertise": [
+      "Content creation (social & web)",
+      "Event marketing",
+      "Emailing & campaigns (Mailchimp)",
+      "CRM & client relations",
+      "Reporting (GA, Meta, Excel)"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Fluent" },
+      { "name": "English", "level": "Fluent" },
+      { "name": "Arabic",  "level": "Fluent" }
+    ],
+    "education": [
+      { "year": "2024 — Present", "school": "INSEEC Business School",            "degree": "Bachelor Marketing & Communication PM" },
+      { "year": "BSc 3",          "school": "University of Sciences & Technology", "degree": "Operations Research" }
+    ],
+    "experiences": [
+      {
+        "employer": "Galerie Joseph (network of 30 venues, Le Marais)",
+        "role": "Communication / Event Project Assistant",
+        "duration": "June — Dec. 2025",
+        "achievements": [
+          "Created visual content and publications for social media, website and newsletters (Photoshop, Canva, Premiere Pro, Indesign).",
+          "Ran a Mailchimp emailing campaign: +100% visitor attendance and +60% registrations vs prior edition (1,300 vs 800)."
+        ]
+      },
+      {
+        "employer": "IPM (Belgian press group)",
+        "role": "Customer Relations Manager",
+        "duration": "Sept. 2023 — Aug. 2024",
+        "achievements": [
+          "Contributed to the optimisation of CRM tools and processes (reporting, dashboards).",
+          "Handled and followed up on Front-Office and Back-Office client requests (analysis, updates, resolution)."
+        ]
+      },
+      {
+        "employer": "KOMNOW (digital marketing agency)",
+        "role": "Sales / Marketing Assistant",
+        "duration": "Jan. 2020 — Aug. 2023",
+        "achievements": [
+          "Prospecting and market analysis; sales proposals; client follow-up and loyalty.",
+          "Created communication materials (flyers, visuals, newsletters, digital content); managed social media."
+        ]
+      }
+    ],
+    "references": [],
+    "engagements": [],
+    "hobbies": [
+      "Cinema (Wong Kar-Wai)",
+      "Painting & sketching",
+      "Fashion",
+      "Swimming (regional competition)"
+    ]
+  }
+}

@@ -70,6 +70,39 @@ def _esc(s) -> str:
     return html.escape(str(s) if s is not None else "")
 
 
+def _estimate_sidebar_pt_html(payload: dict) -> float:
+    """Lightweight mirror of the renderer's sidebar height estimator."""
+    line_pt, sec_pt, gap_pt, cpl = 14, 19, 1, 42
+    def wrap(s):
+        return max(1, (len(s) + cpl - 1) // cpl) if s else 0
+    pt = 0.0
+    if payload.get("expertise"):
+        pt += sec_pt + len(payload["expertise"]) * line_pt
+    if payload.get("languages"):
+        pt += sec_pt + len(payload["languages"]) * line_pt
+    if payload.get("education"):
+        pt += sec_pt
+        for e in payload["education"]:
+            year = (e.get("year", "") if isinstance(e, dict) else "")
+            school = (e.get("school", "") if isinstance(e, dict) else str(e))
+            degree = (e.get("degree", "") if isinstance(e, dict) else "")
+            pt += wrap(f"{year} {school}") * line_pt + wrap(degree) * line_pt
+    if payload.get("hobbies"):
+        pt += sec_pt + sum(wrap(h) for h in payload["hobbies"]) * line_pt
+    if payload.get("engagements"):
+        pt += sec_pt
+        for e in payload["engagements"]:
+            if isinstance(e, dict):
+                line = f"{e.get('title','')} {e.get('description','')}"
+            else:
+                line = str(e)
+            pt += wrap(line) * line_pt + gap_pt
+    return pt
+
+
+_AVAIL_SIDEBAR_HTML = 380
+
+
 def _truncate(payload: dict) -> dict:
     """Mirror the renderer's MAX_* caps so preview = output."""
     out = dict(payload)
@@ -107,6 +140,17 @@ def _truncate(payload: dict) -> dict:
     summary = (out.get("summary") or "").strip()
     if len(summary) > MAX_SUMMARY_CHARS:
         out["summary"] = summary[:MAX_SUMMARY_CHARS].rstrip() + "…"
+
+    # Adaptive sidebar trim: mirror the renderer's eviction order.
+    if _estimate_sidebar_pt_html(out) > _AVAIL_SIDEBAR_HTML and out.get("hobbies"):
+        out["hobbies"] = []
+    if _estimate_sidebar_pt_html(out) > _AVAIL_SIDEBAR_HTML and out.get("engagements"):
+        out["engagements"] = [
+            ({**e, "description": ""} if isinstance(e, dict) else e)
+            for e in out["engagements"]
+        ]
+    if _estimate_sidebar_pt_html(out) > _AVAIL_SIDEBAR_HTML and out.get("engagements"):
+        out["engagements"] = out["engagements"][:2]
     return out
 
 

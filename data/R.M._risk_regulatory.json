@@ -1,0 +1,154 @@
+{
+  "initials": "R.M.",
+  "first_name": "Richard",
+  "last_name": "Michaud",
+
+  "title_fr": "Consultant Senior — Risk & Regulatory",
+  "title_en": "Senior Consultant — Risk & Regulatory",
+  "domain_fr": "Banque & CIB — Transformation réglementaire",
+  "domain_en": "Banking & CIB — Regulatory Transformation",
+
+  "fr": {
+    "summary": "",
+    "expertise": [
+      "Risk & Regulatory",
+      "Transformation bancaire (CIB / Retail)",
+      "Modèles IRB & Risque de crédit",
+      "CRR 3 — Recovery & Resolution",
+      "Gouvernance des risques digitaux (AI Act)"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant" },
+      { "name": "Espagnol", "level": "Bases" }
+    ],
+    "education": [
+      { "year": "2016 — 2017", "school": "Paris 1 Panthéon-Sorbonne", "degree": "Master 2 Banque & Finance" },
+      { "year": "2013 — 2016", "school": "Bordeaux / Tampere",        "degree": "Magistère d'Économie & Finance Internationales" },
+      { "year": "2012 — 2013", "school": "Lycée Michel Montaigne",    "degree": "Prépa HEC, voie ECE" }
+    ],
+    "experiences": [
+      {
+        "employer": "Inside (Inside Circle, Inside Banking, Inside Training)",
+        "role": "Fondateur — Consultant indépendant",
+        "duration": "Depuis Jan. 26",
+        "achievements": [
+          "Communauté de freelances du secteur financier (banque, assurance, AM) ; média indépendant (2,5M vues 2025, podcast +50K écoutes, newsletter +13K abonnés).",
+          "Inside Training : pédagogie / éducation financière et Personal Branding pour dirigeants et équipes du secteur financier."
+        ]
+      },
+      {
+        "employer": "EY",
+        "role": "Senior Consultant → Senior Manager",
+        "duration": "Oct. 19 — Déc. 25",
+        "achievements": [
+          "Refonte du processus de rating interne des contreparties (7 ETP) ; déploiement de modèles IRB dans le cadre d'un rachat de portefeuille (TOM, échanges superviseur, infrastructure IT/Data).",
+          "Pilotage de projets « risques digitaux » pour une G-SIB : mise en conformité EU AI Act, dispositif de gestion des risques."
+        ]
+      },
+      {
+        "employer": "PwC",
+        "role": "Consultant Financial Services",
+        "duration": "Sept. 17 — Oct. 19",
+        "achievements": [
+          "Coordination d'une certification auprès du régulateur US pour une G-SIB française (10 entités).",
+          "Élaboration de formations réglementaires déployées auprès de +8 000 collaborateurs."
+        ]
+      },
+      {
+        "employer": "Mazars",
+        "role": "Consultant Financial Services",
+        "duration": "Avril — Sept. 17",
+        "achievements": [
+          "Définition et rédaction d'un Plan Préventif de Rétablissement (PPR) pour un groupe bancaire étranger : analyse stratégique, options de redressement, stress tests, gouvernance."
+        ]
+      }
+    ],
+    "references": [
+      "G-SIB française", "Banque Populaire (BPACA)", "EY", "PwC", "Mazars"
+    ],
+    "engagements": [
+      { "title": "Auteur",             "description": "Lettre réglementaire banque EY France" },
+      { "title": "Référent G-SIB",     "description": "2 comptes prioritaires Risk & Regulatory" },
+      { "title": "Création de contenu", "description": "Podcast & newsletter financiers" }
+    ],
+    "hobbies": [
+      "Entrepreneuriat",
+      "Création de contenu",
+      "Running",
+      "Tennis"
+    ]
+  },
+
+  "en": {
+    "summary": "",
+    "expertise": [
+      "Risk & Regulatory",
+      "Banking Transformation (CIB / Retail)",
+      "IRB Models & Credit Risk",
+      "CRR 3 — Recovery & Resolution",
+      "Digital Risk Governance (EU AI Act)"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent" },
+      { "name": "Spanish", "level": "Basic" }
+    ],
+    "education": [
+      { "year": "2016 — 2017", "school": "Paris 1 Panthéon-Sorbonne", "degree": "Master's in Banking & Finance" },
+      { "year": "2013 — 2016", "school": "Bordeaux / Tampere",        "degree": "Magistère in Economics & International Finance" },
+      { "year": "2012 — 2013", "school": "Lycée Michel Montaigne",    "degree": "Prépa HEC, ECE track" }
+    ],
+    "experiences": [
+      {
+        "employer": "Inside (Inside Circle, Inside Banking, Inside Training)",
+        "role": "Founder — Independent Consultant",
+        "duration": "Since Jan. 26",
+        "achievements": [
+          "Financial-sector freelance community (banking, insurance, AM); independent media (2.5M views in 2025, podcast +50K listens, newsletter +13K subscribers).",
+          "Inside Training: financial education and Personal Branding for senior executives and teams in the financial sector."
+        ]
+      },
+      {
+        "employer": "EY",
+        "role": "Senior Consultant → Senior Manager",
+        "duration": "Oct. 19 — Dec. 25",
+        "achievements": [
+          "Redesign of the internal counterparty rating process (7 FTE); IRB credit-model rollout as part of a portfolio acquisition (TOM, supervisor exchanges, IT/Data infrastructure).",
+          "Lead of digital-risk projects for a G-SIB: EU AI Act compliance, risk-management framework."
+        ]
+      },
+      {
+        "employer": "PwC",
+        "role": "Consultant Financial Services",
+        "duration": "Sept. 17 — Oct. 19",
+        "achievements": [
+          "Coordination of a US-regulator certification for a French G-SIB (10 entities).",
+          "Design of regulatory training rolled out to 8,000+ employees."
+        ]
+      },
+      {
+        "employer": "Mazars",
+        "role": "Consultant Financial Services",
+        "duration": "April — Sept. 17",
+        "achievements": [
+          "Drafting of a Preventive Recovery Plan (PPR) for a foreign banking group: strategic analysis, recovery options, stress tests, governance."
+        ]
+      }
+    ],
+    "references": [
+      "French G-SIB", "Banque Populaire (BPACA)", "EY", "PwC", "Mazars"
+    ],
+    "engagements": [
+      { "title": "Author",             "description": "EY France banking regulatory newsletter" },
+      { "title": "G-SIB lead",         "description": "Two priority Risk & Regulatory accounts" },
+      { "title": "Content creator",    "description": "Financial podcast & newsletter" }
+    ],
+    "hobbies": [
+      "Entrepreneurship",
+      "Content creation",
+      "Running",
+      "Tennis"
+    ]
+  }
+}
