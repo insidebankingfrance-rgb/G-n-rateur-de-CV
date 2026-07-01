@@ -46,15 +46,11 @@ from theme import (
     LOGO_RIGHT_PAD,
     LOGO_TOP,
     MARGIN,
-    MAX_BULLET_CHARS,
     MAX_BULLETS_PER_EXP,
-    MAX_DEGREE_CHARS,
-    MAX_ENGAGEMENT_DESC_CHARS,
     MAX_ENGAGEMENTS,
     MAX_EXPERIENCES,
     MAX_EXPERTISE,
     MAX_HOBBIES,
-    MAX_SUMMARY_CHARS,
     NAVY_SIDEBAR,
     SEPARATOR_W,
     SIDEBAR_W,
@@ -156,7 +152,9 @@ def initials_from_name(first: str, last: str) -> str:
 
 
 def _truncate_payload(payload: dict, who: str) -> dict:
-    """Apply MAX_* caps. Warn when content is dropped."""
+    """Apply MAX_* caps by dropping WHOLE items only — jamais de troncature
+    mid-string avec "…". Le texte des bullets / summary / descriptions doit
+    être écrit à la bonne longueur dès la phase d'extraction."""
     out = dict(payload)
 
     exp = out.get("experiences", [])
@@ -170,15 +168,8 @@ def _truncate_payload(payload: dict, who: str) -> dict:
         ach = e.get("achievements", [])
         if len(ach) > MAX_BULLETS_PER_EXP:
             _warn(f"{who}: {e.get('employer', '?')} — "
-                  f"{len(ach) - MAX_BULLETS_PER_EXP} bullet(s) trimmed")
-            ach = ach[:MAX_BULLETS_PER_EXP]
-        # Trim overly-long single bullets
-        ach = [
-            (b if len(b) <= MAX_BULLET_CHARS
-             else b[:MAX_BULLET_CHARS].rstrip() + "…")
-            for b in ach
-        ]
-        e["achievements"] = ach
+                  f"{len(ach) - MAX_BULLETS_PER_EXP} bullet(s) dropped")
+            e["achievements"] = ach[:MAX_BULLETS_PER_EXP]
     out["experiences"] = exp
 
     for key, cap in (("expertise", MAX_EXPERTISE),
@@ -187,35 +178,6 @@ def _truncate_payload(payload: dict, who: str) -> dict:
         if key in out and len(out[key]) > cap:
             _warn(f"{who}: {key} capped to {cap} (was {len(out[key])})")
             out[key] = out[key][:cap]
-
-    # Engagement descriptions: keep them short for the sidebar.
-    if "engagements" in out:
-        trimmed = []
-        for e in out["engagements"]:
-            if isinstance(e, dict):
-                e = dict(e)
-                desc = (e.get("description") or "").strip()
-                if len(desc) > MAX_ENGAGEMENT_DESC_CHARS:
-                    e["description"] = desc[:MAX_ENGAGEMENT_DESC_CHARS].rstrip() + "…"
-            trimmed.append(e)
-        out["engagements"] = trimmed
-
-    # Education: cap degree line length
-    if "education" in out:
-        trimmed = []
-        for e in out["education"]:
-            if isinstance(e, dict):
-                e = dict(e)
-                deg = (e.get("degree") or "").strip()
-                if len(deg) > MAX_DEGREE_CHARS:
-                    e["degree"] = deg[:MAX_DEGREE_CHARS].rstrip() + "…"
-            trimmed.append(e)
-        out["education"] = trimmed
-
-    summary = (out.get("summary") or "").strip()
-    if len(summary) > MAX_SUMMARY_CHARS:
-        _warn(f"{who}: summary truncated to {MAX_SUMMARY_CHARS} chars")
-        out["summary"] = summary[:MAX_SUMMARY_CHARS].rstrip() + "…"
     return out
 
 
@@ -301,6 +263,22 @@ def _check_overflow(payload: dict, who: str) -> None:
     if side_pt > _AVAIL_PT_SIDEBAR:
         _warn(f"{who}: sidebar estimated {side_pt:.0f}pt > "
               f"budget {_AVAIL_PT_SIDEBAR:.0f}pt — risque de débordement")
+
+
+def _adaptive_main_trim(payload: dict, who: str) -> dict:
+    """When main column overflow is predicted, drop content by descending
+    priority. Only references get dropped (bullets/experiences are protected
+    — the truncation in _truncate_payload already applied).
+    Le seuil est plus strict que _AVAIL_PT_MAIN pour laisser une marge de
+    sécurité (l'estimateur peut sous-estimer de quelques pt)."""
+    payload = dict(payload)
+    safety = _AVAIL_PT_MAIN - 20
+    if _estimate_main_pt(payload) <= safety:
+        return payload
+    if payload.get("references"):
+        _warn(f"{who}: references dropped to keep main in 1 page")
+        payload["references"] = []
+    return payload
 
 
 def _adaptive_sidebar_trim(payload: dict, who: str) -> dict:
@@ -559,6 +537,7 @@ def _build_slide(prs: Presentation, cv: dict, lang: str, logo: Path | None):
 
     payload = _truncate_payload(cv.get(lang, cv), f"{initials} [{lang}]")
     payload = _adaptive_sidebar_trim(payload, f"{initials} [{lang}]")
+    payload = _adaptive_main_trim(payload, f"{initials} [{lang}]")
     _check_overflow(payload, f"{initials} [{lang}]")
     _build_sidebar_content(slide, payload, lang)
     _build_main_content(slide, payload, lang)

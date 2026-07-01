@@ -1,0 +1,154 @@
+{
+  "initials": "C.P.",
+  "first_name": "Christophe",
+  "last_name": "Poberejsky",
+
+  "title_fr": "Manager de Transition — Direction de Programme IT & Finance",
+  "title_en": "Transition Manager — IT & Finance Program Management",
+  "domain_fr": "Transformation IT & Finance — Banque, Secteur Public, Mobilités",
+  "domain_en": "IT & Finance Transformation — Banking, Public Sector, Mobility",
+
+  "fr": {
+    "summary": "Ex-VP Société Générale (20 ans) | Expert Management de Transition & Transformation Critique. Relais opérationnel en contexte de vide managérial, fusion ou post-cybercrise.",
+    "expertise": [
+      "Pilotage programmes IT (cadrage, PMO)",
+      "Paiements, Cash Management, ERP, CRM, KYC",
+      "Schéma directeur IT & cybersécurité",
+      "Management & conduite du changement",
+      "Trilingue FR / EN / ES"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant" },
+      { "name": "Espagnol", "level": "Courant" }
+    ],
+    "education": [
+      { "year": "1996", "school": "EDHEC",  "degree": "Master en Management (Grande École)" },
+      { "year": "2024", "school": "Google", "degree": "AI Professional Certificate" },
+      { "year": "—",    "school": "Certifs pro", "degree": "PRINCE2, KYC-ACAMS, RGPD (CNIL/IAPP)" }
+    ],
+    "experiences": [
+      {
+        "employer": "Delubac & Cie (via Ailancy)",
+        "role": "Manager de Transition — COO Middle-Office",
+        "duration": "Mai — Juin 2026",
+        "achievements": [
+          "Relais managérial d'urgence : prise en main du périmètre post-fusion des middle-offices, stabilisation des équipes aux côtés de la nouvelle Directrice.",
+          "Sécurisation opérationnelle : audit des frictions ; feuille de route à 1,5 mois, dashboards KPI quotidiens."
+        ]
+      },
+      {
+        "employer": "Groupe Indigo",
+        "role": "Pilotage stratégique COMEX — Refonte gouvernance IT",
+        "duration": "2025 (S2)",
+        "achievements": [
+          "Diagnostic global du SI (organisation, processus, infrastructures, data, compétences) dans un contexte de reconstruction post-cyber.",
+          "Plan d'investissement IT pluriannuel + cadre de gouvernance ; livrables exécutifs : roadmap, cartographies, organigrammes cibles."
+        ]
+      },
+      {
+        "employer": "CGI Business Consulting",
+        "role": "Senior Manager — Banque Assurance",
+        "duration": "2022 — 2025",
+        "achievements": [
+          "BPCE (projet SIGMA) : gestion IAM, pilote pour la standardisation des habilitations sur le socle commun Groupe.",
+          "Crédit Agricole CIB : taskforce Cash Management / Correspondent Banking (20+ consultants) ; PNB > 200 K€."
+        ]
+      },
+      {
+        "employer": "Société Générale",
+        "role": "20 ans — Rôles multiples (KYC, VP B2B, Cash Mgmt)",
+        "duration": "2002 — 2022",
+        "achievements": [
+          "KYC (2019-22) : TOM digitalisation, Blockchain/IA — fiabilisation à +90 % sur 3 CSP ; réduction du risque opérationnel.",
+          "VP B2B & Digital (2007-19) : rollout CRM MS Dynamics international (1 000 users) ; +30 % PNB Cash Management."
+        ]
+      }
+    ],
+    "references": [
+      "Société Générale", "BPCE", "Crédit Agricole CIB", "Delubac & Cie", "Groupe Indigo"
+    ],
+    "engagements": [
+      { "title": "Cercles pros",   "description": "Membre UMBREX / VERITUX" },
+      { "title": "Intervenant",    "description": "AlphaSights, XpertsCouncil, Les BigBoss" }
+    ],
+    "hobbies": [
+      "Guitare électrique & chant",
+      "Collectionneur de vinyles",
+      "Plongée sous-marine",
+      "Théâtre amateur"
+    ]
+  },
+
+  "en": {
+    "summary": "Ex-VP Société Générale (20 years) | Expert Transition Management & Critical Transformation. Operational relay in management vacuum, merger or post-cyberattack contexts.",
+    "expertise": [
+      "IT Program & Project Governance (scoping, PMO)",
+      "Payments, Cash Management, ERP, CRM, KYC",
+      "IT Master Plan & Cybersecurity",
+      "Management & Change Leadership",
+      "Trilingual FR / EN / ES"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent" },
+      { "name": "Spanish", "level": "Fluent" }
+    ],
+    "education": [
+      { "year": "1996", "school": "EDHEC",  "degree": "Master in Management" },
+      { "year": "2024", "school": "Google", "degree": "AI Professional Certificate" },
+      { "year": "—",    "school": "Certifications", "degree": "PRINCE2, KYC-ACAMS, GDPR (CNIL/IAPP)" }
+    ],
+    "experiences": [
+      {
+        "employer": "Delubac & Cie (via Ailancy)",
+        "role": "Transition Manager — COO Middle-Office",
+        "duration": "May — June 2026",
+        "achievements": [
+          "Emergency management relay: takeover of the post-merger middle-office perimeter, stabilisation of teams alongside the new Director.",
+          "Operational security: friction points audit; 1.5-month roadmap, daily KPI dashboards."
+        ]
+      },
+      {
+        "employer": "Groupe Indigo",
+        "role": "Strategic piloting COMEX — IT governance overhaul",
+        "duration": "2025 (H2)",
+        "achievements": [
+          "Global IT diagnosis (organisation, processes, infrastructure, data, competencies) in a post-cyber reconstruction context.",
+          "Multi-year IT investment plan + governance framework; executive deliverables: roadmap, mappings, target org charts."
+        ]
+      },
+      {
+        "employer": "CGI Business Consulting",
+        "role": "Senior Manager — Banking & Insurance",
+        "duration": "2022 — 2025",
+        "achievements": [
+          "BPCE (SIGMA project): IAM management, pilot for the standardisation of authorisations on the Group common foundation.",
+          "Crédit Agricole CIB: taskforce Cash Management / Correspondent Banking (20+ consultants); PNB > 200K€."
+        ]
+      },
+      {
+        "employer": "Société Générale",
+        "role": "20 years — Multiple roles (KYC, VP B2B, Cash Mgmt)",
+        "duration": "2002 — 2022",
+        "achievements": [
+          "KYC (2019-22): TOM for KYC digitalisation, Blockchain/AI — reliability to 90%+ across 3 SSCs; drastic reduction of operational risk.",
+          "VP B2B & Digital (2007-19): international MS Dynamics CRM rollout (1,000 users); +30% PNB in Cash Management."
+        ]
+      }
+    ],
+    "references": [
+      "Société Générale", "BPCE", "Crédit Agricole CIB", "Delubac & Cie", "Groupe Indigo"
+    ],
+    "engagements": [
+      { "title": "Professional circles", "description": "Member UMBREX / VERITUX" },
+      { "title": "Speaker",              "description": "AlphaSights, XpertsCouncil, Les BigBoss" }
+    ],
+    "hobbies": [
+      "Electric guitar & singing",
+      "Vinyl collector",
+      "Scuba diving",
+      "Amateur theatre"
+    ]
+  }
+}

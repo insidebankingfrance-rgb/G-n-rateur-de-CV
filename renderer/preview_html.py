@@ -19,13 +19,10 @@ from pathlib import Path
 from theme import (
     LOGO_FILENAME,
     MAX_BULLETS_PER_EXP,
-    MAX_DEGREE_CHARS,
-    MAX_ENGAGEMENT_DESC_CHARS,
     MAX_ENGAGEMENTS,
     MAX_EXPERIENCES,
     MAX_EXPERTISE,
     MAX_HOBBIES,
-    MAX_SUMMARY_CHARS,
 )
 
 
@@ -99,6 +96,29 @@ def _estimate_sidebar_pt_html(payload: dict) -> float:
 
 
 _AVAIL_SIDEBAR_HTML = 380
+_AVAIL_MAIN_HTML = 419
+
+
+def _estimate_main_pt_html(payload: dict) -> float:
+    """Lightweight mirror of the renderer's main-column height estimator."""
+    line_pt, sec_pt, gap_pt, cpl = 14, 19, 1, 80
+    def wrap(s):
+        return max(1, (len(s) + cpl - 1) // cpl) if s else 0
+    pt = 0.0
+    if (payload.get("summary") or "").strip():
+        pt += sec_pt + wrap(payload["summary"]) * line_pt
+    if payload.get("experiences"):
+        pt += sec_pt
+        for exp in payload["experiences"]:
+            header = (f"{exp.get('employer','')} {exp.get('role','')} "
+                      f"{exp.get('duration','')}")
+            pt += wrap(header) * line_pt + gap_pt
+            for b in exp.get("achievements", []):
+                pt += wrap(b) * line_pt + gap_pt
+    if payload.get("references"):
+        ref = ", ".join(payload["references"])
+        pt += sec_pt + wrap(ref) * line_pt
+    return pt
 
 
 def _truncate(payload: dict) -> dict:
@@ -115,29 +135,6 @@ def _truncate(payload: dict) -> dict:
                      ("engagements", MAX_ENGAGEMENTS)):
         if key in out:
             out[key] = out[key][:cap]
-    if "engagements" in out:
-        trimmed = []
-        for e in out["engagements"]:
-            if isinstance(e, dict):
-                e = dict(e)
-                desc = (e.get("description") or "").strip()
-                if len(desc) > MAX_ENGAGEMENT_DESC_CHARS:
-                    e["description"] = desc[:MAX_ENGAGEMENT_DESC_CHARS].rstrip() + "…"
-            trimmed.append(e)
-        out["engagements"] = trimmed
-    if "education" in out:
-        trimmed = []
-        for e in out["education"]:
-            if isinstance(e, dict):
-                e = dict(e)
-                deg = (e.get("degree") or "").strip()
-                if len(deg) > MAX_DEGREE_CHARS:
-                    e["degree"] = deg[:MAX_DEGREE_CHARS].rstrip() + "…"
-            trimmed.append(e)
-        out["education"] = trimmed
-    summary = (out.get("summary") or "").strip()
-    if len(summary) > MAX_SUMMARY_CHARS:
-        out["summary"] = summary[:MAX_SUMMARY_CHARS].rstrip() + "…"
 
     # Adaptive sidebar trim: mirror the renderer's eviction order.
     if _estimate_sidebar_pt_html(out) > _AVAIL_SIDEBAR_HTML and out.get("hobbies"):
@@ -149,6 +146,11 @@ def _truncate(payload: dict) -> dict:
         ]
     if _estimate_sidebar_pt_html(out) > _AVAIL_SIDEBAR_HTML and out.get("engagements"):
         out["engagements"] = out["engagements"][:2]
+
+    # Adaptive main trim: drop references when main is near/over budget
+    # (marge de sécurité de 20pt).
+    if _estimate_main_pt_html(out) > _AVAIL_MAIN_HTML - 20 and out.get("references"):
+        out["references"] = []
     return out
 
 

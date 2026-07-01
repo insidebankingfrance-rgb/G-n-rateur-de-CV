@@ -1,0 +1,138 @@
+{
+  "initials": "D.L.",
+  "first_name": "David",
+  "last_name": "Leclercq",
+
+  "title_fr": "Consultant Transformation Digitale & IA",
+  "title_en": "Digital & AI Transformation Consultant",
+  "domain_fr": "Programmes de Transformation | Digital | IA | Services financiers",
+  "domain_en": "Transformation Programs | Digital | AI | Financial Services",
+
+  "fr": {
+    "summary": "Leader expérimenté en transformation IA et digitale, habitué aux environnements complexes et réglementés. Vision stratégique et capacité d'exécution, pilotage de programmes de bout en bout.",
+    "expertise": [
+      "Pilotage de programmes complexes",
+      "Transformation digitale & IA",
+      "Stratégie et gouvernance IA",
+      "Roadmap produit & plateformes digitales",
+      "Conduite du changement & Agile"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant" }
+    ],
+    "education": [
+      { "year": "2000",      "school": "ESSEC Business School", "degree": "Grande École" },
+      { "year": "2024",      "school": "ESSEC",                 "degree": "AI for Business, AI & Leadership" },
+      { "year": "2025",      "school": "Polytechnique",         "degree": "Piloter le processus d'innovation" },
+      { "year": "2025",      "school": "EDHEC",                 "degree": "Leadership de transformation" }
+    ],
+    "experiences": [
+      {
+        "employer": "Allagio",
+        "role": "Leader Transformation IA & Digitale (consultant indépendant)",
+        "duration": "Depuis 2026",
+        "achievements": [
+          "Leadership d'équipe Produit pour un acteur de référence de la protection sociale en France (épargne collective, santé, prévoyance) : refonte de l'expérience et des outils de relation client, intégration IA.",
+          "Conception et réalisation de projets IA, développement d'applications AI-driven ; études sectorielles sur les cas d'usage IA."
+        ]
+      },
+      {
+        "employer": "Stellantis",
+        "role": "Manager de Programmes de Transformation Digitale",
+        "duration": "2017 — 2025",
+        "achievements": [
+          "Mise en place d'un nouveau modèle de distribution omnicanal et d'un outil SaaS de planification / RDV livraisons de véhicules (4 pays) ; déploiement européen d'une plateforme e-commerce.",
+          "Pilotage d'une ligne produit digitale internationale (budget >1M€) : encadrement d'équipes pluridisciplinaires (>50 personnes), définition de la vision produit / roadmap / UX."
+        ]
+      },
+      {
+        "employer": "Distingo Bank",
+        "role": "Responsable Banque en Ligne Multi-Pays",
+        "duration": "2012 — 2017",
+        "achievements": [
+          "Pilotage end-to-end du lancement et développement d'une banque en ligne sur 3 pays ; conception des parcours clients digitaux (acquisition, souscription, KYC, selfcare).",
+          "Résultats : +3 Md€ collectés et +100 000 comptes actifs en 5 ans ; gestion d'un budget annuel > 20 M€, management d'équipes internes et externes."
+        ]
+      },
+      {
+        "employer": "Wavestone",
+        "role": "Consultant Senior Digital & Relation Client",
+        "duration": "2007 — 2012",
+        "achievements": [
+          "Missions de conseil en transformation digitale et optimisation de la relation client (banque, télécoms, énergie).",
+          "Lancement d'interfaces de banque à distance, personnalisation en ligne et applications mobiles innovantes ; encadrement de consultants et développement commercial."
+        ]
+      }
+    ],
+    "references": [
+      "Allagio", "Stellantis", "Distingo Bank", "Wavestone"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "Experienced leader in AI and digital transformation, familiar with complex and regulated environments. Strategic vision and execution capacity, end-to-end program piloting.",
+    "expertise": [
+      "Complex program management",
+      "Digital & AI transformation",
+      "AI strategy & governance",
+      "Product roadmap & digital platforms",
+      "Change management & Agile"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent" }
+    ],
+    "education": [
+      { "year": "2000", "school": "ESSEC Business School", "degree": "Grande École" },
+      { "year": "2024", "school": "ESSEC",                 "degree": "AI for Business, AI & Leadership" },
+      { "year": "2025", "school": "École Polytechnique",   "degree": "Piloting the innovation process" },
+      { "year": "2025", "school": "EDHEC",                 "degree": "Transformation Leadership" }
+    ],
+    "experiences": [
+      {
+        "employer": "Allagio",
+        "role": "AI & Digital Transformation Leader (independent consultant)",
+        "duration": "Since 2026",
+        "achievements": [
+          "Product-team leadership for a leading French social-protection player (group savings, health, protection): overhaul of customer experience and CRM tools, AI integration.",
+          "Design and delivery of AI projects, AI-driven application development; sector studies on AI use-cases."
+        ]
+      },
+      {
+        "employer": "Stellantis",
+        "role": "Digital Transformation Program Manager",
+        "duration": "2017 — 2025",
+        "achievements": [
+          "Rollout of a new omnichannel distribution model and a SaaS planning/booking tool for vehicle deliveries (4 countries); European e-commerce platform deployment.",
+          "International digital product line management (budget >€1M): leading multidisciplinary teams (>50 people), product vision / roadmap / UX definition."
+        ]
+      },
+      {
+        "employer": "Distingo Bank",
+        "role": "Multi-Country Online Bank Manager",
+        "duration": "2012 — 2017",
+        "achievements": [
+          "End-to-end piloting of the launch and growth of an online bank across 3 countries; digital customer journey design (acquisition, onboarding, KYC, selfcare).",
+          "Results: €3B+ collected and 100,000+ active accounts in 5 years; annual budget > €20M, managing internal and external teams."
+        ]
+      },
+      {
+        "employer": "Wavestone",
+        "role": "Senior Consultant Digital & Customer Relations",
+        "duration": "2007 — 2012",
+        "achievements": [
+          "Digital transformation and customer relations consulting engagements (banking, telecom, energy).",
+          "Launch of distance-banking interfaces, online personalisation and innovative mobile apps; consultant coaching and business development."
+        ]
+      }
+    ],
+    "references": [
+      "Allagio", "Stellantis", "Distingo Bank", "Wavestone"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}

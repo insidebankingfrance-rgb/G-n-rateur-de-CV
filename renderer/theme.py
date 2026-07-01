@@ -72,17 +72,17 @@ CONTENT_TOP     = HEADER_H + Emu(50000)
 CONTENT_BOTTOM  = SLIDE_H - FOOTER_H
 
 
-# ─── Capacity / truncation ───────────────────────────────────────────────────
-# Pour garantir 1 page : on cape le contenu à ces valeurs.
+# ─── Capacity ────────────────────────────────────────────────────────────────
+# Pour garantir 1 page, on plafonne le NOMBRE d'items. Le texte de chaque
+# item n'est JAMAIS tronqué avec "…" — il doit être écrit à la bonne
+# longueur en phase d'extraction. Si la mise en page déborde, on drop
+# des éléments entiers (hobbies, engagements, références) via les
+# fonctions _adaptive_*_trim.
 MAX_EXPERIENCES        = 4
-MAX_BULLETS_PER_EXP    = 2     # 2 bullets per experience to guarantee 1 page
+MAX_BULLETS_PER_EXP    = 2
 MAX_EXPERTISE          = 5
 MAX_HOBBIES            = 4
 MAX_ENGAGEMENTS        = 3
-MAX_SUMMARY_CHARS      = 200
-MAX_BULLET_CHARS       = 140   # achievement bullet — trim with ellipsis above
-MAX_ENGAGEMENT_DESC_CHARS = 35 # engagement description — short tag only
-MAX_DEGREE_CHARS       = 40    # education degree line (single sidebar line)
 
 
 # ─── Confidentiality footer text ─────────────────────────────────────────────
