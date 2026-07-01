@@ -25,11 +25,17 @@ cp mon_cv.pdf inputs/
 # 2. Demander à Claude de produire le JSON normalisé (suit agent/system_prompt.md)
 #    → résultat dans data/<slug>.json
 
-# 3. Générer le PPT
+# 3a. Générer un PPT par CV
 python renderer/generate_cv.py data/<slug>.json --out outputs/<slug>.pptx
+
+# 3b. Ou générer UN SEUL PPT contenant tous les CVs (mode livraison batch)
+python renderer/generate_cv.py data/ --merged --out outputs/all_cvs.pptx
 ```
 
-Traitement en lot : répéter étapes 2-3 par CV, ou passer un dossier au renderer.
+Modes du renderer :
+- **Single** : `<file>.json` → `<file>.pptx` (2 slides FR + EN)
+- **Batch séparé** : `data/` → `outputs/` (un PPT par CV)
+- **Batch fusionné** : `data/ --merged` → un `.pptx` unique de N × 2 slides
 
 ## Règles métier (résumé)
 

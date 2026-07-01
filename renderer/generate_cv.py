@@ -548,6 +548,7 @@ def _build_slide(prs: Presentation, cv: dict, lang: str, logo: Path | None):
 
 
 def render(cv_json: dict, out_path: Path) -> Path:
+    """Render a single CV to its own .pptx (2 slides FR + EN)."""
     prs = Presentation()
     prs.slide_width = SLIDE_W
     prs.slide_height = SLIDE_H
@@ -555,6 +556,23 @@ def render(cv_json: dict, out_path: Path) -> Path:
     logo = _resolve_logo()
     _build_slide(prs, cv_json, "fr", logo)
     _build_slide(prs, cv_json, "en", logo)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    prs.save(out_path)
+    return out_path
+
+
+def render_merged(cv_jsons: list[dict], out_path: Path) -> Path:
+    """Render several CVs into ONE combined .pptx (2 slides per CV, ordered
+    by input list). Used for batch delivery."""
+    prs = Presentation()
+    prs.slide_width = SLIDE_W
+    prs.slide_height = SLIDE_H
+
+    logo = _resolve_logo()
+    for cv in cv_jsons:
+        _build_slide(prs, cv, "fr", logo)
+        _build_slide(prs, cv, "en", logo)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     prs.save(out_path)
@@ -571,10 +589,40 @@ def _iter_jsons(path: Path) -> Iterable[Path]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description=(
+            "Render CV JSONs to Inside Circle PPTX. "
+            "Three modes: (a) single JSON + <name>.pptx = 1 CV per file ; "
+            "(b) directory + --merged <name>.pptx = ALL CVs in ONE file ; "
+            "(c) directory + directory out = one PPT per CV."
+        ),
+    )
     parser.add_argument("input", type=Path, help="JSON file or directory")
     parser.add_argument("--out", type=Path, default=Path("outputs"))
+    parser.add_argument(
+        "--merged", action="store_true",
+        help="When input is a directory, concatenate every CV into a single "
+             ".pptx file (2 slides per CV, ordered alphabetically).",
+    )
     args = parser.parse_args()
+
+    if args.merged:
+        if not args.input.is_dir():
+            raise SystemExit("--merged requires a directory input")
+        out_file = args.out if args.out.suffix == ".pptx" \
+            else args.out / "all_cvs.pptx"
+        jsons = _iter_jsons(args.input)
+        cvs = []
+        for j in jsons:
+            _warnings.clear()
+            cv = json.loads(j.read_text(encoding="utf-8"))
+            cvs.append(cv)
+            if _warnings:
+                print(f"  ({len(_warnings)} warnings) {j.name}")
+        _warnings.clear()
+        rendered = render_merged(cvs, out_file)
+        print(f"✓ {len(cvs)} CV(s) → {rendered}")
+        return
 
     out = args.out
     multiple = args.input.is_dir() or out.is_dir() or out.suffix != ".pptx"
