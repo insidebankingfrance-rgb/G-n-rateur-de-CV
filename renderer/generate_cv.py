@@ -34,9 +34,11 @@ from theme import (
     FS_BODY,
     FS_BODY_SMALL,
     FS_DOMAIN,
+    FS_FIRST_NAME,
     FS_FLOOR,
     FS_FOOTER,
     FS_INITIALS,
+    FS_LAST_NAME,
     FS_SECTION,
     FS_TITLE,
     HEADER_H,
@@ -353,16 +355,33 @@ def _resolve_logo() -> Path | None:
     return candidate if candidate.is_file() else None
 
 
-def _build_header(slide, initials: str, title: str, domain: str):
-    # Initiales dans la sidebar
+def _build_header(slide, first_name: str, last_name: str, initials: str,
+                  title: str, domain: str):
+    """Sidebar top : "Prénom" + newline + "NOM" (uppercase, bold). Fallback
+    aux initiales si first/last absents (anonymisation optionnelle)."""
     tb, tf = _add_textbox(
         slide,
-        MARGIN, Emu(260000),
-        SIDEBAR_W - 2 * MARGIN, Emu(800000),
+        MARGIN, Emu(240000),
+        SIDEBAR_W - 2 * MARGIN, Emu(1300000),
     )
+    tf.word_wrap = True
     p = tf.paragraphs[0]
     p.alignment = PP_ALIGN.LEFT
-    _run(p, initials, bold=True, size=FS_INITIALS, color=CYAN_ACCENT)
+
+    if first_name or last_name:
+        if first_name:
+            _run(p, first_name, size=FS_FIRST_NAME, color=CYAN_ACCENT)
+        if last_name:
+            if first_name:
+                p2 = tf.add_paragraph()
+                p2.space_before = Pt(0)
+                _run(p2, last_name.upper(), bold=True,
+                     size=FS_LAST_NAME, color=CYAN_ACCENT)
+            else:
+                _run(p, last_name.upper(), bold=True,
+                     size=FS_LAST_NAME, color=CYAN_ACCENT)
+    else:
+        _run(p, initials, bold=True, size=FS_INITIALS, color=CYAN_ACCENT)
 
     # Titre + domaine — width réduit pour laisser la place au logo top-right
     tb, tf = _add_textbox(
@@ -528,12 +547,12 @@ def _build_slide(prs: Presentation, cv: dict, lang: str, logo: Path | None):
     # Le bandeau footer doit être posé EN DERNIER (z-order top) pour masquer
     # un éventuel débordement de textbox dans le bas du slide.
 
-    initials = cv.get("initials") or initials_from_name(
-        cv.get("first_name", ""), cv.get("last_name", "")
-    )
+    first_name = cv.get("first_name", "")
+    last_name = cv.get("last_name", "")
+    initials = cv.get("initials") or initials_from_name(first_name, last_name)
     title = cv.get(f"title_{lang}") or cv.get("title", "")
     domain = cv.get(f"domain_{lang}") or cv.get("domain", "")
-    _build_header(slide, initials, title, domain)
+    _build_header(slide, first_name, last_name, initials, title, domain)
 
     payload = _truncate_payload(cv.get(lang, cv), f"{initials} [{lang}]")
     payload = _adaptive_sidebar_trim(payload, f"{initials} [{lang}]")

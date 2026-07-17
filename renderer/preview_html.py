@@ -278,6 +278,8 @@ def _logo_data_uri() -> str | None:
 
 def _render_slide(cv: dict, lang: str, logo_uri: str | None) -> str:
     labels = SECTION_LABELS[lang]
+    first_name = _esc(cv.get("first_name", ""))
+    last_name = _esc(cv.get("last_name", "")).upper()
     initials = _esc(cv.get("initials", ""))
     title = _esc(cv.get(f"title_{lang}") or cv.get("title", ""))
     domain = _esc(cv.get(f"domain_{lang}") or cv.get("domain", ""))
@@ -288,12 +290,22 @@ def _render_slide(cv: dict, lang: str, logo_uri: str | None) -> str:
         if logo_uri else ""
     )
 
+    if first_name or last_name:
+        header_html = (
+            '<div class="header-name">'
+            + (f'<div class="first-name">{first_name}</div>' if first_name else "")
+            + (f'<div class="last-name">{last_name}</div>' if last_name else "")
+            + '</div>'
+        )
+    else:
+        header_html = f'<div class="header-initials">{initials}</div>'
+
     return f"""
 <section class="slide-wrap" aria-label="{labels['lang_tag']}">
   <div class="slide-meta">{labels['lang_tag']}</div>
   <article class="slide">
     <aside class="sidebar">
-      <div class="header-initials">{initials}</div>
+      {header_html}
       <div class="sidebar-inner">{_render_sidebar(payload, labels)}</div>
     </aside>
     <main class="content">
@@ -377,6 +389,20 @@ body {{
   letter-spacing: 0.02em;
   line-height: 1;
   margin-bottom: 16px;
+}}
+.header-name {{
+  margin-bottom: 18px;
+  color: var(--cyan-acc);
+  line-height: 1.05;
+}}
+.header-name .first-name {{
+  font-size: 36px;
+  font-weight: 400;
+}}
+.header-name .last-name {{
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }}
 .sidebar-inner {{
   font-size: 15.5px;        /* ≥ PPT 12pt visually */

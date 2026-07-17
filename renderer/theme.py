@@ -41,7 +41,9 @@ FONT_FAMILY = "Alegreya Sans"
 
 # ─── Type scale ──────────────────────────────────────────────────────────────
 # Règle : aucune typo de contenu en-dessous de 12pt.
-FS_INITIALS    = Pt(48)   # X.X. dans le header
+FS_FIRST_NAME  = Pt(28)   # Prénom (sidebar, casse d'origine)
+FS_LAST_NAME   = Pt(32)   # NOM (sidebar, bold, uppercase)
+FS_INITIALS    = Pt(48)   # fallback si first/last absents
 FS_TITLE       = Pt(24)   # poste principal
 FS_DOMAIN      = Pt(15)   # domaine d'expertise
 FS_SECTION     = Pt(13)   # titres de section

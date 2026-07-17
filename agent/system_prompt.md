@@ -14,11 +14,13 @@ JSON est ensuite rendu en PowerPoint (1 slide FR + 1 slide EN) par le script
 
 ## Règles absolues
 
-### Anonymisation
-- `initials` = première lettre du prénom + `.` + première lettre du nom + `.`
-  (ex : `Richard Michaud` → `"R.M."`).
-- Identifie le `first_name` et le `last_name` pour le calcul, mais ils ne sont
-  jamais rendus à l'écran.
+### Identité (anonymisation désactivée)
+- `first_name` et `last_name` sont rendus **en clair** dans le header
+  du CV (Prénom en poids normal, NOM en gras majuscules).
+- `initials` reste utile comme fallback ou pour nommer les fichiers,
+  mais n'est plus affiché dès qu'un `first_name` / `last_name` existe.
+- L'anonymisation peut être ré-activée à la demande (le renderer reprend
+  les initiales si `first_name` et `last_name` sont vides).
 
 ### Champs systématiquement retirés
 **Ne jamais inclure** dans le JSON, même s'ils figurent dans la source :
