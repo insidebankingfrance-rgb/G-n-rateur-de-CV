@@ -1,0 +1,144 @@
+{
+  "initials": "A.P.",
+  "first_name": "Alexandre",
+  "last_name": "Polakowski",
+
+  "title_fr": "Spécialiste AI Governance, AI Risk & EU AI Act",
+  "title_en": "AI Governance, AI Risk & EU AI Act Specialist",
+  "domain_fr": "Gouvernance IA & Conformité réglementaire — Services financiers",
+  "domain_en": "AI Governance & Regulatory Compliance — Financial Services",
+
+  "fr": {
+    "summary": "Expert en gouvernance de l'IA, AI Risk Management et conformité réglementaire, avec près de 8 ans d'expérience auprès de grandes institutions bancaires. Spécialisé dans l'EU AI Act et le déploiement international de dispositifs de gouvernance IA.",
+    "expertise": [
+      "AI Governance",
+      "AI Risk Management",
+      "EU AI Act",
+      "Digital Compliance",
+      "Regulatory Strategy"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "TOEIC 955/990" }
+    ],
+    "education": [
+      { "year": "2024",        "school": "EDHEC Business School", "degree": "Certification Digital Ethics Officer" },
+      { "year": "2015 — 2020", "school": "Sciences Po Saint-Germain-en-Laye", "degree": "Master II Affaires européennes et internationales" },
+      { "year": "2020",        "school": "UVSQ", "degree": "Master II Influence & Affaires publiques" }
+    ],
+    "experiences": [
+      {
+        "employer": "Top-tier CIB européenne",
+        "role": "AI Compliance Lead (consultant)",
+        "duration": "8 mois — en cours",
+        "achievements": [
+          "Finalisation et mise en œuvre du cadre de gouvernance des risques IA : politiques internes, cartographie des risques, comitologie.",
+          "Déploiement international du dispositif dans plus de 40 entités (USA, UK, APAC, MEA)."
+        ]
+      },
+      {
+        "employer": "Sia Partners",
+        "role": "Associate Manager",
+        "duration": "10 mois — en cours",
+        "achievements": [
+          "Responsable de l'offre AI Risk Management : appels d'offres, veille réglementaire, développement commercial.",
+          "Pilotage du groupe de travail IA de Paris Europlace (+40 responsables du secteur financier) : position papers, consultations européennes."
+        ]
+      },
+      {
+        "employer": "Groupe BPCE",
+        "role": "Group EU AI Act Project Manager",
+        "duration": "18 mois",
+        "achievements": [
+          "Responsable du programme EU AI Act du Groupe BPCE et de ses entités (Natixis, Oney, BRED) : cartographie des risques IA, cadre normatif Groupe.",
+          "Accompagnement de plus de 35 décideurs locaux (DPO, CCO, CDO) dans la déclinaison du cadre normatif."
+        ]
+      },
+      {
+        "employer": "Oney / Oneytrust",
+        "role": "Expert Leader — Digital & AI Compliance Officer",
+        "duration": "38 mois",
+        "achievements": [
+          "Structuration du cadre de gouvernance des risques IA avec le CDO : inventaire, formation, conformité EU AI Act dans plus de 10 entités.",
+          "Ambassadeur IA Générative auprès de 3 000 collaborateurs ; pilotage des activités RGPD d'Oneytrust."
+        ]
+      }
+    ],
+    "references": [
+      "Groupe BPCE", "Natixis", "Oney", "Sia Partners", "Paris Europlace"
+    ],
+    "engagements": [
+      { "title": "Conseiller Numérique", "description": "Saint-Germain-en-Laye" },
+      { "title": "Podcasteur",           "description": "Créateur du podcast Esprit IA" },
+      { "title": "Conférencier & Juré EDHEC", "description": "" }
+    ],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "Expert in AI Governance, AI Risk Management and regulatory compliance, with nearly 8 years of experience advising major banking institutions. Specialised in the EU AI Act and international AI governance rollouts.",
+    "expertise": [
+      "AI Governance",
+      "AI Risk Management",
+      "EU AI Act",
+      "Digital Compliance",
+      "Regulatory Strategy"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "TOEIC 955/990" }
+    ],
+    "education": [
+      { "year": "2024",        "school": "EDHEC Business School", "degree": "Digital Ethics Officer certification" },
+      { "year": "2015 — 2020", "school": "Sciences Po Saint-Germain-en-Laye", "degree": "Master's in European & International Affairs" },
+      { "year": "2020",        "school": "UVSQ", "degree": "Master's in Influence & Public Affairs" }
+    ],
+    "experiences": [
+      {
+        "employer": "Top-tier European CIB",
+        "role": "AI Compliance Lead (consultant)",
+        "duration": "8 months — ongoing",
+        "achievements": [
+          "Finalisation and rollout of the AI risk governance framework: internal policies, risk mapping, committee design.",
+          "International rollout across 40+ entities (USA, UK, APAC, MEA)."
+        ]
+      },
+      {
+        "employer": "Sia Partners",
+        "role": "Associate Manager",
+        "duration": "10 months — ongoing",
+        "achievements": [
+          "Head of the AI Risk Management offering: RFPs, regulatory watch, business development.",
+          "Lead of the AI working group at Paris Europlace (40+ senior financial-sector representatives): position papers, EU consultations."
+        ]
+      },
+      {
+        "employer": "Groupe BPCE",
+        "role": "Group EU AI Act Project Manager",
+        "duration": "18 months",
+        "achievements": [
+          "Lead of the EU AI Act compliance programme for Groupe BPCE and its entities (Natixis, Oney, BRED): AI risk mapping, Group standards framework.",
+          "Support of 35+ local decision-makers (DPO, CCO, CDO) in deploying the Group framework."
+        ]
+      },
+      {
+        "employer": "Oney / Oneytrust",
+        "role": "Expert Leader — Digital & AI Compliance Officer",
+        "duration": "38 months",
+        "achievements": [
+          "Built the AI risk governance framework with the CDO: inventory, training, EU AI Act compliance across 10+ entities.",
+          "Group GenAI ambassador to 3,000 employees; pilot of Oneytrust's GDPR activities."
+        ]
+      }
+    ],
+    "references": [
+      "Groupe BPCE", "Natixis", "Oney", "Sia Partners", "Paris Europlace"
+    ],
+    "engagements": [
+      { "title": "Digital Council Advisor", "description": "Saint-Germain-en-Laye" },
+      { "title": "Podcaster",               "description": "Creator of the Esprit IA podcast" },
+      { "title": "Speaker & EDHEC Juror",   "description": "" }
+    ],
+    "hobbies": []
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "initials": "L.S.",
+  "first_name": "Leila",
+  "last_name": "Slimani",
+
+  "title_fr": "Manager Conformité",
+  "title_en": "Compliance Manager",
+  "domain_fr": "LCB-FT, KYC & AI Act — Banque, Assurance, Paiement",
+  "domain_en": "AML-CFT, KYC & AI Act — Banking, Insurance, Payments",
+
+  "fr": {
+    "summary": "Manager Conformité chez EY, intervenant auprès d'acteurs bancaires, assurantiels et de paiement. Expérience combinant conseil en conformité, audit interne en banque G-SIB et gestion de projets réglementaires internationaux.",
+    "expertise": [
+      "LCB-FT & sécurité financière",
+      "KYC, sanctions internationales, gel des avoirs",
+      "AI Act & gouvernance IA",
+      "Audit interne & contrôle permanent",
+      "Conduite, éthique & déontologie"
+    ],
+    "languages": [
+      { "name": "Français",  "level": "Langue maternelle" },
+      { "name": "Anglais",   "level": "Courant" },
+      { "name": "Espagnol",  "level": "Courant" },
+      { "name": "Portugais", "level": "Notions" }
+    ],
+    "education": [
+      { "year": "2017 — 2018", "school": "Université Panthéon-Assas", "degree": "Master 2 Banque Finance" },
+      { "year": "2012 — 2016", "school": "HEC Montréal", "degree": "B.B.A. spécialisé en Finance (AACSB, EQUIS, AMBA)" }
+    ],
+    "experiences": [
+      {
+        "employer": "EY",
+        "role": "Manager Conformité — Banque, Assurance, Paiement",
+        "duration": "Sept. 2023 — Août 2026",
+        "achievements": [
+          "Mise en conformité AI Act pour une G-SIB et un assureur majeur : gap analysis, gouvernance cible, feuille de route ; KRI conformité suite à une recommandation BCE.",
+          "Transformation du dispositif KYC d'un établissement de paiement (TOM, cas d'usage IA) ; remédiation LCB-FT de 25 collaborateurs ; analyses d'écart sécurité financière."
+        ]
+      },
+      {
+        "employer": "Société Générale CIB",
+        "role": "Auditrice interne — Inspection & Audit interne",
+        "duration": "Juin 2021 — Août 2023",
+        "achievements": [
+          "Missions d'audit interne LCB-FT, KYC, Sanctions & embargo, PPE et contrôle permanent sur le domaine des paiements (correspondance bancaire, trade finance, affacturage, cash management).",
+          "Identification des risques, préconisations, rédaction des livrables d'audit (fiches diagnostic, constats, rapport) et relation avec les audités."
+        ]
+      },
+      {
+        "employer": "Société Générale USA (VIE New York)",
+        "role": "Cheffe de projet — Transition LIBOR USD",
+        "duration": "Juil. 2019 — Avr. 2021",
+        "achievements": [
+          "Assistance au pilotage de la gouvernance de la transition IBOR de SG Amériques, en relation étroite avec les parties prenantes en France."
+        ]
+      },
+      {
+        "employer": "Société Générale CIB",
+        "role": "Front office — Émission de Covered Bonds & gestion du collatéral",
+        "duration": "Déc. 2017 — Juil. 2019",
+        "achievements": [
+          "Émission sur le marché primaire d'obligations sécurisées adossées à des actifs de haute qualité (alternance 12 mois puis CDD 9 mois)."
+        ]
+      }
+    ],
+    "references": [
+      "EY", "Société Générale CIB", "Société Générale USA"
+    ],
+    "engagements": [],
+    "hobbies": [
+      "Voyage (road trips Amérique du Nord)",
+      "Lecture (romans policiers)",
+      "Course à pied"
+    ]
+  },
+
+  "en": {
+    "summary": "Compliance Manager at EY, advising banking, insurance and payment players. Experience combining compliance consulting, internal audit within a G-SIB bank and international regulatory project management.",
+    "expertise": [
+      "AML-CFT & financial security",
+      "KYC, international sanctions, asset freezing",
+      "AI Act & AI governance",
+      "Internal audit & permanent control",
+      "Conduct, ethics & deontology"
+    ],
+    "languages": [
+      { "name": "French",     "level": "Native" },
+      { "name": "English",    "level": "Fluent" },
+      { "name": "Spanish",    "level": "Fluent" },
+      { "name": "Portuguese", "level": "Basic" }
+    ],
+    "education": [
+      { "year": "2017 — 2018", "school": "Université Panthéon-Assas", "degree": "Master 2 Banking & Finance" },
+      { "year": "2012 — 2016", "school": "HEC Montréal", "degree": "B.B.A. in Finance (AACSB, EQUIS, AMBA)" }
+    ],
+    "experiences": [
+      {
+        "employer": "EY",
+        "role": "Compliance Manager — Banking, Insurance, Payments",
+        "duration": "Sept. 2023 — Aug. 2026",
+        "achievements": [
+          "AI Act compliance for a G-SIB and a major insurer: gap analysis, target governance, roadmap; compliance KRIs following an ECB recommendation.",
+          "KYC framework transformation for a payment institution (TOM, AI use-cases); 25-people AML remediation programme; financial security gap analyses."
+        ]
+      },
+      {
+        "employer": "Société Générale CIB",
+        "role": "Internal Auditor — Inspection & Internal Audit",
+        "duration": "June 2021 — Aug. 2023",
+        "achievements": [
+          "Internal audit missions on AML-CFT, KYC, Sanctions & embargo, PEP and permanent control across the payments domain (correspondent banking, trade finance, factoring, cash management).",
+          "Risk identification, recommendations, drafting of audit deliverables (diagnostic sheets, findings, audit report) and relationship with auditees."
+        ]
+      },
+      {
+        "employer": "Société Générale USA (VIE New York)",
+        "role": "Project Manager — USD LIBOR transition",
+        "duration": "July 2019 — Apr. 2021",
+        "achievements": [
+          "Supported the governance of SG Americas' IBOR transition, working closely with stakeholders in France."
+        ]
+      },
+      {
+        "employer": "Société Générale CIB",
+        "role": "Front office — Covered Bonds issuance & collateral management",
+        "duration": "Dec. 2017 — July 2019",
+        "achievements": [
+          "Primary-market issuance of covered bonds backed by high-quality assets (12-month apprenticeship then 9-month contract)."
+        ]
+      }
+    ],
+    "references": [
+      "EY", "Société Générale CIB", "Société Générale USA"
+    ],
+    "engagements": [],
+    "hobbies": [
+      "Travel (North America road trips)",
+      "Reading (crime novels)",
+      "Running"
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "initials": "C.S.",
+  "first_name": "Charles",
+  "last_name": "Saint-Dizier",
+
+  "title_fr": "Manager — Chef de Projet Réglementaire Banque",
+  "title_en": "Manager — Regulatory Banking Project Manager",
+  "domain_fr": "Réglementation bancaire & Risques — BCE, BCBS239, SREP, ESG",
+  "domain_en": "Banking Regulation & Risk — ECB, BCBS239, SREP, ESG",
+
+  "fr": {
+    "summary": "Consultant indépendant, 11 ans d'expérience bancaire dont 9 en conseil. Programmes réglementaires, risques et gouvernance des données pour de grands groupes.",
+    "expertise": [
+      "Projets réglementaires (BCE, BCBS239, SREP, ESG, RGPD)",
+      "Risques de crédit, opérationnel et de liquidité",
+      "Gouvernance des données, reportings réglementaires",
+      "Pilotage de portefeuille projets, COPIL / COPROJ",
+      "Contrôle et conformité"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant" },
+      { "name": "Espagnol", "level": "Bon niveau" }
+    ],
+    "education": [
+      { "year": "Bac +5", "school": "Master 2", "degree": "Gestion financière internationale, spéc. Europe" }
+    ],
+    "experiences": [
+      {
+        "employer": "La Banque Postale",
+        "role": "Chef de Projet Solution — ESG & Conformité réglementaire",
+        "duration": "2025 — aujourd'hui",
+        "achievements": [
+          "Programme Haussmann (PMO) : étude de faisabilité d'une solution bout en bout de la chaîne de crédit ; besoins métiers, rationalisation du SI.",
+          "Programme Citoyen (reco BCE) : automatisation du calcul d'indicateurs ESG (marché SPES) ; projet Forbearance : design de la solution cible."
+        ]
+      },
+      {
+        "employer": "AXA GIE — Headquarter",
+        "role": "Senior Project Manager — RGPD et management des données",
+        "duration": "Janv. 2023 — Avr. 2024",
+        "achievements": [
+          "Suppression automatique de données structurées et non structurées : cartographie des processus, purges automatiques, Microsoft IPG.",
+          "Gestion du budget et des comités projets, pilotage de deux équipes de consultants."
+        ]
+      },
+      {
+        "employer": "Société Générale",
+        "role": "Project Manager — Risque Opérationnel (SREP) & Data Strategy (BCE)",
+        "duration": "Sept. — Déc. 2022",
+        "achievements": [
+          "Risque opérationnel : roadmap métiers/IT, collecte et priorisation des besoins, dashboards, animation COPIL / COPROJ.",
+          "Data Strategy BCE : règles de gestion des données, APIs entre référentiels, cadrage avec le core banking (Loans IQ)."
+        ]
+      },
+      {
+        "employer": "BNP Paribas",
+        "role": "Project Manager / Consultant Senior — Data Management & BCBS239",
+        "duration": "2017 — 2022",
+        "achievements": [
+          "Digitalisation de la chaîne de crédit CIB : besoins métiers, dictionnaire de données, covenants, workflow.",
+          "BCBS 239 / RDARR : audit des contrats de crédit CIB, évaluation des garanties et confirmation du RWA."
+        ]
+      }
+    ],
+    "references": [
+      "BNP Paribas", "Société Générale", "La Banque Postale", "AXA", "Nexans", "CIC"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "Independent consultant with 11 years of experience in the banking sector, including 9 years in consulting. Specialized in leading regulatory programs, risk management, and data governance for major banking groups.",
+    "expertise": [
+      "Regulatory projects (ECB, BCBS239, SREP, ESG, GDPR)",
+      "Credit, operational and liquidity risk",
+      "Data governance, regulatory reporting",
+      "Project portfolio management, steering committees",
+      "Controls and compliance"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent" },
+      { "name": "Spanish", "level": "Good level" }
+    ],
+    "education": [
+      { "year": "Bac +5", "school": "Master's Degree (Master 2)", "degree": "Management & International Finance, spec. Europe" }
+    ],
+    "experiences": [
+      {
+        "employer": "La Banque Postale",
+        "role": "Solution Project Manager — ESG & Regulatory Compliance",
+        "duration": "2025 — Present",
+        "achievements": [
+          "Haussmann Program (PMO): feasibility study for an end-to-end credit chain solution; business requirements, process optimization, data management.",
+          "Citoyen Program (ECB recommendation): automation of ESG indicator calculations (SPES market); Forbearance project: target solution design."
+        ]
+      },
+      {
+        "employer": "AXA GIE — Headquarters",
+        "role": "Senior Project Manager — GDPR & Data Management",
+        "duration": "Jan. 2023 — Apr. 2024",
+        "achievements": [
+          "Automated deletion of structured and unstructured data: process mapping, automated purges, Microsoft Purview (IPG).",
+          "Budget and steering committee management, led two consulting teams."
+        ]
+      },
+      {
+        "employer": "Société Générale",
+        "role": "Project Manager — Operational Risk (SREP) & Data Strategy (ECB)",
+        "duration": "Sept. — Dec. 2022",
+        "achievements": [
+          "Operational risk: business/IT roadmap, requirements gathering and prioritization, dashboards, governance meetings.",
+          "ECB Data Strategy: data governance rules, APIs between repositories, framework with the core banking system (Loans IQ)."
+        ]
+      },
+      {
+        "employer": "BNP Paribas",
+        "role": "Project Manager / Senior Consultant — Data Management & BCBS239",
+        "duration": "2017 — 2022",
+        "achievements": [
+          "Digitalization of the CIB credit chain: business requirements, data dictionary, covenants, workflow.",
+          "BCBS 239 / RDARR: audit of CIB credit agreements, guarantee evaluation and RWA confirmation."
+        ]
+      }
+    ],
+    "references": [
+      "BNP Paribas", "Société Générale", "La Banque Postale", "AXA", "Nexans", "CIC"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "initials": "B.E.",
+  "first_name": "Baptiste",
+  "last_name": "Epplin",
+
+  "title_fr": "Consultant Senior — Conformité Réglementaire & Contrôle Interne",
+  "title_en": "Senior Consultant — Regulatory Compliance & Internal Control",
+  "domain_fr": "Banque — Protection clientèle, Tax & Regulatory, AI Act",
+  "domain_en": "Banking — Client Protection, Tax & Regulatory, AI Act",
+
+  "fr": {
+    "summary": "Plus de 5 ans d'expérience en conformité réglementaire, contrôle interne et transformation des processus en environnement bancaire. Habitué à traduire les exigences réglementaires en dispositifs opérationnels.",
+    "expertise": [
+      "Conformité réglementaire bancaire",
+      "Protection des intérêts de la clientèle",
+      "FATCA, AEOI, TTF, QDD",
+      "AI Act & gouvernance des systèmes d'IA",
+      "Contrôle interne (LoD1, LoD2)"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant" },
+      { "name": "Espagnol", "level": "Intermédiaire" }
+    ],
+    "education": [
+      { "year": "2019 — 2020", "school": "EM Lyon", "degree": "Mastère Spécialisé Droit et Management" },
+      { "year": "2018 — 2019", "school": "Université d'Orléans", "degree": "Master II Droit des Affaires et Fiscalité" },
+      { "year": "—",           "school": "Certification", "degree": "AMF" }
+    ],
+    "experiences": [
+      {
+        "employer": "Tier 1 Groupe Bancaire Français (via Sia Partners)",
+        "role": "Conformité Centrale — Protection de la clientèle",
+        "duration": "Depuis févr. 2023",
+        "achievements": [
+          "Diagnostics réglementaires : gouvernance produits, paiements, crédit conso ; écarts et risques de non-conformité.",
+          "Dispositifs cibles de gouvernance et contrôle (LoD1/LoD2) ; corpus documentaire (politiques, procédures, formations) pour le Groupe."
+        ]
+      },
+      {
+        "employer": "Tier 1 Banque d'Investissement (via Sia Partners)",
+        "role": "Tax & Regulatory — 4 réglementations",
+        "duration": "Mission Sia Partners",
+        "achievements": [
+          "Déclinaison FATCA, AEOI, TTF et QDD sur les zones AMER, APAC, EMEA ; diagnostics et recommandations.",
+          "Modèles opérationnels cibles par réglementation ; cadre de contrôle LoD1 et automatisation des contrôles."
+        ]
+      },
+      {
+        "employer": "Tier 1 Groupe Bancaire Français (via Sia Partners)",
+        "role": "Data & IA — Programme AI Act",
+        "duration": "Mission Sia Partners",
+        "achievements": [
+          "Inventaire centralisé des systèmes d'IA (registre Groupe) : traçabilité, conformité AI Act, auditabilité ; cartographie des risques IA.",
+          "Contrôles LoD1 sur les risques IA ; cadre de gouvernance AI Act couvrant le cycle de vie des systèmes."
+        ]
+      },
+      {
+        "employer": "Rothschild Martin Maurel",
+        "role": "Junior — Operations",
+        "duration": "Juin 2020 — Janv. 2023",
+        "achievements": [
+          "Revue des processus Front-to-Back KYC, FATCA, CRS avec nouveaux contrôles de validité et de cohérence.",
+          "Sécurisation des traitements de fonds de Private Equity (souscriptions, appels de fonds, distributions)."
+        ]
+      }
+    ],
+    "references": [
+      "Sia Partners", "Rothschild Martin Maurel", "Paris Europlace"
+    ],
+    "engagements": [
+      { "title": "Référent Paris Europlace", "description": "Attractivité, réglementation UE, IA" }
+    ],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "Over 5 years of experience in regulatory compliance, internal control and process transformation in banking environments. Skilled at translating regulatory requirements into operational frameworks.",
+    "expertise": [
+      "Banking regulatory compliance",
+      "Client interest protection",
+      "FATCA, AEOI, FTT, QDD",
+      "AI Act & AI systems governance",
+      "Internal control (LoD1, LoD2)"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent" },
+      { "name": "Spanish", "level": "Intermediate" }
+    ],
+    "education": [
+      { "year": "2019 — 2020", "school": "EM Lyon", "degree": "Specialized Master in Law & Management" },
+      { "year": "2018 — 2019", "school": "University of Orléans", "degree": "Master II Business Law & Taxation" },
+      { "year": "—",           "school": "Certification", "degree": "AMF" }
+    ],
+    "experiences": [
+      {
+        "employer": "Tier 1 French Banking Group (via Sia Partners)",
+        "role": "Central Compliance — Client protection",
+        "duration": "Since Feb. 2023",
+        "achievements": [
+          "Regulatory diagnostics: product governance, payments, consumer credit; gaps and non-compliance risks.",
+          "Target governance and control frameworks (LoD1/LoD2); documentary corpus (policies, procedures, training) for the Group."
+        ]
+      },
+      {
+        "employer": "Tier 1 Investment Bank (via Sia Partners)",
+        "role": "Tax & Regulatory — 4 regulations",
+        "duration": "Sia Partners mission",
+        "achievements": [
+          "Rollout of FATCA, AEOI, FTT and QDD across AMER, APAC, EMEA; diagnostics and recommendations.",
+          "Target operating models per regulation; LoD1 control framework and control automation."
+        ]
+      },
+      {
+        "employer": "Tier 1 French Banking Group (via Sia Partners)",
+        "role": "Data & AI — AI Act programme",
+        "duration": "Sia Partners mission",
+        "achievements": [
+          "Centralized AI systems inventory (Group register): traceability, AI Act compliance, auditability; AI risk mapping.",
+          "LoD1 controls on AI risks; AI Act governance framework covering the full system lifecycle."
+        ]
+      },
+      {
+        "employer": "Rothschild Martin Maurel",
+        "role": "Junior — Operations",
+        "duration": "June 2020 — Jan. 2023",
+        "achievements": [
+          "Front-to-Back review of KYC, FATCA, CRS processes with new validity and consistency controls.",
+          "Securing of Private Equity fund processing (subscriptions, capital calls, distributions)."
+        ]
+      }
+    ],
+    "references": [
+      "Sia Partners", "Rothschild Martin Maurel", "Paris Europlace"
+    ],
+    "engagements": [
+      { "title": "Paris Europlace referent", "description": "Attractiveness, EU regulation, AI" }
+    ],
+    "hobbies": []
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "initials": "A.B.",
+  "first_name": "Aboubacar",
+  "last_name": "Bathily",
+
+  "title_fr": "Consultant Indépendant — Gestion de Projets Réglementaires",
+  "title_en": "Independent Consultant — Regulatory Project Management",
+  "domain_fr": "Conformité & Contrôle Interne — CIB, Asset Management, Assurance",
+  "domain_en": "Compliance & Internal Control — CIB, Asset Management, Insurance",
+
+  "fr": {
+    "summary": "Expert en conformité et contrôle interne, 8 ans d'expérience dans les services financiers. Spécialisé dans le pilotage de programmes réglementaires complexes, habitué à l'accompagnement des COMEX et Comités de Direction.",
+    "expertise": [
+      "Conformité réglementaire européenne (MiFID II, PRIIPs, SFDR)",
+      "LCB-FT / KYC, Abus de Marché",
+      "DORA, MiCA, RGPD, Solvabilité II",
+      "Contrôle interne & risque opérationnel (LoD1-LoD3)",
+      "Gestion de projet Waterfall & Agile (PMO/PM)"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Natif" },
+      { "name": "Anglais",  "level": "Courant" }
+    ],
+    "education": [
+      { "year": "2017", "school": "Université Panthéon-Assas", "degree": "Master en Finance" },
+      { "year": "—",    "school": "Certifications", "degree": "AMF, PMI, McKinsey Forward, Cybersécurité" }
+    ],
+    "experiences": [
+      {
+        "employer": "AXA IM / BNP AM (Direction COO)",
+        "role": "Chef de Projet — Transition de prestataire de reporting réglementaire",
+        "duration": "Depuis 2025",
+        "achievements": [
+          "Cadrage des processus de reporting AXA IM post-fusion BNP AM ; scénarios de réinternalisation vs externalisation, cartographie des contrôles.",
+          "Définition du TOM (workflows, RACI, gap analysis) sur les reportings PRIIPs & UCITS KI(I)D, MiFID II, SFDR."
+        ]
+      },
+      {
+        "employer": "MPG Partners",
+        "role": "Manager Consultant — Services Financiers",
+        "duration": "2020 — 2025",
+        "achievements": [
+          "Développement d'offres : Conformité / Contrôle Interne (risque climatique / SFDR), agrément MiCA des PSAN, formation MAD/MAR, DORA.",
+          "Missions : reporting MiFID II (SGCIB), projets cross-border (CACIB), programme LCB-FT/KYC (AXA), transition prestataire (LBPAM & Ostrum)."
+        ]
+      },
+      {
+        "employer": "Marker Management Consulting (racheté par PwC)",
+        "role": "Consultant Contrôle Interne & Conformité",
+        "duration": "2019 — 2020",
+        "achievements": [
+          "RCCI délégué pour une dizaine de sociétés de gestion : contrôle permanent KYC/LCB-FT, Abus de Marché, Valorisation, Conflits d'Intérêts.",
+          "Rédaction de dossiers d'agrément AMF, plans de contrôle annuels, politiques et procédures."
+        ]
+      },
+      {
+        "employer": "Ernst & Young",
+        "role": "Consultant Risk Management — Services Financiers",
+        "duration": "2018 — 2019",
+        "achievements": [
+          "Contrôles périodiques pour les filiales Natixis IM : KYC/LCB-FT, fonds propres (CRR), Abus de Marché, valorisation, best execution.",
+          "Rédaction de rapports d'audit et de procédures internes pour banques, assureurs et sociétés de gestion."
+        ]
+      }
+    ],
+    "references": [
+      "AXA IM", "BNP AM", "SGCIB", "Crédit Agricole CIB", "AXA", "LBPAM & Ostrum AM", "AMF"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "Expert in compliance and internal control with 8 years of experience in financial services. Specialized in managing complex regulatory programs, experienced in supporting COMEX and Executive Committees.",
+    "expertise": [
+      "European regulatory compliance (MiFID II, PRIIPs, SFDR)",
+      "AML-CFT / KYC, Market Abuse",
+      "DORA, MiCA, GDPR, Solvency II",
+      "Internal control & operational risk (LoD1-LoD3)",
+      "Project management Waterfall & Agile (PMO/PM)"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent" }
+    ],
+    "education": [
+      { "year": "2017", "school": "Université Panthéon-Assas", "degree": "Master's Degree in Finance" },
+      { "year": "—",    "school": "Certifications", "degree": "AMF, PMI, McKinsey Forward, Cybersecurity" }
+    ],
+    "experiences": [
+      {
+        "employer": "AXA IM / BNP AM (COO Department)",
+        "role": "Project Manager — Regulatory Reporting Provider Transition",
+        "duration": "Since 2025",
+        "achievements": [
+          "Scoping of AXA IM reporting processes post-merger with BNP AM; reinternalization vs outsourcing scenarios, control mapping.",
+          "Definition of the TOM (workflows, RACI, gap analysis) on PRIIPs & UCITS KI(I)D, MiFID II, SFDR reportings."
+        ]
+      },
+      {
+        "employer": "MPG Partners",
+        "role": "Manager Consultant — Financial Services",
+        "duration": "2020 — 2025",
+        "achievements": [
+          "Service offerings: Compliance / Internal Control (climate risk / SFDR), MiCA approval for PSANs, MAD/MAR training, DORA.",
+          "Missions: MiFID II reporting (SGCIB), cross-border projects (CACIB), AML/KYC program (AXA), provider transition (LBPAM & OSTRUM)."
+        ]
+      },
+      {
+        "employer": "Marker Management Consulting (acquired by PwC)",
+        "role": "Internal Control & Compliance Consultant",
+        "duration": "2019 — 2020",
+        "achievements": [
+          "Delegated RCCI for around 10 Asset Management companies: permanent control on KYC/AML, Market Abuse, Valuation, Conflicts of Interest.",
+          "Drafted AMF licensing files, annual control plans, policies and procedures."
+        ]
+      },
+      {
+        "employer": "Ernst & Young",
+        "role": "Risk Management Consultant — Financial Services",
+        "duration": "2018 — 2019",
+        "achievements": [
+          "Periodic controls for Natixis IM affiliates: KYC/AML, capital requirements (CRR), Market Abuse, valuation, best execution.",
+          "Wrote audit reports and internal procedures for banks, insurers, and asset managers."
+        ]
+      }
+    ],
+    "references": [
+      "AXA IM", "BNP AM", "SGCIB", "Crédit Agricole CIB", "AXA", "LBPAM & OSTRUM AM", "AMF"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}

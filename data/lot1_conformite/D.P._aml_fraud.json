@@ -1,0 +1,146 @@
+{
+  "initials": "D.P.",
+  "first_name": "Dorian",
+  "last_name": "Prevost",
+
+  "title_fr": "Senior Manager — Conformité Réglementaire (CAMS & CCAS)",
+  "title_en": "Senior Manager — Regulatory Compliance (CAMS & CCAS)",
+  "domain_fr": "LCB-FT, Fraude & Criminalité financière — Banque & Fintech",
+  "domain_en": "AML/CTF, Fraud & Financial Crime — Banking & Fintech",
+
+  "fr": {
+    "summary": "Senior Manager en conformité réglementaire, certifié CAMS et CCAS, spécialisé en LCB-FT, lutte contre la fraude et criminalité financière pour les banques et fintechs. Expérience chez PwC, EY et KPMG Luxembourg.",
+    "expertise": [
+      "LCB-FT (AML/CTF) & KYC",
+      "Lutte contre la fraude (scénarios, calibration)",
+      "Criminalité financière & abus de marché",
+      "Cryptoactifs (certifié CCAS)",
+      "RegTech (Feedzai, AdvanThink, Shift, Finovox)"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant" },
+      { "name": "Espagnol", "level": "Courant" }
+    ],
+    "education": [
+      { "year": "2018 / 2024", "school": "Certifications", "degree": "CAMS & CCAS (cryptoactifs)" },
+      { "year": "2011 — 2016", "school": "Sciences Po Lyon", "degree": "Programme Grande École" },
+      { "year": "2015 — 2016", "school": "Université du Luxembourg", "degree": "LL.M. Droit pénal économique et financier" }
+    ],
+    "experiences": [
+      {
+        "employer": "BNP Paribas CIB (via PwC)",
+        "role": "IT Business Delivery Manager — LCB-FT & Fraude / TOM Superviseurs",
+        "duration": "PwC — depuis 2020",
+        "achievements": [
+          "Animation du comité bimensuel des évolutions IT LCB-FT & Fraude : études d'impact, priorisation, backlog avec Conformité et Métiers.",
+          "Design du TOM d'interaction avec les superviseurs : benchmark top-tier dans 5 pays (UK, US), rôles et organisation."
+        ]
+      },
+      {
+        "employer": "La Banque Postale (via PwC)",
+        "role": "Fraud PMO — Déploiement WERO (P2P, P2Pro, E/M Commerce)",
+        "duration": "Mission PwC",
+        "achievements": [
+          "Pilotage du workstream Fraude : avancement, risques et interdépendances, ateliers avec toutes les parties prenantes (dont EPI).",
+          "Évaluation des exigences Fraude d'EPI vs capacités de la banque ; conduite du changement du back-office Fraude."
+        ]
+      },
+      {
+        "employer": "Société Générale & Qonto (via PwC)",
+        "role": "TOM Criminalité financière / Audit Fraude externe",
+        "duration": "Missions PwC",
+        "achievements": [
+          "SG : TOM des activités de surveillance Financial Crime, Fraude & Abus de Marché ; stratégie 2025, modélisation du ROI.",
+          "Qonto : revue des scénarios de détection de fraude externe (calibration) ; environ 1 000 documents d'identité revus."
+        ]
+      },
+      {
+        "employer": "EY France / KPMG Luxembourg",
+        "role": "Senior Consultant — Regulatory & Compliance",
+        "duration": "2016 — 2019",
+        "achievements": [
+          "EY — Citi France : évaluation des risques Conformité dans plus de 10 pays (dont UK).",
+          "KPMG — J.P. Morgan Luxembourg : audits Transfer Agency, focus LCB-FT & KYC."
+        ]
+      }
+    ],
+    "references": [
+      "BNP Paribas CIB", "La Banque Postale", "Société Générale", "Qonto", "Citi", "J.P. Morgan"
+    ],
+    "engagements": [
+      { "title": "Podcast L'Actu Fin[Tech]", "description": "Co-créateur — FinTech & Blockchain" }
+    ],
+    "hobbies": [
+      "Horlogerie de collection"
+    ]
+  },
+
+  "en": {
+    "summary": "Senior Manager in Regulatory Compliance, CAMS and CCAS certified, specialized in AML/CTF, fraud and financial crime for banks and fintechs. Experience with PwC, EY and KPMG Luxembourg.",
+    "expertise": [
+      "AML/CTF & KYC",
+      "Fraud prevention (scenarios, calibration)",
+      "Financial crime & market abuse",
+      "Cryptoassets (CCAS certified)",
+      "RegTech (Feedzai, AdvanThink, Shift, Finovox)"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent" },
+      { "name": "Spanish", "level": "Fluent" }
+    ],
+    "education": [
+      { "year": "2018 / 2024", "school": "Certifications", "degree": "CAMS & CCAS (cryptoassets)" },
+      { "year": "2011 — 2016", "school": "Sciences Po Lyon", "degree": "Grande École Program" },
+      { "year": "2015 — 2016", "school": "University of Luxembourg", "degree": "LL.M. European Economic & Financial Criminal Law" }
+    ],
+    "experiences": [
+      {
+        "employer": "BNP Paribas CIB (via PwC)",
+        "role": "IT Business Delivery Manager — AML/CTF & Fraud / Supervisory TOM",
+        "duration": "PwC — since 2020",
+        "achievements": [
+          "Facilitated the bi-monthly AML/CTF & Fraud IT committee: impact studies, prioritization, backlog with Compliance & Business.",
+          "Designed the TOM for engaging with supervisors: top-tier benchmark across 5 countries (UK, US), roles and organization."
+        ]
+      },
+      {
+        "employer": "La Banque Postale (via PwC)",
+        "role": "Fraud PMO — WERO roll-out (P2P, P2Pro, E/M Commerce)",
+        "duration": "PwC mission",
+        "achievements": [
+          "Led the Fraud workstream: progress, risks and interdependencies, workshops with all stakeholders (incl. EPI).",
+          "Assessed EPI's fraud requirements against the bank's capabilities; change management for the fraud back-office."
+        ]
+      },
+      {
+        "employer": "Société Générale & Qonto (via PwC)",
+        "role": "Financial Crime TOM / External Fraud audit",
+        "duration": "PwC missions",
+        "achievements": [
+          "SG: TOM and organization for Financial Crime, Fraud & Market Abuse surveillance; 2025 strategy, ROI modelling.",
+          "Qonto: review of external fraud detection scenarios (calibration); ~1,000 ID documents reviewed."
+        ]
+      },
+      {
+        "employer": "EY France / KPMG Luxembourg",
+        "role": "Senior Consultant — Regulatory & Compliance",
+        "duration": "2016 — 2019",
+        "achievements": [
+          "EY — Citi France: Risk & Compliance assessment across 10+ countries (incl. UK).",
+          "KPMG — J.P. Morgan Luxembourg: Transfer Agency audits, AML/CTF & KYC focus."
+        ]
+      }
+    ],
+    "references": [
+      "BNP Paribas CIB", "La Banque Postale", "Société Générale", "Qonto", "Citi", "J.P. Morgan"
+    ],
+    "engagements": [
+      { "title": "L'Actu Fin[Tech] podcast", "description": "Co-creator — FinTech & Blockchain" }
+    ],
+    "hobbies": [
+      "Watch collecting"
+    ]
+  }
+}
