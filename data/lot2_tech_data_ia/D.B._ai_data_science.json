@@ -1,0 +1,137 @@
+{
+  "initials": "D.B.",
+  "first_name": "Daniel",
+  "last_name": "Blundell",
+  "title_fr": "Senior Manager — AI Engineer / Data Scientist",
+  "title_en": "Senior Manager — AI Engineer / Data Scientist",
+  "domain_fr": "Data Science & GenAI — Services financiers",
+  "domain_en": "Data Science & GenAI — Financial Services",
+  "fr": {
+    "summary": "7 ans d'expérience en conseil Data pour les services financiers. Encadrement Agile de plusieurs plateformes IA appliquées aux données financières et commerciales.",
+    "expertise": [
+      "Data Science & GenAI",
+      "AI Engineering (Azure x OpenAI, Databricks)",
+      "Product Ownership SAFe",
+      "DevOps / CI-CD (Azure DevOps, Jenkins)",
+      "Python, Scikit-Learn / PyTorch, SQL, R"
+    ],
+    "languages": [],
+    "education": [
+      {
+        "year": "—",
+        "school": "École Centrale de Marseille",
+        "degree": "Diplôme d'ingénieur, spéc. Finance & Data Science"
+      },
+      {
+        "year": "—",
+        "school": "Certifications",
+        "degree": "SAFe POPM ; Azure Data Science Associate (Microsoft)"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "Grande banque française",
+        "role": "Chef de projet — 3 plateformes NLP (juridique & réglementaire)",
+        "duration": "",
+        "achievements": [
+          "Coordination des développements full stack ; industrialisation CI/CD en production (Azure DevOps vers Bitbucket, XLRelease, XLDeploy).",
+          "Architecture sécurité et environnements Azure de test/production (VNETs, flux) ; images Docker en environnement sécurisé avec la DSI."
+        ]
+      },
+      {
+        "employer": "Grande banque française",
+        "role": "Analyse statistique du stock client & axes stratégiques",
+        "duration": "6 mois",
+        "achievements": [
+          "Cadrage, gestion du projet et développement des travaux data science ; extraction et analyse de larges volumes de données.",
+          "Machine Learning et NLP sur les données NPS pour interpréter les variations du stock client ; feuille de route basée sur des analyses Big Data."
+        ]
+      },
+      {
+        "employer": "Banque française",
+        "role": "Algorithmes ML — Détection de transactions suspicieuses",
+        "duration": "",
+        "achievements": [
+          "Développement des algorithmes dans un pipeline DevOps complet ; tableaux de bord d'analyse des transactions identifiées.",
+          "Processus manuel de classification entraînant l'algorithme en continu (active learning)."
+        ]
+      },
+      {
+        "employer": "Banque étrangère",
+        "role": "Analyse d'impact — Réforme sécurité sociale / fonds de pension",
+        "duration": "",
+        "achievements": [
+          "Développement sous R du code de projection démographique détaillée, avec modèles avancés de probabilité statistique.",
+          "Optimisation de la vitesse de calcul par parallélisation des opérations."
+        ]
+      }
+    ],
+    "references": [],
+    "engagements": [],
+    "hobbies": []
+  },
+  "en": {
+    "summary": "7 years of experience in Data consulting for financial services. Agile leadership of several AI platforms applied to financial and commercial data.",
+    "expertise": [
+      "Data Science & GenAI",
+      "AI Engineering (Azure x OpenAI, Databricks)",
+      "SAFe Product Ownership",
+      "DevOps / CI-CD (Azure DevOps, Jenkins)",
+      "Python, Scikit-Learn / PyTorch, SQL, R"
+    ],
+    "languages": [],
+    "education": [
+      {
+        "year": "—",
+        "school": "École Centrale de Marseille",
+        "degree": "Engineering degree, Finance & Data Science"
+      },
+      {
+        "year": "—",
+        "school": "Certifications",
+        "degree": "SAFe POPM; Azure Data Science Associate (Microsoft)"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "Major French bank",
+        "role": "Project Manager — 3 NLP platforms (legal & regulatory)",
+        "duration": "",
+        "achievements": [
+          "Coordination of full-stack development; CI/CD industrialization in production (Azure DevOps to Bitbucket, XLRelease, XLDeploy).",
+          "Security architecture and Azure test/production environments (VNETs, flows); Docker builds in a secured environment with the IT department."
+        ]
+      },
+      {
+        "employer": "Major French bank",
+        "role": "In-depth statistical analysis of the client base & strategic directions",
+        "duration": "6 months",
+        "achievements": [
+          "Scoping, project management and data science delivery; extraction and analysis of large data volumes.",
+          "Machine Learning and NLP on NPS data to interpret client-base variations; roadmap based on Big Data analyses."
+        ]
+      },
+      {
+        "employer": "French bank",
+        "role": "ML algorithms — Suspicious transaction detection",
+        "duration": "",
+        "achievements": [
+          "Algorithm development within a complete DevOps pipeline; dashboards to analyse identified transactions.",
+          "Manual classification process feeding the algorithm continuously (active learning)."
+        ]
+      },
+      {
+        "employer": "Foreign bank",
+        "role": "Impact analysis — Social security reform / pension fund",
+        "duration": "",
+        "achievements": [
+          "Developed in R the full detailed demographic projection code, applying advanced statistical probability models.",
+          "Optimized computation speed by parallelizing operations."
+        ]
+      }
+    ],
+    "references": [],
+    "engagements": [],
+    "hobbies": []
+  }
+}

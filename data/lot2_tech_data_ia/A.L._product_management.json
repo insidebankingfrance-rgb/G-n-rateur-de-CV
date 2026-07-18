@@ -1,0 +1,171 @@
+{
+  "initials": "A.L.",
+  "first_name": "Alexis",
+  "last_name": "Léger",
+  "title_fr": "Senior Product Manager | Senior Business Analyst",
+  "title_en": "Senior Product Manager | Senior Business Analyst",
+  "domain_fr": "Transformation digitale & Produits — Banque, Assurance, Secteur public",
+  "domain_en": "Digital Transformation & Products — Banking, Insurance, Public Sector",
+  "fr": {
+    "summary": "10 ans d'expérience en transformation digitale et produits complexes. Pilotage de projets digitaux à fort enjeu, du cadrage stratégique au delivery opérationnel, en alignant métiers, IT et utilisateurs finaux.",
+    "expertise": [
+      "Product Ownership (Discovery & Delivery)",
+      "Cadrage, études d'impact, gouvernance projet",
+      "AMOA, appels d'offres, comitologie",
+      "Pilotage Agile Scrum & Cycle V",
+      "Data : SQL, Python, Tableau, KPI"
+    ],
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Langue maternelle"
+      },
+      {
+        "name": "Anglais",
+        "level": "Courant"
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "school": "IAE Paris",
+        "degree": "Master en management"
+      },
+      {
+        "year": "2021 — 2022",
+        "school": "Certifications",
+        "degree": "SCRUM PO, PRINCE2, ITIL, gestion de données"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "CAREL Mutuelle",
+        "role": "Senior Project Manager / Business Analyst",
+        "duration": "Mai 2024 — Déc. 2025",
+        "achievements": [
+          "Migration de portefeuilles et changement d'outil back-office (KELIA) : gouvernance des interfaces (Espaces Clients, GED, Éditique, Salesforce).",
+          "Rédaction et pilotage d'appels d'offres ; recettes inter-applicatives ; recommandations stratégiques à la Direction Générale."
+        ]
+      },
+      {
+        "employer": "Crédit Agricole CIB",
+        "role": "Senior Business Analyst / Project Manager — Supply Chain Finance",
+        "duration": "Janv. 2023 — Mars 2024",
+        "achievements": [
+          "Référent IT de l'application Supply Chain Finance ; études d'impact et cadrage des besoins métiers.",
+          "Production des livrables : spécifications, user stories, tests automatisés Cucumber (Gherkin) ; recettes bout en bout, support L3 et formation."
+        ]
+      },
+      {
+        "employer": "Groupe Caisse des Dépôts & Consignations",
+        "role": "Product & Project Manager",
+        "duration": "Mars 2021 — Juil. 2022",
+        "achievements": [
+          "Refonte d'une application métier et migration de données inter-SI : discovery produit (personae, story map, roadmaps), US et priorisation Jira.",
+          "Migration des données de carrière : cahiers des charges, qualification avec l'Agirc-Arrco, stratégie de recette ; fiches RGPD & sécurité."
+        ]
+      },
+      {
+        "employer": "BNP Paribas (CIB)",
+        "role": "PMO Programme — Cash Management Competence Center",
+        "duration": "Févr. — Août 2018",
+        "achievements": [
+          "Programme d'amélioration de la qualité de service IT Cash Management : coordination de 5 entités du groupe.",
+          "Analyses de qualité de service (criticité des incidents), préparation des COPIL, documentation des incidents IT et des processus."
+        ]
+      }
+    ],
+    "references": [
+      "CAREL Mutuelle",
+      "Crédit Agricole CIB",
+      "Caisse des Dépôts",
+      "BNP Paribas",
+      "Allianz Partners",
+      "SNCF",
+      "Système U"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+  "en": {
+    "summary": "10 years of experience in digital transformation and complex products. Piloting high-stakes digital projects from strategic scoping to operational delivery, aligning business, IT and end users.",
+    "expertise": [
+      "Product Ownership (Discovery & Delivery)",
+      "Scoping, impact studies, project governance",
+      "Business analysis, RFPs, governance bodies",
+      "Agile Scrum & V-cycle delivery",
+      "Data: SQL, Python, Tableau, KPIs"
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "education": [
+      {
+        "year": "2015",
+        "school": "IAE Paris",
+        "degree": "Master in Management"
+      },
+      {
+        "year": "2021 — 2022",
+        "school": "Certifications",
+        "degree": "SCRUM PO, PRINCE2, ITIL, data management"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "CAREL Mutuelle",
+        "role": "Senior Project Manager / Business Analyst",
+        "duration": "May 2024 — Dec. 2025",
+        "achievements": [
+          "Portfolio migration and back-office tool change (KELIA): governance of interfaces (Client portals, EDM, document output, Salesforce).",
+          "Drafted and managed several RFPs; cross-application acceptance testing; strategic recommendations to General Management."
+        ]
+      },
+      {
+        "employer": "Crédit Agricole CIB",
+        "role": "Senior Business Analyst / Project Manager — Supply Chain Finance",
+        "duration": "Jan. 2023 — Mar. 2024",
+        "achievements": [
+          "IT referent for the Supply Chain Finance application; impact studies and business requirements scoping.",
+          "Deliverables: specifications, user stories, automated tests with Cucumber (Gherkin); end-to-end acceptance, L3 support and training."
+        ]
+      },
+      {
+        "employer": "Groupe Caisse des Dépôts & Consignations",
+        "role": "Product & Project Manager",
+        "duration": "Mar. 2021 — July 2022",
+        "achievements": [
+          "Business application redesign and cross-IS data migration: product discovery (personae, story map, roadmaps), user stories and Jira prioritization.",
+          "Career data migration: requirement documents, qualification with Agirc-Arrco, acceptance strategy; GDPR & security documentation."
+        ]
+      },
+      {
+        "employer": "BNP Paribas (CIB)",
+        "role": "Program PMO — Cash Management Competence Center",
+        "duration": "Feb. — Aug. 2018",
+        "achievements": [
+          "IT Cash Management service quality improvement program: coordination of 5 group entities.",
+          "Service quality analyses (incident criticality), steering committee preparation, IT incident and process documentation."
+        ]
+      }
+    ],
+    "references": [
+      "CAREL Mutuelle",
+      "Crédit Agricole CIB",
+      "Caisse des Dépôts",
+      "BNP Paribas",
+      "Allianz Partners",
+      "SNCF",
+      "Système U"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}
