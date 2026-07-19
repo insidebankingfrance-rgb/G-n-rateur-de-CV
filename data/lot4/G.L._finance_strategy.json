@@ -1,0 +1,146 @@
+{
+  "initials": "G.L.",
+  "first_name": "Gaspard",
+  "last_name": "de Lassus",
+
+  "title_fr": "Consultant Freelance en Finance & Stratégie",
+  "title_en": "Freelance Finance & Strategy Consultant",
+  "domain_fr": "Pilotage financier, stratégique & IA — Chief of Staff",
+  "domain_en": "Financial, Strategic & AI Steering — Chief of Staff",
+
+  "fr": {
+    "summary": "Depuis 2016, postes de conseil (Capgemini, LexisNexis) et Chief of Staff (Fujitsu, La Banque Postale, BPCE). Pilotage du cadrage et de la mise en œuvre de projets stratégiques d'envergure (carve-out, plan de retournement). Fortes compétences en finance, stratégie et IA.",
+    "expertise": [
+      "Pilotage financier (budget, BP, lead-to-cash)",
+      "Pilotage commercial (sales ops, go-to-market)",
+      "Pilotage opérationnel (PMO, Target Operating Model)",
+      "Pilotage stratégique (retournement, PMI, due diligence)",
+      "Pilotage d'agents IA (Codex)"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant (C1/C2)" },
+      { "name": "Espagnol", "level": "Conversationnel (B2)" }
+    ],
+    "education": [
+      { "year": "2012 — 2018", "school": "Sciences Po Paris", "degree": "Bachelor of Arts puis Master Finance & Stratégie" },
+      { "year": "2014 — 2015", "school": "Chulalongkorn University (Bangkok)", "degree": "Bachelor of Business Administration (échange)" }
+    ],
+    "experiences": [
+      {
+        "employer": "Groupe BPCE (freelance)",
+        "role": "Chief of Staff « data & IA »",
+        "duration": "Sept. 2025 — aujourd'hui",
+        "achievements": [
+          "Pilotage de la direction data & IA en lien avec le CODIR : modélisation et suivi mensuel du budget 2026, définition et suivi des KPI des projets d'IA.",
+          "Pilotage réglementaire (comités stratégiques, audit BCE sur l'IA Gen) et études ad hoc ; revente trimestrielle de la mission et fluidification du process budgétaire."
+        ]
+      },
+      {
+        "employer": "Freelance",
+        "role": "Consultant en finance & stratégie commerciale",
+        "duration": "Janv. 2024 — aujourd'hui",
+        "achievements": [
+          "Accompagnement de +10 clients sur des études d'opportunités financières & business : due diligences France 2030 (BPI France), roadmap opérationnelle et business plan à 3 ans, analyse P&L.",
+          "Revente régulière des missions (+50 %)."
+        ]
+      },
+      {
+        "employer": "LexisNexis CEMEA",
+        "role": "Strategic Project Manager (Europe, Moyen-Orient, Afrique)",
+        "duration": "Sept. 2022 — Déc. 2023",
+        "achievements": [
+          "Définition et mise en œuvre des initiatives stratégiques : audit 360° d'une filiale déficitaire, stratégie de go-to-market d'une nouvelle offre, cas d'usage d'IA.",
+          "Relance réussie de la filiale déficitaire (CA +30 %, pertes -50 % en 2023) ; stratégie GTM validée par le CEO."
+        ]
+      },
+      {
+        "employer": "Capgemini Invent",
+        "role": "Consultant (senior)",
+        "duration": "Sept. 2018 — Févr. 2022",
+        "achievements": [
+          "Contribution à +10 projets stratégiques (pilotage financier et GTM) : carve-out d'une joint-venture Valeo x Capgemini, stratégie et budget de la Procédure Pénale Numérique.",
+          "Encadrement de consultants, gestion des clients, missions clés du cabinet."
+        ]
+      }
+    ],
+    "references": [
+      "Groupe BPCE", "LexisNexis", "Capgemini Invent", "La Banque Postale", "Air Liquide", "Fujitsu"
+    ],
+    "engagements": [
+      { "title": "Mécénat de compétences", "description": "My Job Glasses, Les Cercles de Parents" }
+    ],
+    "hobbies": [
+      "Natation, tennis, randonnée",
+      "Échecs (5 ans en club)"
+    ]
+  },
+
+  "en": {
+    "summary": "Since 2016, consulting roles (Capgemini, LexisNexis) and Chief of Staff positions (Fujitsu, La Banque Postale, BPCE). Led the scoping and implementation of large-scale strategic projects (carve-outs, turnaround plans). Strong finance, strategy and AI skills.",
+    "expertise": [
+      "Financial steering (budget, business plan, lead-to-cash)",
+      "Commercial steering (sales ops, go-to-market)",
+      "Operational steering (PMO, Target Operating Model)",
+      "Strategic steering (turnaround, PMI, due diligence)",
+      "AI agent steering (Codex)"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent (C1/C2)" },
+      { "name": "Spanish", "level": "Conversational (B2)" }
+    ],
+    "education": [
+      { "year": "2012 — 2018", "school": "Sciences Po Paris", "degree": "Bachelor of Arts then Master's in Finance & Strategy" },
+      { "year": "2014 — 2015", "school": "Chulalongkorn University (Bangkok)", "degree": "Bachelor of Business Administration (exchange)" }
+    ],
+    "experiences": [
+      {
+        "employer": "BPCE Group (freelance)",
+        "role": "Chief of Staff, Data & AI",
+        "duration": "Sept. 2025 — Present",
+        "achievements": [
+          "Steering the Data & AI department with the Executive Committee: modeling and monthly monitoring of the 2026 budget, definition and monitoring of AI-project KPIs.",
+          "Regulatory steering (strategic committees, ECB audit on GenAI) and ad hoc studies; quarterly mission renewal and smoother budget process."
+        ]
+      },
+      {
+        "employer": "Freelance",
+        "role": "Finance & Commercial Strategy Consultant",
+        "duration": "Jan. 2024 — Present",
+        "achievements": [
+          "Supported 10+ clients on financial and business opportunity assessments: France 2030 due diligences (BPI France), operational roadmap and 3-year business plan, P&L analysis.",
+          "Regular mission upselling (+50%)."
+        ]
+      },
+      {
+        "employer": "LexisNexis CEMEA",
+        "role": "Strategic Project Manager (Europe, Middle East, Africa)",
+        "duration": "Sept. 2022 — Dec. 2023",
+        "achievements": [
+          "Defined and implemented the group's strategic initiatives: 360° audit of a loss-making subsidiary, go-to-market strategy for a new offering, AI use cases.",
+          "Successfully relaunched the loss-making subsidiary (revenue +30%, losses -50% in 2023); GTM strategy approved by the CEO."
+        ]
+      },
+      {
+        "employer": "Capgemini Invent",
+        "role": "Consultant (senior)",
+        "duration": "Sept. 2018 — Feb. 2022",
+        "achievements": [
+          "Contributed to 10+ strategic projects (financial steering and GTM): carve-out of a Valeo x Capgemini joint venture, strategy and budget for the Digital Criminal Procedure program.",
+          "Consultant supervision, client management, key firm assignments."
+        ]
+      }
+    ],
+    "references": [
+      "BPCE Group", "LexisNexis", "Capgemini Invent", "La Banque Postale", "Air Liquide", "Fujitsu"
+    ],
+    "engagements": [
+      { "title": "Skills-based volunteering", "description": "My Job Glasses, Les Cercles de Parents" }
+    ],
+    "hobbies": [
+      "Swimming, tennis, hiking",
+      "Chess (5 years in a club)"
+    ]
+  }
+}
