@@ -1,0 +1,165 @@
+{
+  "initials": "A.D.",
+  "first_name": "Amadou",
+  "last_name": "Diallo",
+  "title_fr": "Senior Manager — Risk Management & Audit",
+  "title_en": "Senior Manager — Risk Management & Audit",
+  "domain_fr": "Remédiation réglementaire (BCE/ACPR) & Audit interne — Banque",
+  "domain_en": "Regulatory Remediation (ECB/ACPR) & Internal Audit — Banking",
+  "fr": {
+    "summary": "Senior Manager avec plus de 10 ans d'expérience en services financiers, spécialisé en gestion des risques, remédiation réglementaire (BCE/ACPR) et audit interne. Ancien inspecteur bancaire senior au sein d'une G-SIB.",
+    "expertise": [
+      "Remédiation BCE (JST) & V-testing",
+      "Rationalisation des contrôles fraude",
+      "Segregation of Duties (SoD) & IAM",
+      "RCSA & outils GRC (Enablon)",
+      "PMO réglementaire (CRR3, Bâle III)"
+    ],
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Langue maternelle"
+      },
+      {
+        "name": "Anglais",
+        "level": "Courant"
+      }
+    ],
+    "education": [
+      {
+        "year": "2015 — 2016",
+        "school": "Master (MSc) — apprentissage BNP Paribas CIB",
+        "degree": "Audit, Systèmes d'Information"
+      },
+      {
+        "year": "2013 — 2015",
+        "school": "Université Paris Sorbonne — IAE de Paris",
+        "degree": "Master 2 Finance"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "Allianz Partners (Freelance)",
+        "role": "DORA Audit Remediation Manager — Assurance",
+        "duration": "Janv. — Juin 2026",
+        "achievements": [
+          "Programme de remédiation DORA transverse (risques ICT, résilience opérationnelle) : évaluation des écarts et roadmaps cibles (gouvernance, ICT Risk, incidents, tests, risque tiers).",
+          "Coordination des workstreams (Techno, Cyber, Achats, Risques, Conformité, Audit) ; revue BCM, Disaster Recovery et gestion de crise."
+        ]
+      },
+      {
+        "employer": "EY France",
+        "role": "Senior Manager — Banking Risk & Compliance",
+        "duration": "Juin 2022 — Déc. 2025",
+        "achievements": [
+          "La Banque Postale : renforcement de la Fraud Control Library post-findings BCE (20 Key Controls) ; lead RCSA sur Enablon ; matrices SoD ; PMO CRR3 / Bâle III (gap assessment, impacts SMA).",
+          "Dexia : PMO reporting réglementaire en run-off (LCR, NSFR) ; BPCE : PMO du déploiement Groupe de OneStream."
+        ]
+      },
+      {
+        "employer": "Groupe BPCE",
+        "role": "ALM Reporting Manager",
+        "duration": "Janv. 2021 — Juin 2022",
+        "achievements": [
+          "Pilotage du reporting réglementaire de liquidité (LCR, NSFR) au sein du département ALM du Groupe BPCE."
+        ]
+      },
+      {
+        "employer": "Groupe BPCE — Inspection Générale",
+        "role": "Inspecteur bancaire senior (LOD3)",
+        "duration": "Janv. 2017 — Janv. 2021",
+        "achievements": [
+          "Missions d'audit internationales (France, US, Hong Kong, Algérie) sur les dispositifs de contrôle interne et la conformité.",
+          "Audits fraude et risque opérationnel (BICEC, Banque Palatine, BPCE Achats) ; plans de maîtrise des risques Natixis et Caisse d'Épargne."
+        ]
+      }
+    ],
+    "references": [
+      "Allianz Partners",
+      "La Banque Postale",
+      "Dexia",
+      "Groupe BPCE",
+      "Natixis"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+  "en": {
+    "summary": "Senior Manager with more than 10 years of experience in Financial Services, specializing in Risk management, regulatory remediation (ECB/ACPR) and Internal Audit. Former Senior Banking Inspector at a G-SIB.",
+    "expertise": [
+      "ECB Remediation (JST) & V-testing",
+      "Fraud Control Rationalization",
+      "Segregation of Duties (SoD) & IAM",
+      "RCSA & GRC tools (Enablon)",
+      "Regulatory PMO (CRR3, Basel III)"
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "education": [
+      {
+        "year": "2015 — 2016",
+        "school": "Master's (MSc) — apprenticeship at BNP Paribas CIB",
+        "degree": "Audit, Information Systems"
+      },
+      {
+        "year": "2013 — 2015",
+        "school": "Université Paris Sorbonne — IAE de Paris",
+        "degree": "Master 2 Finance"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "Allianz Partners (Freelance)",
+        "role": "DORA Audit Remediation Manager — Insurance",
+        "duration": "Jan. — June 2026",
+        "achievements": [
+          "Cross-functional DORA remediation program (ICT risk, operational resilience): gap assessments and target-state roadmaps (governance, ICT Risk, incidents, testing, third-party risk).",
+          "Coordinated workstreams (Tech, Cyber, Procurement, Risk, Compliance, Audit); review of BCM, Disaster Recovery and crisis management."
+        ]
+      },
+      {
+        "employer": "EY France",
+        "role": "Senior Manager — Banking Risk & Compliance",
+        "duration": "June 2022 — Dec. 2025",
+        "achievements": [
+          "La Banque Postale: strengthened the Fraud Control Library after ECB findings (20 Key Controls); RCSA lead on Enablon; SoD matrices; CRR3 / Basel III PMO (gap assessment, SMA impacts).",
+          "Dexia: PMO for regulatory reporting under run-off (LCR, NSFR); BPCE: PMO for the group-wide OneStream deployment."
+        ]
+      },
+      {
+        "employer": "Groupe BPCE",
+        "role": "ALM Reporting Manager",
+        "duration": "Jan. 2021 — June 2022",
+        "achievements": [
+          "Managed regulatory liquidity reporting (LCR, NSFR) within the ALM department of Groupe BPCE."
+        ]
+      },
+      {
+        "employer": "Groupe BPCE — Inspection Générale",
+        "role": "Senior Banking Inspector (LOD3)",
+        "duration": "Jan. 2017 — Jan. 2021",
+        "achievements": [
+          "International audit missions (France, US, Hong Kong, Algeria) on internal control frameworks and compliance.",
+          "Fraud and operational-risk audits (BICEC, Banque Palatine, BPCE Achats); risk mitigation plans for Natixis and Caisse d'Épargne."
+        ]
+      }
+    ],
+    "references": [
+      "Allianz Partners",
+      "La Banque Postale",
+      "Dexia",
+      "Groupe BPCE",
+      "Natixis"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "initials": "O.I.",
+  "first_name": "Othmane",
+  "last_name": "Ibrahimi",
+
+  "title_fr": "Manager — Risk & Strategy",
+  "title_en": "Manager — Risk & Strategy",
+  "domain_fr": "Transformation stratégique & Risque de crédit — Banque",
+  "domain_en": "Strategic Transformation & Credit Risk — Banking",
+
+  "fr": {
+    "summary": "",
+    "expertise": [
+      "Transformation stratégique réglementaire (BCE)",
+      "Risque de crédit & Private Markets",
+      "Stress tests (EBA) & modélisation",
+      "Target Operating Model & data mapping",
+      "Automatisation SQL / SAS / Python"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Arabe",    "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Professionnel" },
+      { "name": "Espagnol", "level": "Maîtrise limitée" }
+    ],
+    "education": [
+      { "year": "2017 — 2020", "school": "ECE Paris, École d'Ingénieurs", "degree": "Master en Ingénierie Financière Quantitative" },
+      { "year": "2015 — 2017", "school": "Sorbonne Université", "degree": "Licence Mathématiques & Informatique appliquées" },
+      { "year": "—", "school": "Certifications", "degree": "AMF, candidat CFA niveau I, gestion de projet" }
+    ],
+    "experiences": [
+      {
+        "employer": "KPMG France",
+        "role": "Manager — Private Markets, Transformation Stratégique BCE (Groupe BPCE)",
+        "duration": "Mai 2025 — aujourd'hui",
+        "achievements": [
+          "Pilotage d'un programme de transformation Private Markets pour le Groupe BPCE en réponse à la revue prudentielle BCE (CRO Letter) sur les expositions Private Equity & Private Credit — chantier réglementaire prioritaire 2025-2027.",
+          "Consolidation et analyse critique de 27 Md€ d'expositions Private Markets au niveau Groupe (6 établissements pilotes) ; évaluation du dispositif de risques face aux attentes BCE et plans de remédiation (gouvernance, RAF, stress testing)."
+        ]
+      },
+      {
+        "employer": "EY (Ernst & Young Advisory)",
+        "role": "Senior Strategy Consultant",
+        "duration": "Janv. 2022 — Mai 2025",
+        "achievements": [
+          "Fusion HSBC France Retail (fonds Cerberus) : feuille de route et Target Operating Model d'intégration ; optimisation de l'octroi de crédit via data mapping ; plateforme de données réduisant de 20 % le délai de décision crédit.",
+          "Stress Test EBA 25 pour une grande banque : conception du processus (borne de départ, méthodologie, outil de projection sous scénarios macroéconomiques) ; automatisation d'un outil SQL/SAS de centralisation et projection des données."
+        ]
+      }
+    ],
+    "references": [
+      "KPMG", "EY", "Groupe BPCE", "HSBC France"
+    ],
+    "engagements": [],
+    "hobbies": [
+      "Football",
+      "Tennis",
+      "Running",
+      "Organisation de tournois & voyages"
+    ]
+  },
+
+  "en": {
+    "summary": "",
+    "expertise": [
+      "Strategic regulatory transformation (ECB)",
+      "Credit risk & Private Markets",
+      "Stress tests (EBA) & modelling",
+      "Target Operating Model & data mapping",
+      "Automation SQL / SAS / Python"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "Arabic",  "level": "Native" },
+      { "name": "English", "level": "Professional" },
+      { "name": "Spanish", "level": "Limited" }
+    ],
+    "education": [
+      { "year": "2017 — 2020", "school": "ECE Paris, Engineering School", "degree": "Master's in Quantitative Financial Engineering" },
+      { "year": "2015 — 2017", "school": "Sorbonne University", "degree": "Bachelor's in Applied Mathematics & Computer Science" },
+      { "year": "—", "school": "Certifications", "degree": "AMF, CFA Level I candidate, project management" }
+    ],
+    "experiences": [
+      {
+        "employer": "KPMG France",
+        "role": "Manager — Private Markets, ECB Strategic Transformation (Groupe BPCE)",
+        "duration": "May 2025 — Present",
+        "achievements": [
+          "Led a Private Markets transformation program for Groupe BPCE in response to the ECB prudential review (CRO Letter) on Private Equity & Private Credit exposures — a priority regulatory initiative for 2025-2027.",
+          "Consolidation and critical analysis of €27bn of Private Markets exposures at Group level (6 pilot entities); assessment of the risk framework against ECB expectations and remediation plans (governance, RAF, stress testing)."
+        ]
+      },
+      {
+        "employer": "EY (Ernst & Young Advisory)",
+        "role": "Senior Strategy Consultant",
+        "duration": "Jan. 2022 — May 2025",
+        "achievements": [
+          "HSBC France Retail merger (Cerberus fund): roadmap and Target Operating Model for integration; credit-origination optimization via data mapping; data platform reducing the credit-decision time by 20%.",
+          "EBA 25 Stress Test for a large bank: process design (starting point, methodology, projection tool under macroeconomic scenarios); automation of an SQL/SAS tool to centralize and project entity data."
+        ]
+      }
+    ],
+    "references": [
+      "KPMG", "EY", "Groupe BPCE", "HSBC France"
+    ],
+    "engagements": [],
+    "hobbies": [
+      "Football",
+      "Tennis",
+      "Running",
+      "Organising tournaments & trips"
+    ]
+  }
+}

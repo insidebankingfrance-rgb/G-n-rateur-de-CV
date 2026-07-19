@@ -1,0 +1,173 @@
+{
+  "initials": "A.D.",
+  "first_name": "Axel",
+  "last_name": "Domingo",
+  "title_fr": "Senior Manager — Transformation Bancaire",
+  "title_en": "Senior Manager — Banking Transformation",
+  "domain_fr": "CIB & Corporate Banking — Optimisation du capital & IA",
+  "domain_en": "CIB & Corporate Banking — Capital Optimisation & AI",
+  "fr": {
+    "summary": "10 ans d'expérience en services financiers (conseil, banque d'entreprise, inspection générale). Expertise en transformation bancaire : optimisation du capital, efficacité opérationnelle, initiatives data et IA.",
+    "expertise": [
+      "Operating model & optimisation des processus",
+      "Cadres réglementaires & risques (Bâle IV, MiFID II, BCBS239)",
+      "Initiatives data & IA",
+      "Développement commercial & relation client",
+      "Pilotage de projets & management d'équipes"
+    ],
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Langue maternelle"
+      },
+      {
+        "name": "Anglais",
+        "level": "Courant"
+      }
+    ],
+    "education": [
+      {
+        "year": "2017",
+        "school": "EMLYON Business School",
+        "degree": "MSc in Corporate Finance"
+      },
+      {
+        "year": "2016",
+        "school": "Université Paris 10",
+        "degree": "Master 2 Asset Management, Marchés & Régulation des Risques"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "PwC France",
+        "role": "Senior Manager — Consulting Financial Services",
+        "duration": "Mai 2024 — aujourd'hui",
+        "achievements": [
+          "Projets de transformation pour des banques globales (jusqu'à 4 consultants) : initiatives data optimisant RWA et coûts sur 5 filiales d'une G-SIB — 13 M€ de gains P&L.",
+          "Programme d'efficacité des coûts d'une G-SIB : benchmark et analyse détaillée — 210 M€ d'économies potentielles ; promotion de l'IA pour les revenus CIB."
+        ]
+      },
+      {
+        "employer": "Chappuis Halder & Co France",
+        "role": "Manager — Consulting Financial Services",
+        "duration": "Oct. 2021 — Mai 2024",
+        "achievements": [
+          "Projets de transformation pour des banques globales (jusqu'à 6 consultants) : revue du modèle de rating interne Project Finance (harmonisation des modèles BNPP CIB).",
+          "Refonte de 3 macro-processus crédit end-to-end pour une CIB française ; renforcement du dispositif LCB-FT des filiales africaines d'une G-SIB."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — Inspection Générale",
+        "role": "Auditeur interne",
+        "duration": "Août 2020 — Sept. 2021",
+        "achievements": [
+          "Audits internes des lignes métiers CIB Global Banking sur la zone EMEA : identification des lacunes opérationnelles, de gouvernance et de gestion des risques.",
+          "Présentation des conclusions et recommandations au top management pour renforcer le dispositif de gestion des risques."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — Corporate Banking",
+        "role": "Corporate Coverage Associate",
+        "duration": "Avril 2017 — Juil. 2020",
+        "achievements": [
+          "Revues annuelles, origination et structuration de deals (acquisitions, financements capex) pour un portefeuille de 15 clients corporate (500 M€ à 10 Md€ de CA).",
+          "Gestion des waivers, amendements et extensions ; préparation de pitches et memos pour les Senior Bankers."
+        ]
+      }
+    ],
+    "references": [
+      "PwC",
+      "Chappuis Halder & Co",
+      "BNP Paribas"
+    ],
+    "engagements": [],
+    "hobbies": [
+      "Basketball",
+      "Fitness",
+      "Voyages",
+      "Investisseur long terme"
+    ]
+  },
+  "en": {
+    "summary": "10 years of experience in Financial Services spanning consulting, corporate banking and general inspection. Expertise in banking transformation: capital optimisation, operational efficiency, data and AI-enabled initiatives.",
+    "expertise": [
+      "Operating model & process optimisation",
+      "Regulatory & risk frameworks (Basel IV, MiFID II, BCBS239)",
+      "Data & AI initiatives",
+      "Business development & client relationship",
+      "Project management & team leadership"
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
+    ],
+    "education": [
+      {
+        "year": "2017",
+        "school": "EMLYON Business School",
+        "degree": "MSc in Corporate Finance"
+      },
+      {
+        "year": "2016",
+        "school": "Université Paris 10",
+        "degree": "Master 2 Asset Management, Markets' Operations & Risks' Regulation"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "PwC France",
+        "role": "Senior Manager — Consulting Financial Services",
+        "duration": "May 2024 — Present",
+        "achievements": [
+          "Transformation projects for global banks (teams up to 4): data-driven initiatives optimising RWA and costs across 5 subsidiaries of a G-SIB — €13m P&L gains.",
+          "G-SIB cost efficiency program: benchmark and detailed analysis — €210m potential savings; promoted AI adoption for CIB revenues."
+        ]
+      },
+      {
+        "employer": "Chappuis Halder & Co France",
+        "role": "Manager — Consulting Financial Services",
+        "duration": "Oct. 2021 — May 2024",
+        "achievements": [
+          "Transformation projects for global banks (teams up to 6): review of the Project Finance internal rating model (BNPP CIB rating-model harmonization).",
+          "Redesigned 3 end-to-end credit macro-processes for a French CIB; strengthened the AML/CFT framework of a G-SIB's African subsidiaries."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — General Inspection",
+        "role": "Internal Auditor",
+        "duration": "Aug. 2020 — Sept. 2021",
+        "achievements": [
+          "Internal audit assessments of CIB Global Banking business lines across EMEA: identification of operational, governance and risk-management gaps.",
+          "Presented audit conclusions and recommendations to senior management to reinforce the risk-management framework."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — Corporate Banking",
+        "role": "Corporate Coverage Associate",
+        "duration": "April 2017 — July 2020",
+        "achievements": [
+          "Annual reviews, origination and structuring of deals (acquisitions, capex financings) for a portfolio of 15 corporate clients (€500m-€10bn in annual sales).",
+          "Managed waivers, amendments and extensions; prepared client pitches and memos for Senior Bankers."
+        ]
+      }
+    ],
+    "references": [
+      "PwC",
+      "Chappuis Halder & Co",
+      "BNP Paribas"
+    ],
+    "engagements": [],
+    "hobbies": [
+      "Basketball",
+      "Fitness",
+      "Travels",
+      "Long-term investor"
+    ]
+  }
+}

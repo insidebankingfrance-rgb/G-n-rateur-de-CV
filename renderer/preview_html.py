@@ -95,7 +95,7 @@ def _estimate_sidebar_pt_html(payload: dict) -> float:
     return pt
 
 
-_AVAIL_SIDEBAR_HTML = 380
+_AVAIL_SIDEBAR_HTML = 409
 _AVAIL_MAIN_HTML = 419
 
 

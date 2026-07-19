@@ -198,7 +198,9 @@ _PARA_GAP_PT       = 1
 
 # EMU per pt = 12700
 _AVAIL_PT_MAIN    = (SLIDE_H - HEADER_H - FOOTER_H - 160000) / 12700
-_AVAIL_PT_SIDEBAR = _AVAIL_PT_MAIN - 40  # initials block (~0.5") eats the top
+# La sidebar débute après le bloc nom (≈ même hauteur que le titre côté main),
+# donc son budget vertical est quasi identique à celui de la colonne principale.
+_AVAIL_PT_SIDEBAR = _AVAIL_PT_MAIN - 10
 
 
 def _wrapped_lines(text: str, cpl: int) -> int:
