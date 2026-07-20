@@ -1,0 +1,173 @@
+{
+  "initials": "R.E.",
+  "first_name": "Reda",
+  "last_name": "El Gorch",
+  "title_fr": "Data Business Analyst — Gouvernance des données",
+  "title_en": "Data Business Analyst — Data Governance",
+  "domain_fr": "Qualité & gouvernance des données — Risque de crédit & Reporting réglementaire",
+  "domain_en": "Data Quality & Governance — Credit Risk & Regulatory Reporting",
+  "fr": {
+    "summary": "Data Business Analyst à forte culture IT & Data, spécialisé dans la gouvernance et la qualité des données pour le secteur bancaire. Bonne maîtrise des systèmes décisionnels et de la gestion de projet (cycle en V, agile).",
+    "expertise": [
+      "Gouvernance & qualité des données (BCBS 239)",
+      "Recueil des besoins & rédaction de spécifications",
+      "Reporting réglementaire & indicateurs (KPIs)",
+      "Test / recette & suivi des développements",
+      "SQL, Power BI, Tableau, Collibra, Zeenea, Jira"
+    ],
+    "languages": [
+      {
+        "name": "Français",
+        "level": ""
+      },
+      {
+        "name": "Anglais",
+        "level": ""
+      }
+    ],
+    "education": [
+      {
+        "year": "2014 — 2017",
+        "school": "ENSIIE",
+        "degree": "Ingénieur, option Informatique-Finance"
+      },
+      {
+        "year": "2024",
+        "school": "Certification",
+        "degree": "Professional Scrum Product Owner I"
+      },
+      {
+        "year": "2020 — 2021",
+        "school": "Certifications",
+        "degree": "Tableau Desktop Specialist ; MOOC ML & Data Science (Stanford)"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "Natixis",
+        "role": "Business Analyst — Data Governance",
+        "duration": "Depuis Jan. 2025",
+        "achievements": [
+          "Gestion des éléments de données critiques (CDE) via le Data Management Framework pour la qualité, la sécurité et la transparence des données de risque de crédit ; ateliers avec les équipes risques, règles de contrôle qualité (présence, cohérence, unicité, fraîcheur).",
+          "Alimentation du dictionnaire de données Zeenea avec le CDO/DDO, définition du lignage, mise en place de KPIs d'anomalies, recette et campagnes de remédiation."
+        ]
+      },
+      {
+        "employer": "BPCE",
+        "role": "Data Business Analyst — Reporting Conglomérat",
+        "duration": "Jan. 2022 — Déc. 2024",
+        "achievements": [
+          "Industrialisation de la production des nouveaux reportings Conglomérat : ateliers métiers, spécification des exigences fonctionnelles et règles de calcul, cartographie et POC des données.",
+          "Stratégie et réalisation des tests (intégration, fonctionnels, non-régression) ; KPIs Power BI et synthèse semestrielle Direction. Contexte : Large Exposure, Bâle 3, BCBS 239."
+        ]
+      },
+      {
+        "employer": "BNP Paribas",
+        "role": "Data Business Analyst — MOA Finance Groupe",
+        "duration": "Oct. 2018 — Déc. 2021",
+        "achievements": [
+          "Modèle de contrôle et de defaulting des anomalies de risque de crédit, comptabilité et AnaCredit pour toutes les entités : recueil des besoins, spécification des contrôles, validation métier et mise en production IT.",
+          "Dashboards Power BI / Tableau (KPIs, drill down), référencement dans l'outil MDM Groupe (Collibra), calendrier de mise à jour et communication aux responsables métiers."
+        ]
+      },
+      {
+        "employer": "Murex",
+        "role": "Analyst Business Intelligence",
+        "duration": "Sept. 2017 — Oct. 2018",
+        "achievements": [
+          "Développement de tableaux de bord (QlikView, Qlik Sense) et projet Machine Learning : collecte multi-sources, analyse descriptive Python et prédictive (apprentissage supervisé) pour le développement commercial."
+        ]
+      }
+    ],
+    "references": [
+      "Natixis",
+      "BPCE",
+      "BNP Paribas",
+      "Murex"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+  "en": {
+    "summary": "Data Business Analyst with a strong IT & Data background, specialized in data governance and quality for the banking sector. Solid command of decision-support systems and project management (V-cycle, agile).",
+    "expertise": [
+      "Data governance & quality (BCBS 239)",
+      "Requirements gathering & specifications",
+      "Regulatory reporting & KPIs",
+      "Testing / acceptance & development follow-up",
+      "SQL, Power BI, Tableau, Collibra, Zeenea, Jira"
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "level": ""
+      },
+      {
+        "name": "English",
+        "level": ""
+      }
+    ],
+    "education": [
+      {
+        "year": "2014 — 2017",
+        "school": "ENSIIE",
+        "degree": "Engineering degree, IT-Finance track"
+      },
+      {
+        "year": "2024",
+        "school": "Certification",
+        "degree": "Professional Scrum Product Owner I"
+      },
+      {
+        "year": "2020 — 2021",
+        "school": "Certifications",
+        "degree": "Tableau Desktop Specialist; MOOC ML & Data Science (Stanford)"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "Natixis",
+        "role": "Business Analyst — Data Governance",
+        "duration": "Since Jan. 2025",
+        "achievements": [
+          "Management of Critical Data Elements (CDE) via the Data Management Framework for quality, security and transparency of credit-risk data; workshops with risk teams, data-quality control rules (presence, consistency, uniqueness, freshness).",
+          "Feeding the Zeenea data dictionary with the CDO/DDO, lineage definition, anomaly KPIs, acceptance testing and remediation campaigns."
+        ]
+      },
+      {
+        "employer": "BPCE",
+        "role": "Data Business Analyst — Conglomerate Reporting",
+        "duration": "Jan. 2022 — Dec. 2024",
+        "achievements": [
+          "Industrialization of new Conglomerate reporting: business workshops, specification of functional requirements and calculation rules, data mapping and POC.",
+          "Test strategy and execution (integration, functional, non-regression); Power BI KPIs and semi-annual management summary. Context: Large Exposure, Basel 3, BCBS 239."
+        ]
+      },
+      {
+        "employer": "BNP Paribas",
+        "role": "Data Business Analyst — Group Finance MOA",
+        "duration": "Oct. 2018 — Dec. 2021",
+        "achievements": [
+          "Control and defaulting model for credit-risk, accounting and AnaCredit anomalies across all entities: requirements gathering, control specification, business validation and IT go-live.",
+          "Power BI / Tableau dashboards (KPIs, drill down), referencing in the Group MDM tool (Collibra), update schedule and communication to business owners."
+        ]
+      },
+      {
+        "employer": "Murex",
+        "role": "Business Intelligence Analyst",
+        "duration": "Sept. 2017 — Oct. 2018",
+        "achievements": [
+          "Dashboard development (QlikView, Qlik Sense) and a Machine Learning project: multi-source data collection, descriptive Python analysis and predictive modelling (supervised learning) for business development."
+        ]
+      }
+    ],
+    "references": [
+      "Natixis",
+      "BPCE",
+      "BNP Paribas",
+      "Murex"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}
