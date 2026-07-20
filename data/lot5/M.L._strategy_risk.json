@@ -1,0 +1,122 @@
+{
+  "initials": "M.L.",
+  "first_name": "Manuella",
+  "last_name": "Chouaga Lawson",
+
+  "title_fr": "Manager — Stratégie & Risques Bancaires",
+  "title_en": "Manager — Banking Strategy & Risk",
+  "domain_fr": "Risque de crédit, Model Risk & Transformation — Banque & Assurance",
+  "domain_en": "Credit Risk, Model Risk & Transformation — Banking & Insurance",
+
+  "fr": {
+    "summary": "Professionnelle des risques bancaires, plus de 9 ans d'expérience en cabinet de conseil, banque internationale et conseil en stratégie. Accompagnement des institutions financières sur la gouvernance des risques de crédit, le pilotage du capital et la transformation stratégique, avec un focus sur les marchés africains.",
+    "expertise": [
+      "Gouvernance des risques de crédit",
+      "Model Risk Management (PD/LGD, IFRS 9)",
+      "Pilotage du capital & RWA",
+      "Stratégie & transformation (Data / IA)",
+      "Outils : SAS, SQL, Python, R, VBA"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant (C2)" }
+    ],
+    "education": [
+      { "year": "2016", "school": "Université Paris-Dauphine", "degree": "Master Financial Engineering" },
+      { "year": "2013", "school": "Paris-Dauphine & Montréal", "degree": "Bachelor Financial Economics" },
+      { "year": "—", "school": "Certification", "degree": "Financial Risk Manager (FRM) — Part I (GARP)" }
+    ],
+    "experiences": [
+      {
+        "employer": "Freelance",
+        "role": "Manager — Financial Services",
+        "duration": "Depuis Jan. 2026",
+        "achievements": [
+          "Accompagnement de banques et assureurs sur leurs enjeux de stratégie, transformation, risque, data et IA ; développement d'offres et présentation des recommandations aux dirigeants (CEO, CFO, Comités de Direction).",
+          "Missions : stratégie de ciblage clients pour un acteur bancaire ivoirien ; stratégie Data & IA et feuille de route de transformation pour un assureur au Ghana."
+        ]
+      },
+      {
+        "employer": "Société Générale",
+        "role": "Senior → Assistant Manager — Model Risk Management",
+        "duration": "2021 — 2025",
+        "achievements": [
+          "Coordination d'une équipe de 8 spécialistes quantitatifs et consultants externes sur un programme de remédiation réglementaire estimé à près de 2 M€ par an.",
+          "Validation indépendante de plus de 20 modèles Retail (PD/LGD) pour la conformité réglementaire et l'optimisation du capital ; contribution à l'évaluation des RWA dans des projets de cession d'entités."
+        ]
+      },
+      {
+        "employer": "EY — Paris",
+        "role": "Consultant Senior — Financial Risk Advisory",
+        "duration": "2016 — 2020",
+        "achievements": [
+          "Accompagnement des banques sur le risque de crédit, la gouvernance et la transformation réglementaire : +10 missions de conseil et contribution à +20 appels d'offres.",
+          "BNP Paribas Personal Finance (évaluation IFRS 9), AFD (cadre IFRS 9 banque de développement), HSBC France (outil Groupe de décision crédit : -20 % de délais, +200 collaborateurs formés)."
+        ]
+      }
+    ],
+    "references": [
+      "Société Générale", "EY", "BNP Paribas", "HSBC France", "AFD"
+    ],
+    "engagements": [
+      { "title": "Membre fondatrice — Cléduc", "description": "Éducation & entrepreneuriat en Côte d'Ivoire" }
+    ],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "Banking risk professional with over 9 years of experience across consulting, international banking and strategy advisory. Supporting financial institutions on credit-risk governance, capital steering and strategic transformation, with a focus on African markets.",
+    "expertise": [
+      "Credit-risk governance",
+      "Model Risk Management (PD/LGD, IFRS 9)",
+      "Capital steering & RWA",
+      "Strategy & transformation (Data / AI)",
+      "Tools: SAS, SQL, Python, R, VBA"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent (C2)" }
+    ],
+    "education": [
+      { "year": "2016", "school": "Université Paris-Dauphine", "degree": "Master's in Financial Engineering" },
+      { "year": "2013", "school": "Paris-Dauphine & Montréal", "degree": "Bachelor's in Financial Economics" },
+      { "year": "—", "school": "Certification", "degree": "Financial Risk Manager (FRM) — Part I (GARP)" }
+    ],
+    "experiences": [
+      {
+        "employer": "Freelance",
+        "role": "Manager — Financial Services",
+        "duration": "Since Jan. 2026",
+        "achievements": [
+          "Advising banks and insurers on strategy, transformation, risk, data and AI; offering development and presentation of recommendations to executives (CEO, CFO, Executive Committees).",
+          "Missions: client-targeting growth strategy for an Ivorian bank; Data & AI strategy and transformation roadmap for a Ghanaian insurer."
+        ]
+      },
+      {
+        "employer": "Société Générale",
+        "role": "Senior → Assistant Manager — Model Risk Management",
+        "duration": "2021 — 2025",
+        "achievements": [
+          "Coordinated a team of 8 quantitative specialists and external consultants on a regulatory remediation program estimated at nearly €2M per year.",
+          "Independent validation of 20+ Retail models (PD/LGD) for regulatory compliance and capital optimization; contribution to RWA assessment in entity-disposal projects."
+        ]
+      },
+      {
+        "employer": "EY — Paris",
+        "role": "Senior Consultant — Financial Risk Advisory",
+        "duration": "2016 — 2020",
+        "achievements": [
+          "Advised banks on credit risk, governance and regulatory transformation: 10+ consulting missions and contributions to 20+ RFPs.",
+          "BNP Paribas Personal Finance (IFRS 9 assessment), AFD (IFRS 9 framework for a development bank), HSBC France (Group credit-decision tool: -20% processing time, 200+ staff trained)."
+        ]
+      }
+    ],
+    "references": [
+      "Société Générale", "EY", "BNP Paribas", "HSBC France", "AFD"
+    ],
+    "engagements": [
+      { "title": "Founding member — Cléduc", "description": "Education & entrepreneurship in Côte d'Ivoire" }
+    ],
+    "hobbies": []
+  }
+}
