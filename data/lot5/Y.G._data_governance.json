@@ -1,0 +1,179 @@
+{
+  "initials": "Y.G.",
+  "first_name": "Youssef",
+  "last_name": "Gadri",
+  "title_fr": "Consultant Senior / Manager — Data Governance",
+  "title_en": "Senior Consultant / Manager — Data Governance",
+  "domain_fr": "Data Management & Gouvernance des données — BCBS 239 / RDARR",
+  "domain_en": "Data Management & Data Governance — BCBS 239 / RDARR",
+  "fr": {
+    "summary": "Consultant Senior / Manager spécialisé en Data Management et gouvernance des données, expert des programmes réglementaires BCBS 239 / RDARR pour les grandes institutions financières.",
+    "expertise": [
+      "Gouvernance & qualité des données (BCBS 239 / RDARR)",
+      "Data Management & Data Lineage",
+      "Outils : Collibra, Informatica, Ab Initio",
+      "Product Ownership & Target Operating Model",
+      "Conduite du changement & animation métier"
+    ],
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Langue maternelle"
+      },
+      {
+        "name": "Anglais",
+        "level": "Courant (TOEIC 920/990)"
+      }
+    ],
+    "education": [
+      {
+        "year": "2017",
+        "school": "ESCP Business School",
+        "degree": "MS Stratégie, Conseil & Organisation"
+      },
+      {
+        "year": "2016",
+        "school": "ESGI Paris",
+        "degree": "Master Management & Conseil en SI"
+      },
+      {
+        "year": "—",
+        "school": "Certification",
+        "degree": "Collibra Solution Architect"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "Crédit Agricole CIB",
+        "role": "Direction de programme RDARR — BCBS 239",
+        "duration": "Depuis Juin 2026",
+        "achievements": [
+          "Déclinaison du cadre normatif Groupe (gouvernance, qualité, lignage) aux spécificités de CACIB ; analyses d'écarts et plans de remédiation.",
+          "Animation des parties prenantes (CDO, risques/finance, data offices, IT) ; définition du périmètre RDARR (données essentielles, lignage, contrôles)."
+        ]
+      },
+      {
+        "employer": "TDF (Télédiffusion de France)",
+        "role": "Product Owner — Direction de la Transformation (BU TowerCo)",
+        "duration": "Mars 2024 — Mai 2026",
+        "achievements": [
+          "Digitalisation et automatisation des processus métier : TOM, solution Camunda (70 % du volume de commandes TowerCo).",
+          "Solution in-house de production automatique de livrables ; comités de pilotage et de direction."
+        ]
+      },
+      {
+        "employer": "Allianz Trade (ex Euler Hermes)",
+        "role": "Mise en place du Data Office",
+        "duration": "Sept. 2022 — Oct. 2023",
+        "achievements": [
+          "Déclinaison des directives data du Groupe Allianz (framework, gouvernance, contrôles) avec le Group Data Office.",
+          "Déploiement Informatica AXON / EDC ; framework Data Quality (processus, contrôles, KPIs) ; change management."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — Group Data Office",
+        "role": "Implémentation de l'Enterprise Data Management Tool (Collibra)",
+        "duration": "Oct. 2020 — Août 2022",
+        "achievements": [
+          "Design du modèle de données (metamodel Collibra) ; dictionnaires, catalogues de contrôles, règles métier.",
+          "Cartographie du Data Lineage ; règles de qualité (complétude, fraîcheur, validité) ; guidelines et formation."
+        ]
+      }
+    ],
+    "references": [
+      "Crédit Agricole CIB",
+      "BNP Paribas",
+      "Allianz Trade",
+      "Société Générale",
+      "TDF",
+      "Enedis"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+  "en": {
+    "summary": "Senior Consultant / Manager specialized in Data Management and data governance, expert in BCBS 239 / RDARR regulatory programs for major financial institutions.",
+    "expertise": [
+      "Data governance & quality (BCBS 239 / RDARR)",
+      "Data Management & Data Lineage",
+      "Tools: Collibra, Informatica, Ab Initio",
+      "Product Ownership & Target Operating Model",
+      "Change management & business facilitation"
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent (TOEIC 920/990)"
+      }
+    ],
+    "education": [
+      {
+        "year": "2017",
+        "school": "ESCP Business School",
+        "degree": "MS Strategy, Consulting & Organization"
+      },
+      {
+        "year": "2016",
+        "school": "ESGI Paris",
+        "degree": "Master's in Management & IS Consulting"
+      },
+      {
+        "year": "—",
+        "school": "Certification",
+        "degree": "Collibra Solution Architect"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "Crédit Agricole CIB",
+        "role": "RDARR Program Management — BCBS 239",
+        "duration": "Since June 2026",
+        "achievements": [
+          "Adaptation of the Group standards framework (governance, quality, lineage) to CACIB; gap analyses and remediation plans.",
+          "Stakeholder facilitation (CDO, risk/finance, data offices, IT); RDARR scope definition (critical data, lineage, controls)."
+        ]
+      },
+      {
+        "employer": "TDF (Télédiffusion de France)",
+        "role": "Product Owner — Transformation Division (TowerCo BU)",
+        "duration": "Mar. 2024 — May 2026",
+        "achievements": [
+          "Business-process digitalization and automation: TOM, Camunda solution (70% of TowerCo order volume).",
+          "In-house solution for automated deliverable production; steering and executive committees."
+        ]
+      },
+      {
+        "employer": "Allianz Trade (ex Euler Hermes)",
+        "role": "Data Office set-up",
+        "duration": "Sept. 2022 — Oct. 2023",
+        "achievements": [
+          "Rollout of Allianz Group data directives (framework, governance, controls) with the Group Data Office.",
+          "Informatica AXON / EDC deployment; Data Quality framework (processes, controls, KPIs); change management."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — Group Data Office",
+        "role": "Enterprise Data Management Tool implementation (Collibra)",
+        "duration": "Oct. 2020 — Aug. 2022",
+        "achievements": [
+          "Data-model design (Collibra metamodel); dictionaries, control catalogs, business rules.",
+          "Data Lineage mapping; quality rules (completeness, freshness, validity); guidelines and training."
+        ]
+      }
+    ],
+    "references": [
+      "Crédit Agricole CIB",
+      "BNP Paribas",
+      "Allianz Trade",
+      "Société Générale",
+      "TDF",
+      "Enedis"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}
