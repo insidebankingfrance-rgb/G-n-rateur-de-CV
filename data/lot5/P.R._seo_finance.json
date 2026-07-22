@@ -1,0 +1,136 @@
+{
+  "initials": "P.R.",
+  "first_name": "Pierre-Charles",
+  "last_name": "Relange",
+
+  "title_fr": "Consultant SEO — Finance & Secteurs Réglementés",
+  "title_en": "SEO Consultant — Finance & Regulated Sectors",
+  "domain_fr": "Acquisition organique — Fintech, Banque, Assurance, Compta",
+  "domain_en": "Organic Acquisition — Fintech, Banking, Insurance, Accounting",
+
+  "fr": {
+    "summary": "9 ans de SEO au service de la fintech, de la comptabilité et des secteurs réglementés. Transforme Google en canal d'acquisition durable, dans le respect des exigences YMYL et E-E-A-T. En moyenne +40 % de trafic organique en 12 mois. 50+ clients accompagnés, du CAC 40 à la PME.",
+    "expertise": [
+      "SEO technique (crawl & logs, Core Web Vitals, indexation)",
+      "SEO éditorial & sémantique (cocons, clustering)",
+      "E-E-A-T & YMYL — secteurs réglementés (finance, santé)",
+      "Netlinking & GEO (AI Overviews, ChatGPT, Perplexity)",
+      "Outils : Ahrefs, Semrush, Screaming Frog, GA4, Looker Studio"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant (TOEIC 950/990)" },
+      { "name": "Espagnol", "level": "Notions" }
+    ],
+    "education": [
+      { "year": "2015", "school": "ISTEC Paris", "degree": "Master Bac+5 Commerce B2B" },
+      { "year": "—", "school": "HubSpot Academy", "degree": "Certification SEO" }
+    ],
+    "experiences": [
+      {
+        "employer": "Save Your Web (SASU) — Consultant SEO freelance",
+        "role": "Fintech, Banque, Assurance & B2B",
+        "duration": "Depuis 2023",
+        "achievements": [
+          "Missions pour Stanwell Consulting (conseil banque, assurance, protection sociale) et Zama (cryptographie & blockchain) : audits, stratégie sémantique, netlinking et pilotage jusqu'à la mise en production.",
+          "Plus de 50 clients accompagnés, 3 maximum par trimestre pour un suivi senior dédié."
+        ]
+      },
+      {
+        "employer": "Je Déclare Mon Meublé (fintech LMNP)",
+        "role": "Consultant SEO Senior",
+        "duration": "Depuis 2025",
+        "achievements": [
+          "+52 % de trafic SEO en 18 mois ; 78 % des leads générés via Google.",
+          "Positions n°1-2 sur les principales requêtes fiscales (LMNP, régime réel)."
+        ]
+      },
+      {
+        "employer": "L-Expert-Comptable.com (compta B2B)",
+        "role": "Responsable SEO",
+        "duration": "2021 — 2024",
+        "achievements": [
+          "1,2 M de visites SEO par mois, +23 % de trafic organique par an ; +23 % de signatures clients issues du SEO.",
+          "Management éditorial de 67 rédacteurs, production de contenus YMYL."
+        ]
+      },
+      {
+        "employer": "NRJ Group (média)",
+        "role": "Head of SEO",
+        "duration": "2018 — 2021",
+        "achievements": [
+          "Stratégie SEO des sites publishing du groupe (NRJ, Rire & Chansons, Chérie FM) : +37 % de trafic organique hors-marque.",
+          "Position n°1 sur « blagues » (300 000 recherches/mois) ; audits techniques, migrations, analyse de logs et netlinking."
+        ]
+      }
+    ],
+    "references": [
+      "Edenred (CAC 40)", "L-Expert-Comptable.com", "Je Déclare Mon Meublé", "Stanwell", "NRJ Group", "Zama"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "9 years of SEO for fintech, accounting and regulated sectors. Turns Google into a sustainable acquisition channel while meeting YMYL and E-E-A-T requirements. On average +40% organic traffic within 12 months. 50+ clients supported, from CAC 40 to SMEs.",
+    "expertise": [
+      "Technical SEO (crawl & logs, Core Web Vitals, indexing)",
+      "Editorial & semantic SEO (topic clusters)",
+      "E-E-A-T & YMYL — regulated sectors (finance, health)",
+      "Netlinking & GEO (AI Overviews, ChatGPT, Perplexity)",
+      "Tools: Ahrefs, Semrush, Screaming Frog, GA4, Looker Studio"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent (TOEIC 950/990)" },
+      { "name": "Spanish", "level": "Basic" }
+    ],
+    "education": [
+      { "year": "2015", "school": "ISTEC Paris", "degree": "Master's (Bac+5) B2B Commerce" },
+      { "year": "—", "school": "HubSpot Academy", "degree": "SEO Certification" }
+    ],
+    "experiences": [
+      {
+        "employer": "Save Your Web (SASU) — Freelance SEO Consultant",
+        "role": "Fintech, Banking, Insurance & B2B",
+        "duration": "Since 2023",
+        "achievements": [
+          "Assignments for Stanwell Consulting (banking, insurance, social protection advisory) and Zama (cryptography & blockchain): audits, semantic strategy, netlinking and delivery through to production.",
+          "50+ clients supported, max 3 per quarter for dedicated senior follow-up."
+        ]
+      },
+      {
+        "employer": "Je Déclare Mon Meublé (LMNP fintech)",
+        "role": "Senior SEO Consultant",
+        "duration": "Since 2025",
+        "achievements": [
+          "+52% SEO traffic in 18 months; 78% of leads generated via Google.",
+          "Positions #1-2 on the main tax-related queries (LMNP, actual regime)."
+        ]
+      },
+      {
+        "employer": "L-Expert-Comptable.com (B2B accounting)",
+        "role": "Head of SEO",
+        "duration": "2021 — 2024",
+        "achievements": [
+          "1.2M SEO visits per month, +23% organic traffic per year; +23% client sign-ups driven by SEO.",
+          "Editorial management of 67 writers, production of YMYL content."
+        ]
+      },
+      {
+        "employer": "NRJ Group (media)",
+        "role": "Head of SEO",
+        "duration": "2018 — 2021",
+        "achievements": [
+          "SEO strategy for the group's publishing sites (NRJ, Rire & Chansons, Chérie FM): +37% non-brand organic traffic.",
+          "#1 position on 'blagues' (300,000 searches/month); technical audits, migrations, log analysis and netlinking."
+        ]
+      }
+    ],
+    "references": [
+      "Edenred (CAC 40)", "L-Expert-Comptable.com", "Je Déclare Mon Meublé", "Stanwell", "NRJ Group", "Zama"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}
