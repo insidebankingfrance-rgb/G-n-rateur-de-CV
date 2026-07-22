@@ -1,0 +1,136 @@
+{
+  "initials": "M.D.",
+  "first_name": "Mamadou",
+  "last_name": "Diallo",
+
+  "title_fr": "Consultant Quant — Risque de Crédit",
+  "title_en": "Credit Risk Quant Consultant",
+  "domain_fr": "Modélisation du risque de crédit — IRB, IFRS 9, TRIM",
+  "domain_en": "Credit Risk Modelling — IRB, IFRS 9, TRIM",
+
+  "fr": {
+    "summary": "Plus de 10 ans en modélisation du risque de crédit auprès de banques Tier 1 et cabinets Big Four. Expertise en conception de modèles IRBA, remédiation TRIM et revue de provisionnement, combinant rigueur quantitative, exigences réglementaires et réalité métier.",
+    "expertise": [
+      "Modèles IRBA (PD / LGD / ELBE)",
+      "Remédiation TRIM & recommandations BCE",
+      "Provisionnement IFRS 9 & études d'impact ECL",
+      "Model Risk Management & backtesting",
+      "SAS, R, Python, VBA, SPSS"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant" }
+    ],
+    "education": [
+      { "year": "2016", "school": "ENGDE Paris", "degree": "MBA Audit & Risk Management" },
+      { "year": "2015", "school": "Paris 1 Panthéon-Sorbonne", "degree": "Master 2 MoSEF, Major Finance" },
+      { "year": "2014", "school": "Paris Ouest Nanterre", "degree": "Master 1 Banque-Finance-Assurance" }
+    ],
+    "experiences": [
+      {
+        "employer": "CCF Group",
+        "role": "Model Governance Auditor",
+        "duration": "Mai — Juil. 2026",
+        "achievements": [
+          "Audit de gouvernance du risque de modèle couvrant tout le cycle de vie (développement, validation, monitoring) ; revue du cadre de politiques MRM par type de modèle vs exigences réglementaires et best practices.",
+          "Revue critique de l'inventaire des modèles et du processus d'identification ; tests d'efficacité des politiques MRM avec les Model Owners (LoD1)."
+        ]
+      },
+      {
+        "employer": "HSBC Continental Europe",
+        "role": "Consultant Global Risk Analytics",
+        "duration": "Janv. 2024 — Déc. 2025",
+        "achievements": [
+          "Préparation des données du nouveau modèle LGD (portefeuille PME / Mid-corp) ; pilotage du développement d'un nouveau modèle PD IFRS 9 (Home Loan) et coordination métier / IT.",
+          "Tests d'implémentation (UAT), études d'impact ECL des nouveaux modèles IFRS 9, suivi du calcul RWA en méthode standard, outils d'analyse (VBA)."
+        ]
+      },
+      {
+        "employer": "EY",
+        "role": "Manager Quantitative Advisory Services",
+        "duration": "Oct. 2021 — Déc. 2023",
+        "achievements": [
+          "Traitement des obligations post-mission TRIM sur les nouveaux modèles IRB (PD, LGD, ELBE) ; analyses d'impact, revue et challenge de documentation, suivi de l'implémentation IT.",
+          "Monitoring trimestriel des modèles IRB et d'octroi, recalibrage du modèle de rentabilité (pricing) ; support quant sur revues d'audit (provisions ECL, backtesting) ; formation des consultants."
+        ]
+      },
+      {
+        "employer": "SFIL (Groupe Caisse des Dépôts)",
+        "role": "Credit Risk Modelling Analyst",
+        "duration": "Févr. 2019 — Sept. 2021",
+        "achievements": [
+          "Lead du développement de modèles (PD, LGD, ELBE) dans le cadre d'IRB Repair : sélection de variables, règles de décision, présentation aux experts métiers et comité de pilotage.",
+          "Préparation du dossier d'agrément BCE, réponses aux inspecteurs lors des on-site, suivi des recommandations et de la validation interne ; outils VBA pour la LGD souverains."
+        ]
+      }
+    ],
+    "references": [
+      "HSBC Continental Europe", "EY", "SFIL", "CGI Finance (Société Générale)", "Volkswagen Financial Services", "GM Financial"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "10+ years in credit-risk modelling across Tier 1 banks and Big Four advisory. Hands-on expertise in IRBA model design, TRIM remediation and provisioning review, connecting quantitative rigour, regulatory expectations and business reality.",
+    "expertise": [
+      "IRBA models (PD / LGD / ELBE)",
+      "TRIM remediation & ECB recommendations",
+      "IFRS 9 provisioning & ECL impact studies",
+      "Model Risk Management & backtesting",
+      "SAS, R, Python, VBA, SPSS"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent" }
+    ],
+    "education": [
+      { "year": "2016", "school": "ENGDE Paris", "degree": "MBA Audit & Risk Management" },
+      { "year": "2015", "school": "Paris 1 Panthéon-Sorbonne", "degree": "Master 2 MoSEF, Major Finance" },
+      { "year": "2014", "school": "Paris Ouest Nanterre", "degree": "Master 1 Banking-Finance-Insurance" }
+    ],
+    "experiences": [
+      {
+        "employer": "CCF Group",
+        "role": "Model Governance Auditor",
+        "duration": "May — July 2026",
+        "achievements": [
+          "Model-risk governance audit covering the full lifecycle (development, validation, monitoring); review of the MRM policy framework by model type vs regulatory requirements and best practices.",
+          "Critical review of the model inventory and identification process; effectiveness testing of MRM policies with Model Owners (LoD1)."
+        ]
+      },
+      {
+        "employer": "HSBC Continental Europe",
+        "role": "Consultant Global Risk Analytics",
+        "duration": "Jan. 2024 — Dec. 2025",
+        "achievements": [
+          "Data preparation for a new LGD model (SME / Mid-corp portfolio); piloted the development of a new IFRS 9 PD model (Home Loan) and coordinated business / IT.",
+          "Implementation tests (UAT), ECL impact studies of the new IFRS 9 models, monitoring of standard-method RWA calculation, credit-risk analysis tools (VBA)."
+        ]
+      },
+      {
+        "employer": "EY",
+        "role": "Manager Quantitative Advisory Services",
+        "duration": "Oct. 2021 — Dec. 2023",
+        "achievements": [
+          "Treatment of obligations following the TRIM mission on new IRB models (PD, LGD, ELBE); impact analyses, documentation review & challenge, IT implementation follow-up.",
+          "Quarterly monitoring of IRB and acceptance models, recalibration of the pricing profitability model; quant support on audit reviews (ECL provisions, backtesting); consultant training."
+        ]
+      },
+      {
+        "employer": "SFIL (Caisse des Dépôts Group)",
+        "role": "Credit Risk Modelling Analyst",
+        "duration": "Feb. 2019 — Sept. 2021",
+        "achievements": [
+          "Lead of model development (PD, LGD, ELBE) under IRB Repair: variable selection, decision rules, presentation to business experts and steering committee.",
+          "Preparation of the ECB approval file, responses to inspectors during on-site missions, follow-up of recommendations and internal validation; VBA tools for sovereign LGD."
+        ]
+      }
+    ],
+    "references": [
+      "HSBC Continental Europe", "EY", "SFIL", "CGI Finance (Société Générale)", "Volkswagen Financial Services", "GM Financial"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}
