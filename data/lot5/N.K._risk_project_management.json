@@ -1,0 +1,142 @@
+{
+  "initials": "N.K.",
+  "first_name": "Nadhira",
+  "last_name": "Khelifi",
+
+  "title_fr": "Project & Risk Management — Réglementaire Bancaire",
+  "title_en": "Project & Risk Management — Banking Regulatory",
+  "domain_fr": "Risques & Prudentiel — RWA, Stress Tests, ICAAP/ILAAP, LCR/NSFR",
+  "domain_en": "Risk & Prudential — RWA, Stress Tests, ICAAP/ILAAP, LCR/NSFR",
+
+  "fr": {
+    "summary": "Project Manager, 12 ans en pilotage de projets réglementaires et risques pour de grands établissements (Société Générale, Natixis, Crédit Agricole SA, BNP Paribas CIB, Amundi). Expertise prudentielle : RWA, ICAAP/ILAAP, IRRBB, LCR/NSFR.",
+    "expertise": [
+      "Risque de crédit (RWA, IRB, IFRS 9, Stress Tests)",
+      "Risque de liquidité & ALM (LCR/NSFR, IRRBB)",
+      "ICAAP / ILAAP / Risk Appetite Framework",
+      "Reporting prudentiel (COREP, CRR2/3, Guidelines EBA)",
+      "Business Analysis & Data (Agile, SQL, Databricks)"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Courant" },
+      { "name": "Anglais",  "level": "Courant" },
+      { "name": "Arabe",    "level": "Courant" }
+    ],
+    "education": [
+      { "year": "2016", "school": "Université Paris X / ESB", "degree": "Master 2 Asset & Risk Management" },
+      { "year": "2015", "school": "École Supérieure de la Banque", "degree": "Master 1 Banque Finance" },
+      { "year": "2017", "school": "Certification", "degree": "AMF — Autorité des Marchés Financiers" }
+    ],
+    "experiences": [
+      {
+        "employer": "Crédit Agricole SA (DRG)",
+        "role": "Chef de Projet — Stratégie de Modélisation RWA",
+        "duration": "Déc. 2025 — Mai 2026",
+        "achievements": [
+          "Revue de la stratégie de modélisation du risque de crédit (RWA IRBA/IRBF, IFRS 9, Stress Tests, ICAAP) : densités RWA et gains IRB par entité.",
+          "Ateliers d'objectivation coûts/gains de modélisation ; tableau de bord de pilotage et zones d'optimisation."
+        ]
+      },
+      {
+        "employer": "Necker Bank",
+        "role": "Chef de Projet — Risk Appetite & Ratios Prudentiels (agrément ACPR)",
+        "duration": "Sept. — Nov. 2025",
+        "achievements": [
+          "Pilotage du stream Risk pour une demande d'agrément bancaire ACPR : cartographie des risques, RAF/RAS, métriques et limites.",
+          "Formalisation des politiques (crédit, liquidité, ICAAP, ILAAP) et calcul des ratios réglementaires (RWA, capital, LCR, NSFR)."
+        ]
+      },
+      {
+        "employer": "Société Générale",
+        "role": "Senior BA / Chef de Projet — Stress Tests & RWA",
+        "duration": "Août 2024 — Août 2025",
+        "achievements": [
+          "Pilotage des Stress Tests Crédit (EBA, Budget, Climatique) : projection stressée (EAD, RWA, ECL) par scénario et horizon.",
+          "Mise en place des règles CRR 3 (PD/LGD floor, Output Floor) ; migration vers un calculateur Databricks (UAT, recette)."
+        ]
+      },
+      {
+        "employer": "Arab Bank Corporation",
+        "role": "Chef de Projet — ICAAP / ILAAP / IRRBB",
+        "duration": "Avr. — Juil. 2024",
+        "achievements": [
+          "Revue des méthodologies ICAAP/ILAAP/IRRBB : ratios prudentiels base et stressé, métriques LCR/NSFR, capital économique.",
+          "Définition des management actions et de la méthodologie d'explication des variations NII/EVE présentée en ALCO."
+        ]
+      }
+    ],
+    "references": [
+      "Société Générale", "Natixis", "Amundi", "BNP Paribas CIB", "Dexia", "Lyxor"
+    ],
+    "engagements": [
+      { "title": "Formatrice", "description": "Gestion des risques — IESEG School of Management" }
+    ],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "Project Manager, 12 years leading banking regulatory and risk projects for major institutions (Société Générale, Natixis, Crédit Agricole SA, BNP Paribas CIB, Amundi). Prudential expertise: RWA, Stress Tests, ICAAP/ILAAP, IRRBB, LCR/NSFR.",
+    "expertise": [
+      "Credit risk (RWA, IRB, IFRS 9, Stress Tests)",
+      "Liquidity risk & ALM (LCR/NSFR, IRRBB)",
+      "ICAAP / ILAAP / Risk Appetite Framework",
+      "Prudential reporting (COREP, CRR2/3, EBA Guidelines)",
+      "Business Analysis & Data (Agile, SQL, Databricks)"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Fluent" },
+      { "name": "English", "level": "Fluent" },
+      { "name": "Arabic",  "level": "Fluent" }
+    ],
+    "education": [
+      { "year": "2016", "school": "Université Paris X / ESB", "degree": "Master 2 Asset & Risk Management" },
+      { "year": "2015", "school": "École Supérieure de la Banque", "degree": "Master 1 Banking & Finance" },
+      { "year": "2017", "school": "Certification", "degree": "AMF — French Market Regulator" }
+    ],
+    "experiences": [
+      {
+        "employer": "Crédit Agricole SA (Group Risk)",
+        "role": "Project Manager — RWA Modelling Strategy",
+        "duration": "Dec. 2025 — May 2026",
+        "achievements": [
+          "Review of the credit-risk modelling strategy (RWA IRBA/IRBF, IFRS 9, Stress Tests, ICAAP): RWA densities and IRB gains by entity.",
+          "Workshops to objectify modelling costs vs gains; steering dashboard and areas for optimization."
+        ]
+      },
+      {
+        "employer": "Necker Bank",
+        "role": "Project Leader — Risk Appetite & Prudential Ratios (ACPR licensing)",
+        "duration": "Sept. — Nov. 2025",
+        "achievements": [
+          "Led the Risk stream for an ACPR banking licence application: risk mapping, RAF/RAS, metrics and limits.",
+          "Formalized risk policies (credit, liquidity, ICAAP, ILAAP) and computed regulatory ratios (RWA, capital, LCR, NSFR)."
+        ]
+      },
+      {
+        "employer": "Société Générale",
+        "role": "Senior BA / Project Manager — Stress Tests & RWA",
+        "duration": "Aug. 2024 — Aug. 2025",
+        "achievements": [
+          "Led Credit Stress Tests (EBA, Budget, Climate): stressed projection (EAD, RWA, ECL) by scenario and horizon.",
+          "Implemented CRR 3 rules (PD/LGD floor, Output Floor); migration to a Databricks calculator (UAT, acceptance)."
+        ]
+      },
+      {
+        "employer": "Arab Bank Corporation",
+        "role": "Project Manager — ICAAP / ILAAP / IRRBB",
+        "duration": "Apr. — July 2024",
+        "achievements": [
+          "Review of ICAAP/ILAAP/IRRBB methodologies: prudential ratios baseline and stressed, LCR/NSFR metrics, economic capital.",
+          "Definition of management actions and NII/EVE variation-analysis methodology presented to ALCO."
+        ]
+      }
+    ],
+    "references": [
+      "Société Générale", "Natixis", "Amundi", "BNP Paribas CIB", "Dexia", "Lyxor"
+    ],
+    "engagements": [
+      { "title": "Lecturer", "description": "Risk Management — IESEG School of Management" }
+    ],
+    "hobbies": []
+  }
+}
