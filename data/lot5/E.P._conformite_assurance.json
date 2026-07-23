@@ -1,0 +1,136 @@
+{
+  "initials": "E.P.",
+  "first_name": "",
+  "last_name": "",
+
+  "title_fr": "Experte Conformité & Distribution d'Assurance",
+  "title_en": "Insurance Compliance & Distribution Expert",
+  "domain_fr": "Conformité assurance — DDA, LCB-FT, RGPD, protection sociale",
+  "domain_en": "Insurance compliance — IDD, AML-CFT, GDPR, social protection",
+
+  "fr": {
+    "summary": "Plus de quinze ans d'expérience en assurance, dont quatre dédiés à la conformité. Une conviction : vulgariser le droit, le déployer dans l'organisation, le transmettre à des non-experts.",
+    "expertise": [
+      "Réglementation DDA & devoir de conseil",
+      "Audit de conformité, LCB-FT & RGPD",
+      "Protection sociale, épargne, retraite",
+      "Pédagogie & vulgarisation juridique",
+      "Pilotage & management d'équipe"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Intermédiaire" },
+      { "name": "Espagnol", "level": "Intermédiaire" }
+    ],
+    "education": [
+      { "year": "2021", "school": "CNAM", "degree": "Certificat — Responsabilité sociale et environnementale de l'entreprise" },
+      { "year": "2012", "school": "Université Paris I Panthéon-Sorbonne", "degree": "Master 2 — Droit des assurances" },
+      { "year": "2011", "school": "Université Montesquieu Bordeaux IV", "degree": "Licence & Master 1 — Droit privé général" }
+    ],
+    "experiences": [
+      {
+        "employer": "Althéa Conseil & Conformité",
+        "role": "Fondatrice",
+        "duration": "Depuis sept. 2025",
+        "achievements": [
+          "Accompagnement des distributeurs d'assurance sur les sujets de conformité : audits, classeurs conformité, formations, réponses aux questions courantes."
+        ]
+      },
+      {
+        "employer": "Groupe Sofraco",
+        "role": "Responsable juridique et conformité",
+        "duration": "2020 — 2025",
+        "achievements": [
+          "Audit conformité du groupe et de ses filiales, puis conception et déploiement du plan de conformité (DDA, LCB-FT, RGPD) ; pilotage de l'activité juridique du groupe.",
+          "Accompagnement des 350 courtiers du réseau sur la mise en conformité de leurs cabinets (webinaires, e-learnings, podcasts) ; veille juridique, conventions réglementées et de partenariat, réponses assurantielles (protection sociale, épargne, retraite, santé, prévoyance)."
+        ]
+      },
+      {
+        "employer": "Pavillon Prévoyance",
+        "role": "Juriste assurance",
+        "duration": "2019 — 2021",
+        "achievements": [
+          "Création du pôle assurantiel au sein de la direction juridique et pilotage de sujets transverses (100% santé, complémentaire santé solidaire, résiliation infra-annuelle).",
+          "Pilotage des comités fraude et réclamations, accompagnement juridique des équipes commerciales, reporting auprès de l'autorité de contrôle."
+        ]
+      },
+      {
+        "employer": "La Médiation de l'Assurance",
+        "role": "Responsable du pôle assurance-vie",
+        "duration": "2015 — 2019",
+        "achievements": [
+          "Application de la réglementation relative à l'assurance-vie et au droit des contrats aux cas d'espèce ; rédaction du rapport d'activité annuel.",
+          "Management du pôle : répartition de la charge, entretiens annuels, recrutements."
+        ]
+      }
+    ],
+    "references": [
+      "GEMA — Juriste Médiation (2011–2015)"
+    ],
+    "engagements": [],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "Over fifteen years of experience in insurance, four of them dedicated to compliance. One conviction: make the law accessible, deploy it across the organization, and pass it on to non-experts.",
+    "expertise": [
+      "IDD regulation & duty to advise",
+      "Compliance audit, AML-CFT & GDPR",
+      "Social protection, savings, retirement",
+      "Legal pedagogy & plain-language advice",
+      "Team leadership & management"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Intermediate" },
+      { "name": "Spanish", "level": "Intermediate" }
+    ],
+    "education": [
+      { "year": "2021", "school": "CNAM", "degree": "Certificate — Corporate Social & Environmental Responsibility" },
+      { "year": "2012", "school": "Université Paris I Panthéon-Sorbonne", "degree": "Master 2 — Insurance Law" },
+      { "year": "2011", "school": "Université Montesquieu Bordeaux IV", "degree": "Bachelor & Master 1 — Private Law" }
+    ],
+    "experiences": [
+      {
+        "employer": "Althéa Conseil & Conformité",
+        "role": "Founder",
+        "duration": "Since Sept. 2025",
+        "achievements": [
+          "Advising insurance distributors on compliance matters: audits, compliance binders, training, answers to day-to-day questions."
+        ]
+      },
+      {
+        "employer": "Groupe Sofraco",
+        "role": "Head of Legal & Compliance",
+        "duration": "2020 — 2025",
+        "achievements": [
+          "Group and subsidiaries compliance audit, then design and roll-out of the compliance plan (IDD, AML-CFT, GDPR); steering of the group's legal activity.",
+          "Support to the network's 350 brokers on bringing their firms into compliance (webinars, e-learnings, podcasts); legal watch, regulated & partnership agreements, insurance answers (social protection, savings, retirement, health, provident)."
+        ]
+      },
+      {
+        "employer": "Pavillon Prévoyance",
+        "role": "Insurance Lawyer",
+        "duration": "2019 — 2021",
+        "achievements": [
+          "Created the insurance unit within the legal department and steered cross-functional topics (100% health, solidarity supplementary health, infra-annual cancellation).",
+          "Steering of fraud and complaints committees, legal support to sales teams, reporting to the supervisory authority."
+        ]
+      },
+      {
+        "employer": "La Médiation de l'Assurance",
+        "role": "Head of the Life-Insurance Unit",
+        "duration": "2015 — 2019",
+        "achievements": [
+          "Application of life-insurance and contract-law regulation to case files; drafting of the annual activity report.",
+          "Unit management: workload allocation, annual reviews, recruitment."
+        ]
+      }
+    ],
+    "references": [
+      "GEMA — Mediation Lawyer (2011–2015)"
+    ],
+    "engagements": [],
+    "hobbies": []
+  }
+}
