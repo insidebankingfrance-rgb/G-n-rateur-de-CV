@@ -1,0 +1,126 @@
+{
+  "initials": "C.S.",
+  "first_name": "Claire",
+  "last_name": "Savoldelli",
+
+  "title_fr": "Data Governance Manager — Chef de Projet",
+  "title_en": "Data Governance Manager — Project Manager",
+  "domain_fr": "Optimisation des processus & gouvernance des données — Banque & Marchés financiers",
+  "domain_en": "Process optimization & data governance — Banking & Financial Markets",
+
+  "fr": {
+    "summary": "Consultante en management spécialisée en optimisation des processus et gouvernance des données. Pilote des équipes pour livrer des solutions scalables, conformes et créatrices de valeur métier. 12 ans en banque et marchés financiers.",
+    "expertise": [
+      "Gouvernance des données & data catalog (Collibra)",
+      "Digitalisation & optimisation des processus (RPA, IA)",
+      "KYC onboarding & réglementaire (MiFID, EMIR, FATCA, AEOI)",
+      "Custody, clearing & settlement ; Wealth Management",
+      "Agile / Scrum, Product Owner, conduite du changement"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Bilingue" },
+      { "name": "Espagnol", "level": "Bilingue" },
+      { "name": "Italien",  "level": "Notions" }
+    ],
+    "education": [
+      { "year": "2014", "school": "NEOMA Business School", "degree": "Master in Finance (Programme Grande École)" },
+      { "year": "2010", "school": "HEC Prépa", "degree": "Classes préparatoires — BAC S (mention)" },
+      { "year": "—", "school": "Certifications", "degree": "AMF · Data Governance (Collibra) · Scrum · RPA UiPath" }
+    ],
+    "experiences": [
+      {
+        "employer": "Protiviti @ BNP Paribas",
+        "role": "Manager Consultant — Data Governance (Paris)",
+        "duration": "Avr. 2026 — Présent",
+        "achievements": [
+          "Business Analyst sur le cadre des activités de marché Front-Office (lien IG) : structuration des données critiques de contrôle des traders.",
+          "Déploiement d'un outil de dashboards & analytics (BRD avec IA, coordination IT) ; documentation et formation (data catalog, workflows)."
+        ]
+      },
+      {
+        "employer": "Custodian — Securities Services (Genève, Paris)",
+        "role": "Manager Consultant — Chef de Projet",
+        "duration": "Sept. 2022 — Déc. 2024",
+        "achievements": [
+          "Chef de projet — gouvernance des données pour l'offshoring des comptes-titres d'Italie vers le Portugal (TOM As-Is/To-Be, 3 Product Owners).",
+          "Solution IA de gestion des contrats (−90 % de manuel) ; adjointe d'un programme de fusion sur 18 sites (100+ clients, 10 streams)."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — KYC Consulting / Capgemini Invent",
+        "role": "Business Analyst — KYC (Hong Kong)",
+        "duration": "Févr. 2018 — Août 2022",
+        "achievements": [
+          "Automatisation & digitalisation du processus KYC Maker-Checker (FATCA, PEP, sanctions, adverse news, AML/CFT).",
+          "Rédaction de BRD/FRD divisant par 4 le temps de revue KYC ; dashboards avancement/risques et reporting (Kanban)."
+        ]
+      }
+    ],
+    "references": [
+      "BNP Paribas", "CA Indosuez Wealth Management", "Protiviti", "Capgemini Invent", "Newedge SG"
+    ],
+    "engagements": [],
+    "hobbies": [
+      "Voyage", "Peinture", "Sport"
+    ]
+  },
+
+  "en": {
+    "summary": "Management consultant specialized in process optimization and data governance. Leads teams to deliver scalable, business-enabling and compliant solutions. 12 years of experience across banking and financial markets.",
+    "expertise": [
+      "Data governance & data catalog (Collibra)",
+      "Process digitization & optimization (RPA, AI)",
+      "KYC onboarding & regulatory (MiFID, EMIR, FATCA, AEOI)",
+      "Custody, clearing & settlement; Wealth Management",
+      "Agile / Scrum, Product Owner, change management"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Bilingual" },
+      { "name": "Spanish", "level": "Bilingual" },
+      { "name": "Italian", "level": "Basic" }
+    ],
+    "education": [
+      { "year": "2014", "school": "NEOMA Business School", "degree": "Master in Finance (Grande École Programme)" },
+      { "year": "2010", "school": "HEC Prépa", "degree": "Preparatory classes — BAC S (Honors)" },
+      { "year": "—", "school": "Certifications", "degree": "AMF · Data Governance (Collibra) · Scrum · RPA UiPath" }
+    ],
+    "experiences": [
+      {
+        "employer": "Protiviti @ BNP Paribas",
+        "role": "Manager Consultant — Data Governance (Paris)",
+        "duration": "Apr. 2026 — Present",
+        "achievements": [
+          "Business Analyst on the Front-Office market activities framework (liaising with the IG): structured Traders' controls critical data.",
+          "Rolled out a KPI dashboards & analytics tool (BRDs leveraging AI, IT coordination); documented and trained users (data catalog, workflows)."
+        ]
+      },
+      {
+        "employer": "Custodian — Securities Services (Geneva, Paris)",
+        "role": "Manager Consultant — Project Manager",
+        "duration": "Sept. 2022 — Dec. 2024",
+        "achievements": [
+          "Project manager — data governance for the offshoring of clients' securities accounts from Italy to Portugal (As-Is/To-Be TOM, 3 Product Owners).",
+          "AI-powered contracts management solution (−90% manual process); deputy of a custodian's merger program across 18 locations (100+ clients, 10 streams)."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — KYC Consulting / Capgemini Invent",
+        "role": "Business Analyst — KYC (Hong Kong)",
+        "duration": "Feb. 2018 — Aug. 2022",
+        "achievements": [
+          "KYC Maker-Checker process automation & digitization (FATCA, PEP, Sanctions, adverse news, AML/CFT).",
+          "BRD/FRD cutting the KYC review time by 4; automated progress/risk dashboards & reports (Kanban)."
+        ]
+      }
+    ],
+    "references": [
+      "BNP Paribas", "CA Indosuez Wealth Management", "Protiviti", "Capgemini Invent", "Newedge SG"
+    ],
+    "engagements": [],
+    "hobbies": [
+      "Travel", "Painting", "Sport"
+    ]
+  }
+}

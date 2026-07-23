@@ -1,0 +1,134 @@
+{
+  "initials": "M.G.",
+  "first_name": "Maria",
+  "last_name": "Garcia",
+
+  "title_fr": "Consultante Conformité — Contrôle Permanent & Fraude",
+  "title_en": "Compliance Consultant — Permanent Control & Fraud",
+  "domain_fr": "LCB-FT, KYC, agréments EME/PSAN — Relations ACPR, AMF, TRACFIN",
+  "domain_en": "AML-CFT, KYC, EME/PSAN licensing — ACPR, AMF, TRACFIN relations",
+
+  "fr": {
+    "summary": "Consultante indépendante, double expertise audit (Inspection Générale BNP Paribas) et conformité opérationnelle pour établissements régulés (EME, PSAN, banques, assurances) : LCB-FT, contrôle permanent, fraude, relations ACPR/AMF/TRACFIN.",
+    "expertise": [
+      "LCB-FT, KYC / KYB, sanctions financières",
+      "Contrôle permanent (niveaux 1 & 2)",
+      "Dossiers d'agrément (PSAN, EME)",
+      "Gestion de la fraude & scénarios de surveillance",
+      "Relations régulateurs (ACPR, AMF, TRACFIN) & QLB"
+    ],
+    "languages": [],
+    "education": [
+      { "year": "2024", "school": "Université Panthéon-Assas", "degree": "MBA Droit des Affaires & Management" },
+      { "year": "2018", "school": "École Supérieure de la Banque (ITB)", "degree": "Master Management Bancaire — Major de promotion" },
+      { "year": "2004", "school": "CNAM / Université de Cergy", "degree": "Master 1 Comptabilité Contrôle Audit" }
+    ],
+    "experiences": [
+      {
+        "employer": "Market Pay — Établissement de Monnaie Électronique",
+        "role": "Responsable Contrôle Permanent & Fraude (Freelance)",
+        "duration": "Sept. 2025 — Présent",
+        "achievements": [
+          "Pilotage du dispositif de contrôle permanent (1 collaborateur) et monitoring de la fraude commerçant.",
+          "Contribution aux reportings réglementaires et à la mise en place des scénarii LCB-FT."
+        ]
+      },
+      {
+        "employer": "Crédit Agricole SA",
+        "role": "PMO KYC (Freelance)",
+        "duration": "Mars — Sept. 2025",
+        "achievements": [
+          "Production et remontée des indicateurs KYC au régulateur ; tableaux de bord de suivi KYC.",
+          "Pilotage des recommandations de l'Inspection Générale et du régulateur ; suivi des plans de remédiation."
+        ]
+      },
+      {
+        "employer": "La Banque Postale — eZyness (EME)",
+        "role": "Manager de Transition Conformité (Freelance)",
+        "duration": "Juil. 2023 — Mars 2025",
+        "achievements": [
+          "Mise en conformité : corpus procédural (LCB-FT, KYC, sanctions, gouvernance, surveillance), cartographie des risques, 8 scénarii LCB-FT.",
+          "Scoring / profilage (équipes Data), criblage temps réel, QLB 2025 ; RACI LCB-FT, contrôles N1 & N2, déclarations de soupçons (TRACFIN)."
+        ]
+      },
+      {
+        "employer": "YUZU GREEN & STOKN — 2 PSAN",
+        "role": "Chief Compliance Officer — Crypto-actifs (CDI puis Freelance)",
+        "duration": "Mai 2022 — Nov. 2024",
+        "achievements": [
+          "Création from scratch du dispositif de conformité des 2 PSAN, aboutissant à l'obtention des 2 enregistrements auprès de l'AMF.",
+          "Cadre LCB-FT (politiques, classification, cartographie, scénarios), contrôle interne et plan de contrôles ; échanges AMF / ACPR, QLB 2022 et 2023."
+        ]
+      }
+    ],
+    "references": [
+      "BNP Paribas (Inspection Générale)", "Société Générale — ALD Automotive", "Lyf Pay (BNP Paribas / Crédit Mutuel)", "QILEO", "Crédit Agricole SA"
+    ],
+    "engagements": [
+      { "title": "Fondatrice — Early Brief", "description": "Newsletter de veille réglementaire européenne pour les professionnels de la conformité" }
+    ],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "Independent consultant with dual audit (BNP Paribas Internal Inspection) and operational-compliance expertise for regulated institutions (EMI, CASP, banks, insurers): AML-CFT, permanent control, fraud, ACPR / AMF / TRACFIN relations.",
+    "expertise": [
+      "AML-CFT, KYC / KYB, financial sanctions",
+      "Permanent control (levels 1 & 2)",
+      "Licensing files (CASP, EMI)",
+      "Fraud management & monitoring scenarios",
+      "Regulator relations (ACPR, AMF, TRACFIN) & QLB"
+    ],
+    "languages": [],
+    "education": [
+      { "year": "2024", "school": "Université Panthéon-Assas", "degree": "MBA Business Law & Management" },
+      { "year": "2018", "school": "École Supérieure de la Banque (ITB)", "degree": "Master in Banking Management — Top of class" },
+      { "year": "2004", "school": "CNAM / Université de Cergy", "degree": "Master 1 Accounting, Control & Audit" }
+    ],
+    "experiences": [
+      {
+        "employer": "Market Pay — Electronic Money Institution",
+        "role": "Head of Permanent Control & Fraud (Freelance)",
+        "duration": "Sept. 2025 — Present",
+        "achievements": [
+          "Steering of the permanent control framework (1 team member) and merchant fraud monitoring.",
+          "Contribution to regulatory reporting and to the implementation of AML-CFT scenarios."
+        ]
+      },
+      {
+        "employer": "Crédit Agricole SA",
+        "role": "KYC PMO (Freelance)",
+        "duration": "March — Sept. 2025",
+        "achievements": [
+          "Production and reporting of KYC indicators to the regulator; KYC monitoring dashboards.",
+          "Steering of Internal Inspection and regulator recommendations; follow-up of remediation plans."
+        ]
+      },
+      {
+        "employer": "La Banque Postale — eZyness (EMI)",
+        "role": "Compliance Transition Manager (Freelance)",
+        "duration": "July 2023 — March 2025",
+        "achievements": [
+          "Compliance overhaul: procedural corpus (AML-CFT, KYC, sanctions, governance, monitoring), risk mapping, 8 AML-CFT scenarios.",
+          "Scoring / profiling (Data teams), real-time screening, QLB 2025; AML-CFT RACI, level-1 & 2 controls, suspicious-activity reports (TRACFIN)."
+        ]
+      },
+      {
+        "employer": "YUZU GREEN & STOKN — 2 CASPs",
+        "role": "Chief Compliance Officer — Crypto-assets (Perm. then Freelance)",
+        "duration": "May 2022 — Nov. 2024",
+        "achievements": [
+          "Built the compliance framework of both CASPs from scratch, leading to the two registrations with the AMF.",
+          "AML-CFT framework (policies, classification, mapping, scenarios), internal control and control plan; AMF / ACPR exchanges, QLB 2022 and 2023."
+        ]
+      }
+    ],
+    "references": [
+      "BNP Paribas (Internal Inspection)", "Société Générale — ALD Automotive", "Lyf Pay (BNP Paribas / Crédit Mutuel)", "QILEO", "Crédit Agricole SA"
+    ],
+    "engagements": [
+      { "title": "Founder — Early Brief", "description": "European regulatory-watch newsletter for compliance professionals" }
+    ],
+    "hobbies": []
+  }
+}
