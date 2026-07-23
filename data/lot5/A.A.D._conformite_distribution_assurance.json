@@ -1,0 +1,130 @@
+{
+  "initials": "A.A.D.",
+  "first_name": "",
+  "last_name": "",
+
+  "title_fr": "Expert Conformité & Distribution d'Assurances",
+  "title_en": "Insurance Compliance & Distribution Expert",
+  "domain_fr": "Conformité & transformation — DDA, LCB-FT, loi Lemoine, RGPD",
+  "domain_en": "Compliance & transformation — IDD, AML-CFT, consumer law, GDPR",
+
+  "fr": {
+    "summary": "Expert en conformité spécialisé en distribution de produits d'assurances, 15 ans en direction de programmes, digitalisation des processus et mise en conformité des offres et des parcours, en environnement régulé.",
+    "expertise": [
+      "Conformité : DDA, devoir de conseil, loi Eckert, LCB-FT, loi Lemoine, RGPD",
+      "Protection de la clientèle & pratiques commerciales",
+      "Plans de contrôle & maîtrise des risques",
+      "Diagnostic d'écarts & plans de remédiation",
+      "Direction de programme & digitalisation des parcours"
+    ],
+    "languages": [
+      { "name": "Français", "level": "Langue maternelle" },
+      { "name": "Anglais",  "level": "Courant (C1)" },
+      { "name": "Espagnol", "level": "Courant (B2)" },
+      { "name": "Turc",     "level": "Bilingue (C1)" }
+    ],
+    "education": [
+      { "year": "2009", "school": "Université Paris XI Sud", "degree": "Master II Droit International" },
+      { "year": "2008", "school": "Université Paris II Panthéon-Assas", "degree": "Master Sciences de Gestion" }
+    ],
+    "experiences": [
+      {
+        "employer": "Consultant Indépendant — Expert en Assurances",
+        "role": "Conseil en conformité & distribution",
+        "duration": "Depuis 2024",
+        "achievements": [
+          "Animation FG2A sur l'assurance affinitaire (gouvernance produit, devoir de conseil) : ateliers avec Kereis, la Médiation de l'Assurance, CNP Assurances.",
+          "Conseil chez BNP Paribas : transformation « Trust Companion » (2 000 ETP) ; fondateur d'une plateforme de formation 15h DDA pour les distributeurs."
+        ]
+      },
+      {
+        "employer": "Banque Française Mutualiste — Direction des Opérations",
+        "role": "Responsable des Partenariats et des Projets",
+        "duration": "Mars 2022 — Sept. 2024",
+        "achievements": [
+          "Direction de programme, appel d'offres pour le choix du nouvel assureur, digitalisation des parcours d'adhésion (75% de taux de transformation).",
+          "Animation des réseaux partenaires (15 mutuelles de la fonction publique) ; management du Back Office Assurances."
+        ]
+      },
+      {
+        "employer": "BPCE Lease — Direction de l'Expérience Client",
+        "role": "Directeur de Programme",
+        "duration": "Août 2019 — Mars 2022",
+        "achievements": [
+          "Conception et mise en marché d'offres assurances, digitalisation et conformité des parcours (DDA, RGPD) ; taux d'équipement de 88% atteint.",
+          "Animation / formation des réseaux (29 établissements bancaires du Groupe), veille concurrentielle, pilotage commercial."
+        ]
+      }
+    ],
+    "references": [
+      "SOGECAP (SG)", "Natixis Assurances", "MGEN", "AXA France", "Groupama", "CNP Assurances", "La Banque Postale"
+    ],
+    "engagements": [
+      { "title": "Intervenant — École Supérieure de la Banque", "description": "Formation à la distribution d'assurances & conformité" }
+    ],
+    "hobbies": [
+      "Flûte traversière — concertiste (Orchestre Colonne)",
+      "Voyages (Moyen-Orient, Amérique latine)"
+    ]
+  },
+
+  "en": {
+    "summary": "Compliance expert specialized in insurance-product distribution, 15 years leading programs, process digitization and the compliance of offers and customer journeys in regulated environments.",
+    "expertise": [
+      "Compliance: IDD, duty to advise, Eckert & Lemoine laws, AML-CFT, GDPR",
+      "Customer protection & commercial practices",
+      "Control plans & risk-mitigation frameworks",
+      "Gap analysis & remediation plans",
+      "Program management & journey digitization"
+    ],
+    "languages": [
+      { "name": "French",  "level": "Native" },
+      { "name": "English", "level": "Fluent (C1)" },
+      { "name": "Spanish", "level": "Fluent (B2)" },
+      { "name": "Turkish", "level": "Bilingual (C1)" }
+    ],
+    "education": [
+      { "year": "2009", "school": "Université Paris XI Sud", "degree": "Master II International Law" },
+      { "year": "2008", "school": "Université Paris II Panthéon-Assas", "degree": "Master in Management Sciences" }
+    ],
+    "experiences": [
+      {
+        "employer": "Independent Consultant — Insurance Expert",
+        "role": "Compliance & distribution advisory",
+        "duration": "Since 2024",
+        "achievements": [
+          "Led FG2A work on affinity insurance (product governance, duty to advise): workshops with Kereis, the Insurance Ombudsman and CNP Assurances.",
+          "Advisory at BNP Paribas: transformation of the 'Trust Companion' approach (2,000 FTEs); founder of a 15-hour IDD training platform for distributors."
+        ]
+      },
+      {
+        "employer": "Banque Française Mutualiste — Operations",
+        "role": "Head of Partnerships and Projects",
+        "duration": "March 2022 — Sept. 2024",
+        "achievements": [
+          "Program management, RFP for the choice of the new insurer, digitization of onboarding journeys (75% conversion rate).",
+          "Management of partner networks (15 public-sector mutuals); management of the Insurance Back Office."
+        ]
+      },
+      {
+        "employer": "BPCE Lease — Customer Experience",
+        "role": "Program Director",
+        "duration": "Aug. 2019 — March 2022",
+        "achievements": [
+          "Design and go-to-market of new insurance offers, digitization and compliance of journeys (IDD, GDPR); 88% equipment rate achieved.",
+          "Network training & animation (29 of the Group's banks), competitive watch, commercial steering."
+        ]
+      }
+    ],
+    "references": [
+      "SOGECAP (SG)", "Natixis Assurances", "MGEN", "AXA France", "Groupama", "CNP Assurances", "La Banque Postale"
+    ],
+    "engagements": [
+      { "title": "Lecturer — École Supérieure de la Banque", "description": "Teaching on insurance distribution & compliance" }
+    ],
+    "hobbies": [
+      "Concert flutist — Orchestre Colonne",
+      "Travel (Middle East, Latin America)"
+    ]
+  }
+}
