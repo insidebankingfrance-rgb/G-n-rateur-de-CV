@@ -1,0 +1,185 @@
+{
+  "initials": "D.P.",
+  "first_name": "Dorian",
+  "last_name": "Prevost",
+  "title_fr": "Senior Manager — Conseil Services Financiers",
+  "title_en": "Senior Manager — Financial Services Consulting",
+  "domain_fr": "Fraude, LCB-FT & Paiements — Certifié CAMS & CCAS",
+  "domain_en": "Fraud, AML-CFT & Payments — CAMS & CCAS certified",
+  "fr": {
+    "summary": "Senior Manager en conseil aux services financiers, spécialisé sur la fraude, la LCB-FT et les paiements. Intervient auprès de banques, établissements de paiement et fintechs sur le pilotage de programmes réglementaires, la refonte de dispositifs de détection et la définition de modèles opérationnels cibles. Certifié CAMS et CCAS.",
+    "expertise": [
+      "Dispositifs fraude & LCB-FT (scénarios, TMS)",
+      "Paiements & instant payment (WERO, ISO 20022)",
+      "Pilotage de programmes réglementaires (PMO)",
+      "Target Operating Model & relations superviseurs",
+      "Stratégie produit & business case"
+    ],
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Natif"
+      },
+      {
+        "name": "Anglais",
+        "level": "Courant"
+      },
+      {
+        "name": "Espagnol",
+        "level": "Courant"
+      }
+    ],
+    "education": [
+      {
+        "year": "2024",
+        "school": "Certifications ACAMS",
+        "degree": "CCAS & CAMS"
+      },
+      {
+        "year": "2016",
+        "school": "Sciences Po Lyon",
+        "degree": "Programme Grande École"
+      },
+      {
+        "year": "2016",
+        "school": "Université du Luxembourg",
+        "degree": "Master Droit Pénal Européen des Affaires"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "PwC France — La Banque Postale & Treezor (SG)",
+        "role": "Senior Manager / Manager — PMO Fraude & LCB-FT",
+        "duration": "Depuis Jan. 2020",
+        "achievements": [
+          "La Banque Postale : PMO du chantier fraude pour le déploiement de WERO P2P & P2Pro — roadmap, suivi des risques, ateliers parties prenantes, conduite du changement des back-offices en régions.",
+          "Treezor : PMO de l'implémentation du TMS Fraude & LCB-FT (éditeur SAS) — conception des scénarios, revue de la segmentation et de la calibration ; revue indépendante du dispositif fraude."
+        ]
+      },
+      {
+        "employer": "PwC France — BNP Paribas PF & CIB, eZyness (LBP)",
+        "role": "Stratégie produit & modèles opérationnels",
+        "achievements": [
+          "BNPP Personal Finance : refonte stratégique de l'offre Cpay — diagnostic 360°, Voix du Client et client-mystère, ways to play, business case et macro-roadmap.",
+          "BNPP CIB : définition du TOM des relations avec les superviseurs (benchmark, synergies Groupe, rôles et responsabilités) ; eZyness : stratégie d'expansion européenne avec Strategy&."
+        ]
+      },
+      {
+        "employer": "EY France, Paris",
+        "role": "Conseil Services Financiers — Consultant Senior",
+        "duration": "Sept. — Déc. 2019",
+        "achievements": []
+      },
+      {
+        "employer": "KPMG Luxembourg",
+        "role": "Conseil Services Financiers — Consultant Junior puis Senior",
+        "duration": "Sept. 2016 — Juil. 2019",
+        "achievements": []
+      }
+    ],
+    "references": [
+      "Groupe Société Générale — migration SWIFT ISO 20022 (CBPR+)",
+      "La Banque Postale",
+      "BNP Paribas CIB & Personal Finance",
+      "Treezor",
+      "eZyness"
+    ],
+    "engagements": [
+      {
+        "title": "Cofondateur — L'Actu Fin[Tech]",
+        "description": "Podcast français Fintech & Crypto"
+      }
+    ],
+    "hobbies": [
+      "Horlogerie"
+    ]
+  },
+  "en": {
+    "summary": "Senior Manager in financial-services consulting, specialized in fraud, AML-CFT and payments. Advises banks, payment institutions and fintechs on regulatory program management, the overhaul of detection frameworks and the design of target operating models. CAMS and CCAS certified.",
+    "expertise": [
+      "Fraud & AML-CFT frameworks (scenarios, TMS)",
+      "Payments & instant payment (WERO, ISO 20022)",
+      "Regulatory program management (PMO)",
+      "Target Operating Model & supervisor relations",
+      "Product strategy & business case"
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      },
+      {
+        "name": "Spanish",
+        "level": "Fluent"
+      }
+    ],
+    "education": [
+      {
+        "year": "2024",
+        "school": "ACAMS Certifications",
+        "degree": "CCAS & CAMS"
+      },
+      {
+        "year": "2016",
+        "school": "Sciences Po Lyon",
+        "degree": "Grande École Programme"
+      },
+      {
+        "year": "2016",
+        "school": "University of Luxembourg",
+        "degree": "Master, European Business Criminal Law"
+      }
+    ],
+    "experiences": [
+      {
+        "employer": "PwC France — La Banque Postale & Treezor (SG)",
+        "role": "Senior Manager / Manager — Fraud & AML-CFT PMO",
+        "duration": "Since Jan. 2020",
+        "achievements": [
+          "La Banque Postale: PMO of the fraud workstream for the WERO P2P & P2Pro roll-out — roadmap, risk tracking, stakeholder workshops, change management for the regional back-offices.",
+          "Treezor: PMO of the Fraud & AML-CFT TMS implementation (SAS software) — scenario design, review of segmentation and calibration; independent review of the fraud framework."
+        ]
+      },
+      {
+        "employer": "PwC France — BNP Paribas PF & CIB, eZyness (LBP)",
+        "role": "Product strategy & operating models",
+        "achievements": [
+          "BNPP Personal Finance: strategic overhaul of the Cpay offer — 360° diagnostic, Voice of the Customer and mystery shopping, ways to play, business case and macro-roadmap.",
+          "BNPP CIB: design of the target operating model for supervisor relations (benchmark, Group synergies, roles and responsibilities); eZyness: European expansion strategy with Strategy&."
+        ]
+      },
+      {
+        "employer": "EY France, Paris",
+        "role": "Financial Services Consulting — Senior Consultant",
+        "duration": "Sept. — Dec. 2019",
+        "achievements": []
+      },
+      {
+        "employer": "KPMG Luxembourg",
+        "role": "Financial Services Consulting — Junior then Senior Consultant",
+        "duration": "Sept. 2016 — July 2019",
+        "achievements": []
+      }
+    ],
+    "references": [
+      "Société Générale Group — SWIFT ISO 20022 migration (CBPR+)",
+      "La Banque Postale",
+      "BNP Paribas CIB & Personal Finance",
+      "Treezor",
+      "eZyness"
+    ],
+    "engagements": [
+      {
+        "title": "Co-founder — L'Actu Fin[Tech]",
+        "description": "French Fintech & Crypto podcast"
+      }
+    ],
+    "hobbies": [
+      "Watchmaking"
+    ]
+  }
+}
