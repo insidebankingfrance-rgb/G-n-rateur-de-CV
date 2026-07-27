@@ -1,0 +1,132 @@
+{
+  "initials": "L.B.",
+  "first_name": "Livia",
+  "last_name": "Bonhoure",
+
+  "title_fr": "Consultante Stratégie & Innovation",
+  "title_en": "Strategy & Innovation Consultant",
+  "domain_fr": "Stratégie, transformation & intelligence collective — Retail, Luxe, Santé, FMCG",
+  "domain_en": "Strategy, transformation & collective intelligence — Retail, Luxury, Health, FMCG",
+
+  "fr": {
+    "summary": "10 ans en conseil en stratégie (L.E.K., EY-Parthenon) et développement, aujourd'hui fondatrice et experte en créativité, intelligence collective et neurodiversité. De la stratégie à la facilitation, du cadrage à la mise en œuvre.",
+    "expertise": [
+      "Stratégie & transformation",
+      "Innovation & facilitation (intelligence collective)",
+      "Gestion de projet & PMO",
+      "Business développement & partenariats",
+      "Études de marché & due diligences"
+    ],
+    "languages": [],
+    "education": [
+      { "year": "2015", "school": "EMLYON Business School", "degree": "Programme Grande École" },
+      { "year": "2023", "school": "Coaching Ways", "degree": "Coach certifiée" }
+    ],
+    "experiences": [
+      {
+        "employer": "On the Move / École du Potentiel Humain",
+        "role": "Fondatrice — Experte créativité & intelligence collective",
+        "duration": "Depuis 2024",
+        "achievements": [
+          "Conférencière ; facilitation d'ateliers d'innovation et de neurodiversité pour Orange, Renault Alpine, EDF.",
+          "Création et animation d'un talk show sur la transformation, le leadership et l'innovation (23 talks tournés)."
+        ]
+      },
+      {
+        "employer": "Consultant Indépendant — Stratégie & Innovation",
+        "role": "Missions grands comptes & Private Equity",
+        "duration": "Depuis 2022",
+        "achievements": [
+          "Stratégie grands comptes : LVMH (IA générative, seconde main), Pluxee (31 pays), Carrefour, Sodexo, Novoferm (plans à 3 ans).",
+          "Due diligences Private Equity (~10 cibles : Gerflor, Mecatherm, Revima, Liérac…) : entretiens experts, analyses de marché, mapping des achats."
+        ]
+      },
+      {
+        "employer": "Othentik — Conseil en innovation",
+        "role": "Head of Strategy and Operations (freelance)",
+        "duration": "2023 — 2024",
+        "achievements": [
+          "Définition de la roadmap 2024 et du business plan, de la stratégie commerciale, du positionnement et des offres.",
+          "Co-création de la méthode d'innovation « The Othentik Way » ; facilitation d'ateliers d'innovation."
+        ]
+      },
+      {
+        "employer": "Renovation Man — Proptech",
+        "role": "Head of Strategic Partnerships",
+        "duration": "2019 — 2022",
+        "achievements": [
+          "Structuration du pôle partenariat et de la stratégie de développement : nombre de partenaires ×6, demandes clients ×10.",
+          "Parcours de prescription (conseillers LCL : demandes ×3) et offres partenaires (Mon Chasseur Immo, Rhinov)."
+        ]
+      }
+    ],
+    "references": [
+      "LVMH", "Carrefour", "Sodexo / Pluxee", "EY-Parthenon", "L.E.K.", "Renault Alpine"
+    ],
+    "engagements": [
+      { "title": "Autrice — « À la poursuite du Phaos »", "description": "Libérez le pouvoir créatif en entreprise (Amazon KDP)" }
+    ],
+    "hobbies": []
+  },
+
+  "en": {
+    "summary": "10 years in strategy consulting (L.E.K., EY-Parthenon) and business development, now a founder and expert in creativity, collective intelligence and neurodiversity. From strategy to facilitation, from framing to implementation.",
+    "expertise": [
+      "Strategy & transformation",
+      "Innovation & facilitation (collective intelligence)",
+      "Project management & PMO",
+      "Business development & partnerships",
+      "Market studies & due diligence"
+    ],
+    "languages": [],
+    "education": [
+      { "year": "2015", "school": "EMLYON Business School", "degree": "Grande École Programme" },
+      { "year": "2023", "school": "Coaching Ways", "degree": "Certified Coach" }
+    ],
+    "experiences": [
+      {
+        "employer": "On the Move / École du Potentiel Humain",
+        "role": "Founder — Creativity & Collective-Intelligence Expert",
+        "duration": "Since 2024",
+        "achievements": [
+          "Speaker; facilitation of innovation and neurodiversity workshops for Orange, Renault Alpine, EDF.",
+          "Created and hosts a talk show on transformation, leadership and innovation (23 episodes filmed)."
+        ]
+      },
+      {
+        "employer": "Independent Consultant — Strategy & Innovation",
+        "role": "Large-account & Private Equity missions",
+        "duration": "Since 2022",
+        "achievements": [
+          "Strategy for large accounts: LVMH (generative AI, second-hand), Pluxee (31 countries), Carrefour, Sodexo, Novoferm (3-year plans).",
+          "Due diligence for PE funds (~10 targets: Gerflor, Mecatherm, Revima, Liérac…): expert interviews, market analyses, purchasing mapping."
+        ]
+      },
+      {
+        "employer": "Othentik — Innovation consulting",
+        "role": "Head of Strategy and Operations (freelance)",
+        "duration": "2023 — 2024",
+        "achievements": [
+          "Defined the 2024 roadmap and business plan, the commercial strategy, positioning and offers.",
+          "Co-created the 'The Othentik Way' innovation method; facilitation of innovation workshops."
+        ]
+      },
+      {
+        "employer": "Renovation Man — Proptech",
+        "role": "Head of Strategic Partnerships",
+        "duration": "2019 — 2022",
+        "achievements": [
+          "Built the partnerships unit and the development strategy: number of partners ×6, customer requests ×10.",
+          "Referral journeys (LCL advisors: requests ×3) and partner offers (Mon Chasseur Immo, Rhinov)."
+        ]
+      }
+    ],
+    "references": [
+      "LVMH", "Carrefour", "Sodexo / Pluxee", "EY-Parthenon", "L.E.K.", "Renault Alpine"
+    ],
+    "engagements": [
+      { "title": "Author — 'À la poursuite du Phaos'", "description": "Unlocking creative power in business (Amazon KDP)" }
+    ],
+    "hobbies": []
+  }
+}
