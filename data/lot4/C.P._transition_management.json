@@ -13,7 +13,7 @@
       "Paiements, Cash Management, ERP, CRM, KYC",
       "Schéma directeur IT & cybersécurité",
       "Management & conduite du changement",
-      "Trilingue FR / EN / ES"
+      "Data & Compliance (BCBS 239, FINREP)"
     ],
     "languages": [
       {
@@ -52,12 +52,12 @@
         ]
       },
       {
-        "employer": "Groupe Indigo",
-        "role": "Pilotage stratégique COMEX — Refonte gouvernance IT",
-        "duration": "2025 (S2)",
+        "employer": "Groupe Indigo & Conseil Départemental 93",
+        "role": "Conseil & pilotage stratégique",
+        "duration": "2025",
         "achievements": [
-          "Diagnostic global du SI en contexte post-cyber ; vision cible du numérique et futur rôle de la DSI Groupe.",
-          "Plan d'investissement IT pluriannuel et cadre de gouvernance ; roadmap, cartographies, organigrammes cibles."
+          "Indigo (post-cyber) : diagnostic global du SI, vision cible du numérique, plan d'investissement IT pluriannuel et cadre de gouvernance.",
+          "CD 93 : cadrage du programme Relation Usager — convergence de 8 projets Microsoft Dynamics, gouvernance et feuille de route pluriannuelle."
         ]
       },
       {
@@ -66,7 +66,7 @@
         "duration": "2022 — 2025",
         "achievements": [
           "BPCE (projet SIGMA) : gestion IAM, pilote pour la standardisation des habilitations du socle commun Groupe ; formation et déploiement Groupe.",
-          "Crédit Agricole CIB : supervision d'une taskforce Cash Management / Correspondent Banking (20+ consultants) ; développement Banque-Assurance (PNB > 200 K€)."
+          "Crédit Agricole CIB : taskforce Cash Management / Correspondent Banking (20+ consultants) ; développement Banque-Assurance (PNB > 200 K€)."
         ]
       },
       {
@@ -80,21 +80,13 @@
       }
     ],
     "references": [
-      "Société Générale",
-      "BPCE",
-      "Crédit Agricole CIB",
-      "Delubac & Cie",
-      "Groupe Indigo",
-      "Conseil Départemental 93"
+      "Accenture — projets SAP (Air France, Alstom, Carrefour, Danone)",
+      "TCL Multimedia (Madrid)"
     ],
     "engagements": [
       {
-        "title": "Cercles pros",
-        "description": "Membre UMBREX / VERITUX"
-      },
-      {
-        "title": "Intervenant",
-        "description": "AlphaSights, XpertsCouncil, Les BigBoss"
+        "title": "Cercles pros & expertise",
+        "description": "UMBREX / VERITUX ; AlphaSights, GuidePoint, Les BigBoss"
       }
     ],
     "hobbies": [
@@ -109,7 +101,7 @@
       "Payments, Cash Management, ERP, CRM, KYC",
       "IT Master Plan & Cybersecurity",
       "Management & Change Leadership",
-      "Trilingual FR / EN / ES"
+      "Data & Compliance (BCBS 239, FINREP)"
     ],
     "languages": [
       {
@@ -148,12 +140,12 @@
         ]
       },
       {
-        "employer": "Groupe Indigo",
-        "role": "Strategic piloting COMEX — IT governance overhaul",
-        "duration": "2025 (H2)",
+        "employer": "Groupe Indigo & Seine-Saint-Denis County",
+        "role": "Strategic advisory & scoping",
+        "duration": "2025",
         "achievements": [
-          "Global IT diagnosis in a post-cyber context; target digital vision and future Group CIO role.",
-          "Multi-year IT investment plan and governance framework; roadmap, mappings, target org charts."
+          "Indigo (post-cyber): global IT diagnosis, target digital vision, multi-year IT investment plan and governance framework.",
+          "CD 93: scoping of the Citizen Relationship program — convergence of 8 Microsoft Dynamics projects, governance and multi-year roadmap."
         ]
       },
       {
@@ -161,7 +153,7 @@
         "role": "Senior Manager — Banking & Insurance",
         "duration": "2022 — 2025",
         "achievements": [
-          "BPCE (SIGMA project): IAM management, pilot for the standardization of authorizations on the Group common foundation; training and Group-level deployment.",
+          "BPCE (SIGMA project): IAM management, pilot for standardizing authorizations on the Group common foundation; training and Group-level deployment.",
           "Crédit Agricole CIB: supervision of a Cash Management / Correspondent Banking taskforce (20+ consultants); Banking-Insurance development (PNB > €200K)."
         ]
       },
@@ -176,21 +168,13 @@
       }
     ],
     "references": [
-      "Société Générale",
-      "BPCE",
-      "Crédit Agricole CIB",
-      "Delubac & Cie",
-      "Groupe Indigo",
-      "Conseil Départemental 93"
+      "Accenture — SAP projects (Air France, Alstom, Carrefour, Danone)",
+      "TCL Multimedia (Madrid)"
     ],
     "engagements": [
       {
-        "title": "Professional circles",
-        "description": "Member UMBREX / VERITUX"
-      },
-      {
-        "title": "Speaker",
-        "description": "AlphaSights, XpertsCouncil, Les BigBoss"
+        "title": "Professional circles & expert calls",
+        "description": "UMBREX / VERITUX; AlphaSights, GuidePoint, Les BigBoss"
       }
     ],
     "hobbies": [
