@@ -62,6 +62,7 @@ from theme import (
     WHITE_SOFT,
 )
 from i18n import LABELS
+from layout import MAX_PAGES_PER_LANG, paginate, source_lang
 
 
 _warnings: list[str] = []
@@ -415,6 +416,9 @@ def _build_footer(slide, lang: str):
 
 def _build_sidebar_content(slide, cv: dict, lang: str):
     L = LABELS[lang]
+    if not any(cv.get(k) for k in
+               ("expertise", "languages", "education", "hobbies", "engagements")):
+        return                       # page de suite sans bloc de sidebar
     top = HEADER_H + Emu(80000)
     height = SLIDE_H - top - FOOTER_H - Emu(80000)
     tb, tf = _add_textbox(
@@ -492,6 +496,7 @@ def _build_sidebar_content(slide, cv: dict, lang: str):
 
 def _build_main_content(slide, cv: dict, lang: str):
     L = LABELS[lang]
+    continued = bool(cv.get("continued"))
     left = SIDEBAR_W + MARGIN
     top = HEADER_H + Emu(80000)
     width = SLIDE_W - SIDEBAR_W - 2 * MARGIN
@@ -530,7 +535,10 @@ def _build_main_content(slide, cv: dict, lang: str):
                          size=FS_BODY_SMALL, color=CYAN_ACCENT)
                 for bul in exp.get("achievements", []):
                     _bullet(tf, bul, size=FS_BODY_SMALL, level=1)
-        section(L["experience"], _r)
+        label = L["experience"]
+        if continued:
+            label = f'{label} {L["continued"]}'
+        section(label, _r)
 
     if cv.get("references"):
         def _r():
@@ -541,7 +549,9 @@ def _build_main_content(slide, cv: dict, lang: str):
 
 
 # ─── Top-level render ────────────────────────────────────────────────────────
-def _build_slide(prs: Presentation, cv: dict, lang: str, logo: Path | None):
+def _build_page(prs: Presentation, cv: dict, lang: str, page: dict,
+                logo: Path | None):
+    """Rend UNE page (slide) déjà paginée par layout.paginate()."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     _build_background(slide)
     _build_separator(slide)
@@ -554,46 +564,68 @@ def _build_slide(prs: Presentation, cv: dict, lang: str, logo: Path | None):
     initials = cv.get("initials") or initials_from_name(first_name, last_name)
     title = cv.get(f"title_{lang}") or cv.get("title", "")
     domain = cv.get(f"domain_{lang}") or cv.get("domain", "")
+    if page.get("continued"):
+        title = f'{title} {LABELS[lang]["continued"]}'
     _build_header(slide, first_name, last_name, initials, title, domain)
 
-    payload = _truncate_payload(cv.get(lang, cv), f"{initials} [{lang}]")
-    payload = _adaptive_sidebar_trim(payload, f"{initials} [{lang}]")
-    payload = _adaptive_main_trim(payload, f"{initials} [{lang}]")
-    _check_overflow(payload, f"{initials} [{lang}]")
-    _build_sidebar_content(slide, payload, lang)
-    _build_main_content(slide, payload, lang)
+    _build_sidebar_content(slide, page["sidebar"], lang)
+    _build_main_content(slide, page["main"], lang)
 
     # Bandeau masque + texte footer en dernier (z-order top).
     _build_footer_mask(slide)
     _build_footer(slide, lang)
 
 
-def render(cv_json: dict, out_path: Path) -> Path:
-    """Render a single CV to its own .pptx (2 slides FR + EN)."""
+def _build_lang(prs: Presentation, cv: dict, lang: str, logo: Path | None):
+    """Rend toutes les pages d'une langue (1 à MAX_PAGES_PER_LANG slides)."""
+    first_name = cv.get("first_name", "")
+    last_name = cv.get("last_name", "")
+    initials = cv.get("initials") or initials_from_name(first_name, last_name)
+    who = f"{initials} [{lang}]"
+    pages = paginate(cv.get(lang, cv), warn=lambda m: _warn(f"{who}: {m}"))
+    for page in pages:
+        _build_page(prs, cv, lang, page, logo)
+    return len(pages)
+
+
+def _langs_for(cv: dict, langs: list[str] | None) -> list[str]:
+    """Par défaut : uniquement la langue du document source."""
+    if langs:
+        return langs
+    return [source_lang(cv)]
+
+
+def render(cv_json: dict, out_path: Path, langs: list[str] | None = None) -> Path:
+    """Render a single CV to its own .pptx.
+
+    Par défaut, seule la langue du CV source est produite (`source_lang`),
+    sur 1 à 5 slides selon la richesse du contenu.
+    """
     prs = Presentation()
     prs.slide_width = SLIDE_W
     prs.slide_height = SLIDE_H
 
     logo = _resolve_logo()
-    _build_slide(prs, cv_json, "fr", logo)
-    _build_slide(prs, cv_json, "en", logo)
+    total = 0
+    for lang in _langs_for(cv_json, langs):
+        total += _build_lang(prs, cv_json, lang, logo)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     prs.save(out_path)
     return out_path
 
 
-def render_merged(cv_jsons: list[dict], out_path: Path) -> Path:
-    """Render several CVs into ONE combined .pptx (2 slides per CV, ordered
-    by input list). Used for batch delivery."""
+def render_merged(cv_jsons: list[dict], out_path: Path,
+                  langs: list[str] | None = None) -> Path:
+    """Render several CVs into ONE combined .pptx, dans l'ordre fourni."""
     prs = Presentation()
     prs.slide_width = SLIDE_W
     prs.slide_height = SLIDE_H
 
     logo = _resolve_logo()
     for cv in cv_jsons:
-        _build_slide(prs, cv, "fr", logo)
-        _build_slide(prs, cv, "en", logo)
+        for lang in _langs_for(cv, langs):
+            _build_lang(prs, cv, lang, logo)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     prs.save(out_path)
@@ -621,11 +653,18 @@ def main() -> None:
     parser.add_argument("input", type=Path, help="JSON file or directory")
     parser.add_argument("--out", type=Path, default=Path("outputs"))
     parser.add_argument(
+        "--lang", choices=["auto", "fr", "en", "both"], default="auto",
+        help="Langue(s) produite(s). 'auto' (défaut) = uniquement la langue "
+             "du document source (champ source_lang du JSON).",
+    )
+    parser.add_argument(
         "--merged", action="store_true",
         help="When input is a directory, concatenate every CV into a single "
              ".pptx file (2 slides per CV, ordered alphabetically).",
     )
     args = parser.parse_args()
+    langs = None if args.lang == "auto" else (
+        ["fr", "en"] if args.lang == "both" else [args.lang])
 
     if args.merged:
         if not args.input.is_dir():
@@ -641,7 +680,7 @@ def main() -> None:
             if _warnings:
                 print(f"  ({len(_warnings)} warnings) {j.name}")
         _warnings.clear()
-        rendered = render_merged(cvs, out_file)
+        rendered = render_merged(cvs, out_file, langs)
         print(f"✓ {len(cvs)} CV(s) → {rendered}")
         return
 
@@ -657,7 +696,7 @@ def main() -> None:
             out_file = (out if out.is_dir() else Path("outputs")) / f"{_slug(j.stem)}.pptx"
         else:
             out_file = out
-        rendered = render(cv, out_file)
+        rendered = render(cv, out_file, langs)
         suffix = f"  ({len(_warnings)} warnings)" if _warnings else ""
         print(f"✓ {j.name} → {rendered}{suffix}")
 

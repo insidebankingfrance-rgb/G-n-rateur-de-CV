@@ -7,13 +7,14 @@
   "domain_fr": "Risque de crédit, qualité des données (BCBS 239), Bâle IV / CRR III",
   "domain_en": "Credit risk, data quality (BCBS 239), Basel IV / CRR III",
   "fr": {
-    "summary": "9 ans en conduite de projets de transformation, gestion des risques et conformité réglementaire pour les établissements financiers. Intervient à l'interface métiers / IT : risque de crédit, qualité des données, évolutions réglementaires.",
+    "summary": "9 ans d'expérience dans la conduite de projets de transformation, de gestion des risques et de conformité réglementaire pour les établissements financiers. Intervient à l'interface entre les métiers et les équipes IT sur des programmes complexes liés au risque de crédit, à la qualité des données, aux évolutions réglementaires et au pilotage de projets SI. Une expérience acquise auprès d'acteurs majeurs du secteur, combinant expertise métier, maîtrise des enjeux réglementaires et solides compétences en gestion de projet MOA.",
     "expertise": [
-      "Réglementation : Bâle IV, CRR III, Stress Tests, NDOD, Pilier 3 ESG",
+      "Réglementation financière : Bâle IV, CRR III, Stress Tests, NDOD, Taxonomie, Pilier 3 ESG",
       "Risque de crédit",
       "Qualité des données (BCBS 239)",
-      "Chef de projet & MOA (besoins, spécifications, recette)",
-      "Outils : SQL, VBA, Power BI, JIRA"
+      "Chef de projet / gestion de projet",
+      "MOA : expression de besoin, spécifications fonctionnelles, recette",
+      "Outils : MS Office, VBA, SQL, Power BI, JIRA"
     ],
     "languages": [],
     "education": [
@@ -23,53 +24,116 @@
         "degree": "M2 Audit & Gestion des Risques (alternance)"
       },
       {
-        "year": "—",
+        "year": "",
+        "school": "Spécialisation",
+        "degree": "Risques de crédit, de marché et opérationnels, modélisation financière, gestion d'actifs et gestion bancaire"
+      },
+      {
+        "year": "",
         "school": "Certifications",
         "degree": "AMF · BMC (Bloomberg Market Concepts)"
       }
     ],
     "experiences": [
       {
-        "employer": "Crédit Agricole Leasing & Factoring",
-        "role": "Chef de projets MOA — Risques Leasing (Karat Advisory)",
+        "employer": "Crédit Agricole Leasing & Factoring — DSID Risques Leasing",
+        "role": "Chef de projets MOA (Karat Advisory)",
         "duration": "2024 — 2026 · 22 mois",
         "achievements": [
-          "Pilotage de projets SI du cadrage à la mise en production : besoins métiers, impacts, spécifications, plans de tests, feuille de route MEP.",
-          "Coordination avec la MOE, maintien en condition opérationnelle, animation des comités et ateliers métiers, conduite du changement."
+          "Pilotage de projets fonctionnels SI de la phase de cadrage jusqu'à la mise en production.",
+          "Recueil et analyse des besoins métiers, réalisation d'une évaluation d'impact et de faisabilité en fonction des contraintes.",
+          "Production des livrables MOA : spécifications fonctionnelles, stratégies et plans de tests, feuille de route de mise en production.",
+          "Suivi des évolutions applicatives et coordination avec la MOE.",
+          "Contribution au maintien en condition opérationnelle des applications (support fonctionnel, suivi des incidents, maintenance évolutive).",
+          "Animation des comités projets et ateliers métiers, accompagnement des utilisateurs dans la conduite du changement."
         ]
       },
       {
         "employer": "BNP Paribas — BCBS 239",
+        "role": "Gestion de la qualité des données Risques (EY)",
+        "duration": "14 mois",
+        "achievements": [
+          "Mise en place d'un dispositif de gestion de la qualité des données utilisées par les modèles de notation des institutions financières (Risk Drivers, données de scoping) : identification et définition des données prioritaires.",
+          "Définition et réalisation des contrôles techniques et opérationnels, identification et remédiation des problèmes de qualité des données.",
+          "Production de tableaux de bord présentant les résultats de contrôles et les plans d'actions de remédiation.",
+          "Préparation et formalisation des réponses aux recommandations BCE sur les sujets de qualité de données ; production du corpus documentaire."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — NDOD",
+        "role": "Implémentation réglementaire (EY)",
+        "duration": "7 mois",
+        "achievements": [
+          "Définition des indicateurs d'évaluation des impacts potentiels de la réglementation NDOD sur les paramètres de risque de crédit.",
+          "Coordination de la production des indicateurs d'évaluation d'impact au sein des 8 entités du scope de travaux.",
+          "Suivi, formalisation, consolidation et analyse des résultats de production des indicateurs d'impact.",
+          "Gestion de projet (PMO) : animation des meetings, rétroplanning, coordination des échanges avec le superviseur pour le suivi des recommandations."
+        ]
+      },
+      {
+        "employer": "Dexia — CRR II & EBA 3.0",
+        "role": "Implémentation réglementaire (EY)",
+        "duration": "6 mois",
+        "achievements": [
+          "Pilotage du programme d'implémentation des évolutions CRR II sur le périmètre des risques de crédit.",
+          "Suivi des évolutions IT liées à l'implémentation (besoins métiers, spécifications, développements, tests).",
+          "Suivi de la production des rapports EBA 3.0 et COREP, incluant les évolutions CRR II, et de leur soumission au superviseur.",
+          "Gestion de la relation avec le fournisseur du moteur de calcul des paramètres de risques.",
+          "Gestion de projet en Agile : rétroplanning, préparation et animation des comités, suivi budgétaire."
+        ]
+      },
+      {
+        "employer": "Dexia — Stress Tests EBA",
+        "role": "Exercice réglementaire (EY)",
+        "duration": "10 mois",
+        "achievements": [
+          "Analyse des exigences méthodologiques EBA sur le périmètre risques de crédit et de leurs impacts sur les calculs des provisions et des RWA.",
+          "Analyse de l'environnement Dexia et identification des adaptations nécessaires à l'application de la méthodologie EBA.",
+          "Cartographie et analyse des modèles IFRS 9 utiles à l'exercice de stress test EBA.",
+          "Exécution d'un exercice de simulation : alimentation des templates EBA en données historiques et stressées d'exposition, de provisions et de paramètres de risque (PD, LGD, RWA)."
+        ]
+      },
+      {
+        "employer": "BNP Paribas — BCBS 239",
+        "role": "Conformité Groupe & qualité des données Risques (EY)",
+        "duration": "8 mois",
+        "achievements": [
+          "Mise en place d'un processus d'évaluation de la conformité du Groupe aux principes BCBS 239.",
+          "Suivi de la mise en œuvre du plan de remédiation des recommandations (BCE, Inspection générale, revue indépendante) relatives à la qualité des données Risques sur le périmètre Risque / Finance.",
+          "Contribution à la production de la documentation ICAAP sur les sujets d'agrégation de données Risques.",
+          "Production du corpus documentaire sur les principes mis en place autour de la gestion de la qualité des données."
+        ]
+      },
+      {
+        "employer": "BNP Paribas Personal Finance — BCBS 239",
         "role": "Qualité des données Risques (EY)",
-        "duration": "22 mois",
+        "duration": "15 mois",
         "achievements": [
-          "Dispositif qualité des données des modèles de notation (Risk Drivers, scoping) : contrôles techniques et opérationnels, remédiation, tableaux de bord.",
-          "Évaluation de la conformité Groupe aux principes BCBS 239, réponses aux recommandations BCE, documentation ICAAP (agrégation des données Risques)."
+          "Coordination de la production des livrables data quality pour l'ensemble des entités appartenant au scope de travaux.",
+          "Gestion de projet (PMO) : planification, préparation, animation et rédaction de comptes-rendus de comités, on-boarding des stakeholders, suivi et consolidation budgétaire.",
+          "Production de rapports d'avancement : mise à jour des KPI, remontée des alertes, suivi budgétaire ; corpus documentaire du Data Quality Framework."
         ]
       },
       {
-        "employer": "Dexia — CRR II / EBA 3.0 & Stress Tests EBA",
-        "role": "Chef de projet (EY)",
-        "duration": "16 mois",
+        "employer": "BNP Paribas Personal Finance — Transformation de la fonction Risk",
+        "role": "PMO (EY)",
+        "duration": "3 mois",
         "achievements": [
-          "Pilotage de l'implémentation CRR II sur le risque de crédit (besoins, spécifications, tests) ; rapports EBA 3.0 et COREP soumis au superviseur.",
-          "Stress tests EBA : impacts provisions / RWA, cartographie des modèles IFRS 9, exécution d'une simulation (PD, LGD, RWA)."
+          "Transformation du département Risk des entités de la région SUN (6 pays) conduisant à une réduction des coûts : analyse et simplification des macro-processus, alignement aux modèles d'exploitation cibles, revue des contrats avec les partenaires externes (fournisseurs de bases de données)."
         ]
       },
       {
-        "employer": "BNP Paribas Personal Finance",
-        "role": "Transformation Risk & BCBS 239 — PMO (EY)",
-        "duration": "18 mois",
+        "employer": "Crédit Agricole — Bâle IV & CRR III",
+        "role": "Formation réglementaire (EY)",
+        "duration": "3 mois",
         "achievements": [
-          "Transformation du département Risk de la région SUN (6 pays) : macro-processus simplifiés, modèles d'exploitation cibles, revue des contrats fournisseurs."
+          "Élaboration d'une formation sur les principes réglementaires et les évolutions apportées par les nouveaux cadres réglementaires, notamment Bâle IV / CRR 3."
         ]
       }
     ],
     "references": [
-      "BNP Paribas — NDOD (nouvelle définition du défaut)",
-      "Crédit Agricole — formation Bâle IV / CRR III",
-      "EY",
-      "Karat Advisory"
+      "EY — Consultant Manager 2, gestion des Risques (2017-2024)",
+      "Karat Advisory — Consultant indépendant (depuis 2024)"
     ],
     "engagements": [],
     "hobbies": []
@@ -141,5 +205,6 @@
     ],
     "engagements": [],
     "hobbies": []
-  }
+  },
+  "source_lang": "fr"
 }

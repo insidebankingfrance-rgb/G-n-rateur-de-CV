@@ -16,6 +16,7 @@ import html
 import json
 from pathlib import Path
 
+from layout import paginate, source_lang
 from theme import (
     LOGO_FILENAME,
     MAX_BULLETS_PER_EXP,
@@ -44,7 +45,8 @@ SECTION_LABELS = {
         "references":   "RÉFÉRENCES",
         "engagements":  "ENGAGEMENTS & RÉALISATIONS",
         "footer":       "Les informations de ce document sont strictement confidentielles — Ce document ne peut être partagé qu'avec l'accord de son propriétaire",
-        "lang_tag":     "Slide 1 — Français",
+        "lang_tag":     "Slide {n} — Français",
+        "continued":    "(suite)",
     },
     "en": {
         "summary":      "SUMMARY",
@@ -56,7 +58,8 @@ SECTION_LABELS = {
         "references":   "MAIN REFERENCES",
         "engagements":  "ENGAGEMENTS & ACHIEVEMENTS",
         "footer":       "The information in this document is strictly confidential — This document may only be shared with the owner's consent",
-        "lang_tag":     "Slide 2 — English",
+        "lang_tag":     "Slide {n} — English",
+        "continued":    "(cont.)",
     },
 }
 
@@ -240,7 +243,10 @@ def _render_main(payload, labels) -> str:
         parts.append(f'<p class="summary">{_esc(summary)}</p>')
 
     if payload.get("experiences"):
-        parts.append(_section_title(labels["experience"]))
+        exp_label = labels["experience"]
+        if payload.get("continued"):
+            exp_label = f'{exp_label} {labels["continued"]}'
+        parts.append(_section_title(exp_label))
         exp_html = []
         for exp in payload["experiences"]:
             employer = _esc(exp.get("employer", ""))
@@ -276,14 +282,18 @@ def _logo_data_uri() -> str | None:
     return f"data:image/png;base64,{data}"
 
 
-def _render_slide(cv: dict, lang: str, logo_uri: str | None) -> str:
+def _render_slide(cv: dict, lang: str, logo_uri: str | None,
+                  page: dict, index: int) -> str:
     labels = SECTION_LABELS[lang]
     first_name = _esc(cv.get("first_name", ""))
     last_name = _esc(cv.get("last_name", "")).upper()
     initials = _esc(cv.get("initials", ""))
     title = _esc(cv.get(f"title_{lang}") or cv.get("title", ""))
     domain = _esc(cv.get(f"domain_{lang}") or cv.get("domain", ""))
-    payload = _truncate(cv.get(lang, cv))
+    if page.get("continued"):
+        title = f'{title} {_esc(labels["continued"])}'
+    sidebar_payload = page["sidebar"]
+    main_payload = page["main"]
 
     logo_html = (
         f'<img class="logo" src="{logo_uri}" alt="Inside Circle">'
@@ -300,20 +310,21 @@ def _render_slide(cv: dict, lang: str, logo_uri: str | None) -> str:
     else:
         header_html = f'<div class="header-initials">{initials}</div>'
 
+    tag = labels["lang_tag"].format(n=index)
     return f"""
-<section class="slide-wrap" aria-label="{labels['lang_tag']}">
-  <div class="slide-meta">{labels['lang_tag']}</div>
+<section class="slide-wrap" aria-label="{tag}">
+  <div class="slide-meta">{tag}</div>
   <article class="slide">
     <aside class="sidebar">
       {header_html}
-      <div class="sidebar-inner">{_render_sidebar(payload, labels)}</div>
+      <div class="sidebar-inner">{_render_sidebar(sidebar_payload, labels)}</div>
     </aside>
     <main class="content">
       <header class="content-header">
         <h1>{title}</h1>
         <div class="domain">{domain}</div>
       </header>
-      <div class="content-inner">{_render_main(payload, labels)}</div>
+      <div class="content-inner">{_render_main(main_payload, labels)}</div>
     </main>
     {logo_html}
     <footer class="confidential">{_esc(labels['footer'])}</footer>
@@ -509,19 +520,23 @@ body {{
 """
 
 
-def render_html(cv: dict) -> str:
+def render_html(cv: dict, langs: list[str] | None = None) -> str:
     initials = cv.get("initials", "CV")
     logo_uri = _logo_data_uri()
-    fr = _render_slide(cv, "fr", logo_uri)
-    en = _render_slide(cv, "en", logo_uri)
+    langs = langs or [source_lang(cv)]
+    slides, n = [], 0
+    for lang in langs:
+        for page in paginate(cv.get(lang, cv)):
+            n += 1
+            slides.append(_render_slide(cv, lang, logo_uri, page, n))
+    body = "\n".join(slides)
 
     return f"""<meta charset="utf-8">
 <title>CV {html.escape(initials)} — Aperçu Inside Circle</title>
-<meta name="description" content="Aperçu visuel du CV harmonisé Inside Circle (FR + EN).">
+<meta name="description" content="Aperçu visuel du CV harmonisé Inside Circle.">
 <style>{PAGE_CSS}</style>
-<div class="page-title">CV {html.escape(initials)} — Aperçu Inside Circle</div>
-{fr}
-{en}
+<div class="page-title">CV {html.escape(initials)} — Aperçu Inside Circle ({n} slide(s))</div>
+{body}
 """
 
 
@@ -529,11 +544,15 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("input", type=Path)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--lang", choices=["auto", "fr", "en", "both"],
+                        default="auto")
     args = parser.parse_args()
+    langs = None if args.lang == "auto" else (
+        ["fr", "en"] if args.lang == "both" else [args.lang])
 
     cv = json.loads(args.input.read_text(encoding="utf-8"))
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    args.out.write_text(render_html(cv), encoding="utf-8")
+    args.out.write_text(render_html(cv, langs), encoding="utf-8")
     print(f"✓ {args.input.name} → {args.out}")
 
 

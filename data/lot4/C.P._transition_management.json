@@ -7,13 +7,14 @@
   "domain_fr": "Transformation IT & Finance — Banque, Secteur Public, Mobilités",
   "domain_en": "IT & Finance Transformation — Banking, Public Sector, Mobility",
   "fr": {
-    "summary": "Ex-VP Société Générale (20 ans) | Expert Management de Transition & Transformation Critique. Relais opérationnel en contexte de vide managérial, fusion ou post-cybercrise. Dimensions C-Level (budgets > 10 M€, reporting COMEX).",
+    "summary": "Ex-VP Société Générale (20 ans), expert du management de transition et des transformations critiques. Relais et gestion de crise : prise en main immédiate de directions opérationnelles (middle-office, IT) en contexte de vide managérial, de fusion ou de post-cybercrise — diagnostic 360, restructuration d'équipes et définition de Target Operating Models. Gouvernance, Data & Compliance : sécurisation des risques opérationnels et mise en conformité réglementaire (KYC, BCBS 239, FINREP). Dimensions C-Level : budgets > 10 M€, reporting Directoire / COMEX, direction de taskforces (+20 consultants) et de centres de services internationaux.",
     "expertise": [
-      "Pilotage programmes IT (cadrage, PMO)",
-      "Paiements, Cash Management, ERP, CRM, KYC",
+      "Pilotage de programmes et de projets IT : cadrage, gouvernance, feuille de route, PMO",
+      "Secteurs : banque, secteur public, mobilités urbaines",
+      "Systèmes et solutions : paiements, cash management, ERP, CRM, Business Intelligence, KYC",
       "Schéma directeur IT & cybersécurité",
-      "Management & conduite du changement",
-      "Data & Compliance (BCBS 239, FINREP)"
+      "Gouvernance, Data & Compliance : KYC, BCBS 239, FINREP, Big Data (Hadoop)",
+      "Management & accompagnement : formation d'équipes, conduite du changement"
     ],
     "languages": [
       {
@@ -33,31 +34,58 @@
       {
         "year": "1996",
         "school": "EDHEC",
-        "degree": "Master en Management + certifs (PRINCE2, ACAMS, RGPD)"
+        "degree": "Master en Management — cursus Grande École"
       },
       {
         "year": "2024",
         "school": "Google",
         "degree": "AI Professional Certificate"
+      },
+      {
+        "year": "",
+        "school": "Certifications",
+        "degree": "PRINCE2 Practitioner · Microsoft PL-900"
+      },
+      {
+        "year": "",
+        "school": "Conformité",
+        "degree": "KYC & Due Diligence (ACAMS) · RGPD (CNIL et IAPP)"
       }
     ],
     "experiences": [
       {
         "employer": "Delubac & Cie (via Ailancy)",
-        "role": "Manager de Transition — COO Middle-Office Corporate & Privé",
-        "duration": "Mai — Juin 2026",
+        "role": "Manager de Transition — Directeur Opérationnel Middle-Office Corporate & Privé",
+        "duration": "Depuis mai 2026",
         "achievements": [
-          "Transition flash post-fusion des middle-offices : relais managérial d'urgence, stabilisation des équipes.",
-          "Sécurisation opérationnelle et déploiement de la cible ; feuille de route à 1,5 mois, dashboards KPI quotidiens."
+          "Mission de transition flash visant à stabiliser l'organisation et piloter la convergence post-fusion des middle-offices de la Banque Judiciaire et de la Banque des Entreprises.",
+          "Relais managérial d'urgence : prise en main immédiate du périmètre pour pallier un vide managérial, stabilisation des équipes (risques de turnover et démobilisation) aux côtés de la nouvelle Directrice.",
+          "Sécurisation opérationnelle : audit et traitement des points de friction (inefficiences, doublons de processus, allongement des délais de traitement) afin de restaurer la qualité de service et maîtriser les risques réglementaires.",
+          "Déploiement de la cible : alignement et déploiement opérationnel des nouveaux processus unifiés conçus par la direction de la Transformation.",
+          "Livrables clés : plan d'accompagnement et feuille de route à 1,5 mois, tableaux de bord de pilotage quotidien (KPI), rapports de continuité de mission."
         ]
       },
       {
-        "employer": "Groupe Indigo & Conseil Départemental 93",
-        "role": "Conseil & pilotage stratégique",
-        "duration": "2025",
+        "employer": "Groupe Indigo",
+        "role": "Pilotage stratégique auprès du Comité Exécutif",
+        "duration": "2025 · S2",
         "achievements": [
-          "Indigo (post-cyber) : diagnostic global du SI, vision cible du numérique, plan d'investissement IT pluriannuel et cadre de gouvernance.",
-          "CD 93 : cadrage du programme Relation Usager — convergence de 8 projets Microsoft Dynamics, gouvernance et feuille de route pluriannuelle."
+          "Contexte de reconstruction post-cyber et de refonte de la gouvernance IT : structuration et sécurisation de la trajectoire de transformation numérique à horizon 3 ans.",
+          "Diagnostic global du système d'information : organisation, processus, infrastructures, applications, data et compétences.",
+          "Contribution à la conception de la vision cible du numérique et à la définition du futur rôle de la DSI Groupe.",
+          "Élaboration du plan d'investissement IT pluriannuel et du cadre de gouvernance associé.",
+          "Livrables exécutifs : feuille de route, cartographies, matrices de compétences, organigrammes cibles, chantiers prioritaires."
+        ]
+      },
+      {
+        "employer": "Conseil Départemental de la Seine-Saint-Denis",
+        "role": "Cadrage stratégique — Gestion de la Relation Usager",
+        "duration": "2025 · S1",
+        "achievements": [
+          "Cadrage stratégique du programme de Gestion de la Relation Usager pour améliorer la coordination des services internes.",
+          "Convergence et pilotage de 8 projets autour de la solution Microsoft Dynamics.",
+          "Animation d'ateliers de co-construction avec les directions opérationnelles pour identifier et prioriser les besoins métiers.",
+          "Définition de la gouvernance (comités, rôles) et conception d'une feuille de route pluriannuelle intégrant le front office et la gestion des réclamations."
         ]
       },
       {
@@ -65,33 +93,84 @@
         "role": "Senior Manager — Banque Assurance",
         "duration": "2022 — 2025",
         "achievements": [
-          "BPCE (projet SIGMA) : gestion IAM, pilote pour la standardisation des habilitations du socle commun Groupe ; formation et déploiement Groupe.",
-          "Crédit Agricole CIB : taskforce Cash Management / Correspondent Banking (20+ consultants) ; développement Banque-Assurance (PNB > 200 K€)."
+          "BPCE, projet SIGMA (S2 2023) : gestion de projet IAM, conduite d'un pilote pour la standardisation des habilitations garantissant la sécurité réglementaire du socle commun Groupe.",
+          "Transfert de connaissances, manuels utilisateurs, formation et déploiement au niveau Groupe.",
+          "Crédit Agricole CIB (S1 2023) : supervision d'une taskforce Cash Management / Correspondent Banking, management de 20+ consultants juniors et confirmés, définition des KPI et animation des comités hebdomadaires auprès de la Direction des Paiements.",
+          "Développement commercial du portefeuille Banque-Assurance (PNB > 200 K€) ; membre de la Communauté Data & IA."
+        ]
+      },
+      {
+        "employer": "Société Générale — Direction de la Conformité",
+        "role": "Responsable de projet KYC",
+        "duration": "2019 — 2022",
+        "achievements": [
+          "Définition du Target Operating Model pour la digitalisation KYC et déploiement auprès des filiales et business units ; pilotage des POC internationaux et validation du modèle cible.",
+          "Intégration de solutions Blockchain et IA pour fiabiliser les dossiers KYC à plus de 90 % ; nouvelles solutions technologiques (SWIFT, CLIPEUM, reconnaissance faciale) déployées sur 3 Centres de Services Partagés.",
+          "Tableaux de bord de monitoring en temps réel de la conformité des flux ; résultat : réduction du risque opérationnel et harmonisation des processus KYC au niveau Groupe."
         ]
       },
       {
         "employer": "Société Générale",
-        "role": "20 ans — Resp. KYC, VP Marketing B2B, Cash Management",
-        "duration": "2002 — 2022",
+        "role": "Responsable Digital & Pilotage de la Filière Risque / Finance",
+        "duration": "2014 — 2019",
         "achievements": [
-          "KYC (2019-22) : TOM digitalisation, Blockchain/IA — fiabilisation à +90 % sur 3 CSP.",
-          "VP B2B & Digital (2007-19) : CRM MS Dynamics international (1 000 users) ; +30 % de PNB Cash Management."
+          "Harmonisation des outils de pilotage commercial et financier des filiales bancaires (Afrique, Europe centrale, Russie) et mutualisation des KPI entre les directions Risque et Finance.",
+          "Projet « Client 360 » : pilotage du POC d'un outil d'agrégation de données client connecté au Data Lake (Hadoop / Cloudera), permettant une analyse prédictive des risques de contrepartie.",
+          "Transformation Data & BI : déploiement de COGNOS BI et du CRM Microsoft Dynamics à l'international (1 000 utilisateurs) ; animation de filière (séminaires, intranet)."
+        ]
+      },
+      {
+        "employer": "Société Générale",
+        "role": "Vice-Président Marketing B2B — France et Europe de l'Ouest",
+        "duration": "2007 — 2014",
+        "achievements": [
+          "Accompagnement des Senior Bankers dans les plans d'action commerciale et la revue de portefeuilles stratégiques ; déploiement du CRM Microsoft Dynamics sur l'Europe de l'Ouest.",
+          "Tableaux de bord de suivi des KPI ayant contribué à une croissance de 30 % du PNB sur le cash management et les services financiers spécialisés."
+        ]
+      },
+      {
+        "employer": "Société Générale — Banque à Distance",
+        "role": "Responsable produit Cash Management",
+        "duration": "2002 — 2007",
+        "achievements": [
+          "Pilotage des évolutions majeures de l'outil de banque à distance : virements complexes, suivi des lignes de crédit, mise en œuvre du virement SEPA.",
+          "Lancement et gestion de SG Trust Services (certificats électroniques, authentification forte) ; outil élu « Meilleur outil de banque à distance » par Capital, Challenges et Les Échos."
+        ]
+      },
+      {
+        "employer": "Accenture",
+        "role": "Consultant Senior en Conduite du Changement",
+        "duration": "1999 — 2002",
+        "achievements": [
+          "Projets SAP (FI/CO/MM) chez Air France, Alstom, Carrefour et Danone : coordination des équipes projet, ingénierie de formation et conduite du changement sur des déploiements ERP majeurs."
+        ]
+      },
+      {
+        "employer": "TCL Multimedia — Madrid",
+        "role": "Responsable Business Développement",
+        "duration": "1996 — 1998",
+        "achievements": [
+          "Stratégie marketing et support commercial en environnement multiculturel ; refonte du suivi de la supply chain : −30 % de stocks et amélioration du fonds de roulement."
         ]
       }
     ],
-    "references": [
-      "Accenture — projets SAP (Air France, Alstom, Carrefour, Danone)",
-      "TCL Multimedia (Madrid)"
-    ],
+    "references": [],
     "engagements": [
       {
-        "title": "Cercles pros & expertise",
-        "description": "UMBREX / VERITUX ; AlphaSights, GuidePoint, Les BigBoss"
+        "title": "Cercles professionnels",
+        "description": "Membre UMBREX / VERITUX"
+      },
+      {
+        "title": "Intervenant / modérateur",
+        "description": "AlphaSights, XpertsCouncil, Les BigBoss, GuidePoint"
       }
     ],
     "hobbies": [
-      "Guitare électrique & chant",
-      "Plongée sous-marine"
+      "Musique : guitare électrique, acoustique, chant",
+      "Collectionneur de vinyles",
+      "Plongée sous-marine, fitness, ski",
+      "Photographie, montage vidéo",
+      "Théâtre amateur"
     ]
   },
   "en": {
@@ -181,5 +260,6 @@
       "Electric guitar & singing",
       "Scuba diving"
     ]
-  }
+  },
+  "source_lang": "fr"
 }

@@ -2,73 +2,172 @@
   "initials": "L.B.",
   "first_name": "Livia",
   "last_name": "Bonhoure",
-
   "title_fr": "Consultante Stratégie & Innovation",
   "title_en": "Strategy & Innovation Consultant",
   "domain_fr": "Stratégie, transformation & intelligence collective — Retail, Luxe, Santé, FMCG",
   "domain_en": "Strategy, transformation & collective intelligence — Retail, Luxury, Health, FMCG",
-
   "fr": {
-    "summary": "10 ans en conseil en stratégie (L.E.K., EY-Parthenon) et développement, aujourd'hui fondatrice et experte en créativité, intelligence collective et neurodiversité. De la stratégie à la facilitation, du cadrage à la mise en œuvre.",
+    "summary": "10 ans d'expérience en conseil en stratégie (L.E.K., EY-Parthenon) et en développement, aujourd'hui fondatrice et experte en créativité, intelligence collective et neurodiversité. Intervient sur la stratégie, la transformation, l'innovation et la facilitation, du cadrage à la mise en œuvre, pour des grands groupes comme pour des fonds de Private Equity.",
     "expertise": [
-      "Stratégie & transformation",
-      "Innovation & facilitation (intelligence collective)",
+      "Stratégie & plans stratégiques à 3 ans",
       "Gestion de projet & PMO",
+      "Innovation & facilitation (design thinking, double diamant)",
       "Business développement & partenariats",
-      "Études de marché & due diligences"
+      "Études de marché & due diligences",
+      "Coaching, créativité & neurodiversité",
+      "Marketing digital"
     ],
     "languages": [],
     "education": [
-      { "year": "2015", "school": "EMLYON Business School", "degree": "Programme Grande École" },
-      { "year": "2023", "school": "Coaching Ways", "degree": "Coach certifiée" }
+      {
+        "year": "2015",
+        "school": "EMLYON Business School",
+        "degree": "Programme Grande École"
+      },
+      {
+        "year": "2023",
+        "school": "Coaching Ways",
+        "degree": "Coach certifiée"
+      }
     ],
     "experiences": [
       {
         "employer": "On the Move / École du Potentiel Humain",
-        "role": "Fondatrice — Experte créativité & intelligence collective",
+        "role": "Fondatrice — Experte créativité, intelligence collective & neurodiversité",
         "duration": "Depuis 2024",
         "achievements": [
-          "Conférencière ; facilitation d'ateliers d'innovation et de neurodiversité pour Orange, Renault Alpine, EDF.",
-          "Création et animation d'un talk show sur la transformation, le leadership et l'innovation (23 talks tournés)."
-        ]
-      },
-      {
-        "employer": "Consultant Indépendant — Stratégie & Innovation",
-        "role": "Missions grands comptes & Private Equity",
-        "duration": "Depuis 2022",
-        "achievements": [
-          "Stratégie grands comptes : LVMH (IA générative, seconde main), Pluxee (31 pays), Carrefour, Sodexo, Novoferm (plans à 3 ans).",
-          "Due diligences Private Equity (~10 cibles : Gerflor, Mecatherm, Revima, Liérac…) : entretiens experts, analyses de marché, mapping des achats."
+          "Conférences et ateliers autour de la créativité et de l'innovation : préparation du contenu et animation pour des indépendants, réseaux d'alumni et d'entrepreneurs.",
+          "Rédaction et édition d'un livre sur la créativité en entreprise : 20+ entretiens qualitatifs, conception mêlant conte, introspection, ateliers d'intelligence collective et analyses business (co-création avec IA génératives), publication et promotion.",
+          "Création et animation d'un talk show sur la transformation des organisations, le leadership et l'innovation — 23 talks tournés à date."
         ]
       },
       {
         "employer": "Othentik — Conseil en innovation",
         "role": "Head of Strategy and Operations (freelance)",
-        "duration": "2023 — 2024",
+        "duration": "2023 — 2024 · 1 an",
         "achievements": [
-          "Définition de la roadmap 2024 et du business plan, de la stratégie commerciale, du positionnement et des offres.",
-          "Co-création de la méthode d'innovation « The Othentik Way » ; facilitation d'ateliers d'innovation."
+          "Définition de la roadmap 2024 et du business plan, de la stratégie commerciale, du positionnement et de la proposition de valeur, structuration des offres.",
+          "Participation à la création de la méthode d'innovation « The Othentik Way » et définition de la politique RH.",
+          "Facilitation d'ateliers d'innovation : préparation (objectifs, supports, livrables) et animation d'ateliers et de conférences autour de la neurodiversité et de l'innovation pour Orange, Renault Alpine, EDF et des initiatives internes."
+        ]
+      },
+      {
+        "employer": "Pluxee (Sodexo BRS) — Retail",
+        "role": "Bras-droit de la SVP Strategy, Product and Customer Experience",
+        "duration": "4 mois",
+        "achievements": [
+          "Accompagnement du processus de planification stratégique pour 31 pays : plans de travail, coordination des parties prenantes, consolidation des plans, préparation des retours Comex aux pays.",
+          "Revue des budgets globaux et pays, suivi de l'exécution de la stratégie pour le Comex Sodexo BRS et le Board Groupe ; définition de deux appels d'offres et onboarding du nouveau Strategy Manager."
+        ]
+      },
+      {
+        "employer": "LVMH — Luxe",
+        "role": "Strategic Insights Program Manager",
+        "duration": "4 mois",
+        "achievements": [
+          "Cadrage de deux études stratégiques : impact de l'IA générative dans le secteur du luxe et marché de la seconde main.",
+          "Recherches, interviews des parties prenantes au sein de la Holding et des Maisons, rédaction des briefs et sélection du partenaire."
+        ]
+      },
+      {
+        "employer": "Fermiers du Sud-Ouest — FMCG",
+        "role": "Redéfinition de la stratégie de marques et de distribution",
+        "duration": "5 mois",
+        "achievements": [
+          "Interviews des membres du Comex, analyses de marché et benchmark externe, analyse de la performance marketing, commerciale et financière.",
+          "Définition, scoring et modélisation de scénarios d'optimisation de la performance, revue de la gouvernance ; animation des comités de pilotage et management de 2 consultants."
+        ]
+      },
+      {
+        "employer": "Groupe Novoferm France — Retail",
+        "role": "Plan stratégique à 3 ans",
+        "duration": "3 mois",
+        "achievements": [
+          "Interviews du Comex, entretiens experts, enquête client, benchmark externe et analyses de marché ; identification d'opportunités de croissance.",
+          "Définition de la vision cible et des projets prioritaires, structuration de la roadmap à 3 ans, animation de workshops avec le Comex."
+        ]
+      },
+      {
+        "employer": "Sodexo France — Retail",
+        "role": "Projet de réorganisation",
+        "duration": "2 mois",
+        "achievements": [
+          "Interviews des membres du Comex, analyses de marché par segment client (besoins clients, roads to market, go to market) et revue de la stratégie de portefeuille de marques.",
+          "Participation à la définition des priorités stratégiques, de la nouvelle organisation et des feuilles de route associées ; PMO du projet et animation d'ateliers avec le Comex."
+        ]
+      },
+      {
+        "employer": "Carrefour France — Retail",
+        "role": "Préparation du plan stratégique",
+        "duration": "1 mois",
+        "achievements": [
+          "Analyses de marché et des tendances de consommation, revue de la performance de Carrefour et de ses principaux concurrents.",
+          "Définition d'une stratégie à 3 ans : storytelling, compilation de documents internes, interviews des directeurs de BU."
         ]
       },
       {
         "employer": "Renovation Man — Proptech",
         "role": "Head of Strategic Partnerships",
-        "duration": "2019 — 2022",
+        "duration": "2019 — 2022 · 2,5 ans",
         "achievements": [
-          "Structuration du pôle partenariat et de la stratégie de développement : nombre de partenaires ×6, demandes clients ×10.",
-          "Parcours de prescription (conseillers LCL : demandes ×3) et offres partenaires (Mon Chasseur Immo, Rhinov)."
+          "Structuration du pôle partenariat : définition du rôle et du périmètre, process de traitement et de suivi des demandes clients partenaires, outils, reporting auprès du CEO.",
+          "Stratégie de développement des partenariats : ciblage, approche, négociation, animation et suivi — nombre de partenaires ×6 et nombre de demandes clients ×10.",
+          "Parcours de prescription pour les conseillers LCL : besoins en agence, parcours client adapté et pilotage du déploiement — demandes issues de la prescription ×3 sur 2020-21.",
+          "Offres partenaires : Mon Chasseur Immo (travaux × investissement locatif, lancement en 6 régions, 10 % des demandes clients du partenaire en 2021) et Rhinov (parcours client commun, POC lancé en janvier 2022)."
+        ]
+      },
+      {
+        "employer": "Groupe Baobab — Finance",
+        "role": "Préparation d'un séminaire Comex",
+        "duration": "5 jours",
+        "achievements": [
+          "Analyses de marché et benchmark externe, préparation d'ateliers de réflexion sur des sujets stratégiques (portefeuille produit, distribution, saisonnalité).",
+          "Revue de la stratégie digitale d'acquisition client."
+        ]
+      },
+      {
+        "employer": "Future Agency",
+        "role": "Construction et facilitation d'ateliers d'intelligence collective",
+        "duration": "1 an",
+        "achievements": [
+          "Préparation (objectifs, supports, livrables) et animation d'ateliers pour des start-ups et organismes publics dans l'assurance, le transport, l'immobilier, le luxe et la santé.",
+          "Mobilisation de diverses méthodes d'intelligence collective : design thinking, double diamant."
+        ]
+      },
+      {
+        "employer": "EY-Parthenon",
+        "role": "Senior Associate Consultant",
+        "duration": "2018 — 2019",
+        "achievements": [
+          "Création d'un projet interne de culture d'entreprise pour promouvoir la diversité et l'inclusion : outils de diagnostic et d'ouverture du dialogue.",
+          "Définition et mise en place d'un comité de traitement des comportements non inclusifs et d'un parcours de formation / coaching."
+        ]
+      },
+      {
+        "employer": "Due diligences pour des fonds de Private Equity",
+        "role": "L.E.K. puis missions indépendantes",
+        "duration": "2016 — 2018 et depuis 2022",
+        "achievements": [
+          "Santé : évaluation de l'attractivité de Lagarrigue (appareillage orthopédique) et de Fasonut (nutrition artificielle) — entretiens experts fabricants, orthopédistes, Big Pharmas, hôpitaux.",
+          "Industrie & BTP : Gerflor (modélisation de marché par verticale santé / éducation / logement social), Mecatherm (tendances boulangerie Europe et Amérique du Nord), Groupe CIR (dispositifs de défiscalisation, revue du business plan), Revima (aéronautique, maintenance).",
+          "Retail, beauté & télécom : ECF, Moustache (store-checks vélo, management d'une stagiaire), Liérac (marché cosmétique anti-âge, store-checks pharmacies), Evernex (modélisation du marché de la maintenance serveurs et data centers).",
+          "Méthodologie transverse : entretiens experts, analyses quantitatives et qualitatives de marché, benchmark externe, mapping des processus d'achat clients."
         ]
       }
     ],
-    "references": [
-      "LVMH", "Carrefour", "Sodexo / Pluxee", "EY-Parthenon", "L.E.K.", "Renault Alpine"
-    ],
+    "references": [],
     "engagements": [
-      { "title": "Autrice — « À la poursuite du Phaos »", "description": "Libérez le pouvoir créatif en entreprise (Amazon KDP)" }
+      {
+        "title": "Autrice — « À la poursuite du Phaos »",
+        "description": "Libérez le pouvoir créatif en entreprise (Amazon KDP)"
+      },
+      {
+        "title": "Créatrice d'un talk show",
+        "description": "Transformation des organisations, leadership et innovation — 23 talks tournés"
+      }
     ],
     "hobbies": []
   },
-
   "en": {
     "summary": "10 years in strategy consulting (L.E.K., EY-Parthenon) and business development, now a founder and expert in creativity, collective intelligence and neurodiversity. From strategy to facilitation, from framing to implementation.",
     "expertise": [
@@ -80,8 +179,16 @@
     ],
     "languages": [],
     "education": [
-      { "year": "2015", "school": "EMLYON Business School", "degree": "Grande École Programme" },
-      { "year": "2023", "school": "Coaching Ways", "degree": "Certified Coach" }
+      {
+        "year": "2015",
+        "school": "EMLYON Business School",
+        "degree": "Grande École Programme"
+      },
+      {
+        "year": "2023",
+        "school": "Coaching Ways",
+        "degree": "Certified Coach"
+      }
     ],
     "experiences": [
       {
@@ -122,11 +229,20 @@
       }
     ],
     "references": [
-      "LVMH", "Carrefour", "Sodexo / Pluxee", "EY-Parthenon", "L.E.K.", "Renault Alpine"
+      "LVMH",
+      "Carrefour",
+      "Sodexo / Pluxee",
+      "EY-Parthenon",
+      "L.E.K.",
+      "Renault Alpine"
     ],
     "engagements": [
-      { "title": "Author — 'À la poursuite du Phaos'", "description": "Unlocking creative power in business (Amazon KDP)" }
+      {
+        "title": "Author — 'À la poursuite du Phaos'",
+        "description": "Unlocking creative power in business (Amazon KDP)"
+      }
     ],
     "hobbies": []
-  }
+  },
+  "source_lang": "fr"
 }

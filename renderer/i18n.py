@@ -11,6 +11,7 @@ LABELS = {
         "references":   "RÉFÉRENCES",
         "engagements":  "ENGAGEMENTS & RÉALISATIONS",
         "available":    "Disponibilité",
+        "continued":    "(suite)",
     },
     "en": {
         "summary":      "SUMMARY",
@@ -22,5 +23,6 @@ LABELS = {
         "references":   "MAIN REFERENCES",
         "engagements":  "ENGAGEMENTS & ACHIEVEMENTS",
         "available":    "Availability",
+        "continued":    "(cont.)",
     },
 }

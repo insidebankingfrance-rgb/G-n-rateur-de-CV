@@ -80,11 +80,11 @@ CONTENT_BOTTOM  = SLIDE_H - FOOTER_H
 # longueur en phase d'extraction. Si la mise en page déborde, on drop
 # des éléments entiers (hobbies, engagements, références) via les
 # fonctions _adaptive_*_trim.
-MAX_EXPERIENCES        = 4
-MAX_BULLETS_PER_EXP    = 2
-MAX_EXPERTISE          = 5
-MAX_HOBBIES            = 4
-MAX_ENGAGEMENTS        = 3
+MAX_EXPERIENCES        = 14
+MAX_BULLETS_PER_EXP    = 6
+MAX_EXPERTISE          = 10
+MAX_HOBBIES            = 8
+MAX_ENGAGEMENTS        = 6
 
 
 # ─── Confidentiality footer text ─────────────────────────────────────────────
