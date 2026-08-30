@@ -62,7 +62,7 @@ from theme import (
     WHITE_SOFT,
 )
 from i18n import LABELS
-from layout import MAX_PAGES_PER_LANG, paginate, source_lang
+from layout import MAX_PAGES_PER_LANG, paginate, source_lang, title_extra_pt
 
 
 _warnings: list[str] = []
@@ -494,11 +494,11 @@ def _build_sidebar_content(slide, cv: dict, lang: str):
         section(L["engagements"], _r)
 
 
-def _build_main_content(slide, cv: dict, lang: str):
+def _build_main_content(slide, cv: dict, lang: str, top_extra_pt: float = 0.0):
     L = LABELS[lang]
     continued = bool(cv.get("continued"))
     left = SIDEBAR_W + MARGIN
-    top = HEADER_H + Emu(80000)
+    top = HEADER_H + Emu(80000) + Emu(int(top_extra_pt * 12700))
     width = SLIDE_W - SIDEBAR_W - 2 * MARGIN
     height = SLIDE_H - top - FOOTER_H - Emu(80000)
     tb, tf = _add_textbox(slide, left, top, width, height)
@@ -568,12 +568,30 @@ def _build_page(prs: Presentation, cv: dict, lang: str, page: dict,
         title = f'{title} {LABELS[lang]["continued"]}'
     _build_header(slide, first_name, last_name, initials, title, domain)
 
+    extra = title_extra_pt(title)
+    _check_header_clearance(title, domain, extra, f"{initials} [{lang}]")
     _build_sidebar_content(slide, page["sidebar"], lang)
-    _build_main_content(slide, page["main"], lang)
+    _build_main_content(slide, page["main"], lang, extra)
 
     # Bandeau masque + texte footer en dernier (z-order top).
     _build_footer_mask(slide)
     _build_footer(slide, lang)
+
+
+def _check_header_clearance(title: str, domain: str, extra_pt: float,
+                            who: str) -> None:
+    """Garde-fou : le bloc titre + domaine ne doit pas descendre jusqu'au haut
+    de la colonne principale (sinon le texte se superpose au premier titre de
+    section, le PPT ne repoussant pas les blocs comme le ferait du HTML)."""
+    from layout import CPL_TITLE, TITLE_LINE_PT
+    lines = max(1, (len(title or "") + CPL_TITLE - 1) // CPL_TITLE)
+    header_bottom = (Emu(300000) / 12700) + lines * TITLE_LINE_PT
+    if domain:
+        header_bottom += 2 + 18                      # interligne + ligne domaine
+    content_top = (HEADER_H + Emu(80000)) / 12700 + extra_pt
+    if header_bottom > content_top:
+        _warn(f"{who}: le titre déborde sur la colonne principale "
+              f"({header_bottom:.0f}pt > {content_top:.0f}pt)")
 
 
 def _build_lang(prs: Presentation, cv: dict, lang: str, logo: Path | None):
@@ -582,7 +600,9 @@ def _build_lang(prs: Presentation, cv: dict, lang: str, logo: Path | None):
     last_name = cv.get("last_name", "")
     initials = cv.get("initials") or initials_from_name(first_name, last_name)
     who = f"{initials} [{lang}]"
-    pages = paginate(cv.get(lang, cv), warn=lambda m: _warn(f"{who}: {m}"))
+    title = cv.get(f"title_{lang}") or cv.get("title", "")
+    pages = paginate(cv.get(lang, cv), warn=lambda m: _warn(f"{who}: {m}"),
+                     title=title)
     for page in pages:
         _build_page(prs, cv, lang, page, logo)
     return len(pages)

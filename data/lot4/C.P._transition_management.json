@@ -9,12 +9,12 @@
   "fr": {
     "summary": "Ex-VP Société Générale (20 ans), expert du management de transition et des transformations critiques. Relais et gestion de crise : prise en main immédiate de directions opérationnelles (middle-office, IT) en contexte de vide managérial, de fusion ou de post-cybercrise — diagnostic 360, restructuration d'équipes et définition de Target Operating Models. Gouvernance, Data & Compliance : sécurisation des risques opérationnels et mise en conformité réglementaire (KYC, BCBS 239, FINREP). Dimensions C-Level : budgets > 10 M€, reporting Directoire / COMEX, direction de taskforces (+20 consultants) et de centres de services internationaux.",
     "expertise": [
-      "Pilotage de programmes et de projets IT : cadrage, gouvernance, feuille de route, PMO",
-      "Secteurs : banque, secteur public, mobilités urbaines",
-      "Systèmes et solutions : paiements, cash management, ERP, CRM, Business Intelligence, KYC",
+      "Pilotage de programmes & projets IT (PMO)",
+      "Banque, secteur public, mobilités urbaines",
+      "Paiements, cash management, ERP, CRM, BI",
       "Schéma directeur IT & cybersécurité",
-      "Gouvernance, Data & Compliance : KYC, BCBS 239, FINREP, Big Data (Hadoop)",
-      "Management & accompagnement : formation d'équipes, conduite du changement"
+      "KYC, BCBS 239, FINREP, Big Data (Hadoop)",
+      "Conduite du changement & formation"
     ],
     "languages": [
       {
@@ -34,7 +34,7 @@
       {
         "year": "1996",
         "school": "EDHEC",
-        "degree": "Master en Management — cursus Grande École"
+        "degree": "Master en Management (Grande École)"
       },
       {
         "year": "2024",
@@ -44,12 +44,7 @@
       {
         "year": "",
         "school": "Certifications",
-        "degree": "PRINCE2 Practitioner · Microsoft PL-900"
-      },
-      {
-        "year": "",
-        "school": "Conformité",
-        "degree": "KYC & Due Diligence (ACAMS) · RGPD (CNIL et IAPP)"
+        "degree": "PRINCE2 · PL-900 · ACAMS · RGPD"
       }
     ],
     "experiences": [
@@ -58,11 +53,10 @@
         "role": "Manager de Transition — Directeur Opérationnel Middle-Office Corporate & Privé",
         "duration": "Depuis mai 2026",
         "achievements": [
-          "Mission de transition flash visant à stabiliser l'organisation et piloter la convergence post-fusion des middle-offices de la Banque Judiciaire et de la Banque des Entreprises.",
-          "Relais managérial d'urgence : prise en main immédiate du périmètre pour pallier un vide managérial, stabilisation des équipes (risques de turnover et démobilisation) aux côtés de la nouvelle Directrice.",
-          "Sécurisation opérationnelle : audit et traitement des points de friction (inefficiences, doublons de processus, allongement des délais de traitement) afin de restaurer la qualité de service et maîtriser les risques réglementaires.",
-          "Déploiement de la cible : alignement et déploiement opérationnel des nouveaux processus unifiés conçus par la direction de la Transformation.",
-          "Livrables clés : plan d'accompagnement et feuille de route à 1,5 mois, tableaux de bord de pilotage quotidien (KPI), rapports de continuité de mission."
+          "Mission de transition flash : stabiliser l'organisation et piloter la convergence post-fusion des middle-offices de la Banque Judiciaire et de la Banque des Entreprises.",
+          "Relais managérial d'urgence : prise en main immédiate du périmètre pour pallier un vide managérial, stabilisation des équipes aux côtés de la nouvelle Directrice.",
+          "Sécurisation opérationnelle : audit et traitement des points de friction (inefficiences, doublons, délais) pour restaurer la qualité de service et maîtriser les risques réglementaires.",
+          "Déploiement des processus unifiés cibles ; livrables : feuille de route à 1,5 mois, tableaux de bord quotidiens (KPI), rapports de continuité de mission."
         ]
       },
       {
@@ -70,10 +64,9 @@
         "role": "Pilotage stratégique auprès du Comité Exécutif",
         "duration": "2025 · S2",
         "achievements": [
-          "Contexte de reconstruction post-cyber et de refonte de la gouvernance IT : structuration et sécurisation de la trajectoire de transformation numérique à horizon 3 ans.",
+          "Reconstruction post-cyber et refonte de la gouvernance IT : structuration de la trajectoire de transformation numérique à horizon 3 ans.",
           "Diagnostic global du système d'information : organisation, processus, infrastructures, applications, data et compétences.",
-          "Contribution à la conception de la vision cible du numérique et à la définition du futur rôle de la DSI Groupe.",
-          "Élaboration du plan d'investissement IT pluriannuel et du cadre de gouvernance associé.",
+          "Conception de la vision cible du numérique, définition du futur rôle de la DSI Groupe et élaboration du plan d'investissement IT pluriannuel.",
           "Livrables exécutifs : feuille de route, cartographies, matrices de compétences, organigrammes cibles, chantiers prioritaires."
         ]
       },
@@ -157,20 +150,18 @@
     "references": [],
     "engagements": [
       {
-        "title": "Cercles professionnels",
-        "description": "Membre UMBREX / VERITUX"
+        "title": "Cercles pros",
+        "description": "UMBREX / VERITUX"
       },
       {
-        "title": "Intervenant / modérateur",
-        "description": "AlphaSights, XpertsCouncil, Les BigBoss, GuidePoint"
+        "title": "Expert",
+        "description": "AlphaSights, GuidePoint, BigBoss"
       }
     ],
     "hobbies": [
-      "Musique : guitare électrique, acoustique, chant",
-      "Collectionneur de vinyles",
-      "Plongée sous-marine, fitness, ski",
-      "Photographie, montage vidéo",
-      "Théâtre amateur"
+      "Guitare, chant, collection de vinyles",
+      "Plongée sous-marine, ski, fitness",
+      "Photographie, montage vidéo, théâtre"
     ]
   },
   "en": {

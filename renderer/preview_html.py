@@ -16,7 +16,7 @@ import html
 import json
 from pathlib import Path
 
-from layout import paginate, source_lang
+from layout import paginate, source_lang, title_extra_pt
 from theme import (
     LOGO_FILENAME,
     MAX_BULLETS_PER_EXP,
@@ -311,10 +311,14 @@ def _render_slide(cv: dict, lang: str, logo_uri: str | None,
         header_html = f'<div class="header-initials">{initials}</div>'
 
     tag = labels["lang_tag"].format(n=index)
+    # Reproduit la réservation d'en-tête du PPT (en % de la hauteur du slide).
+    reserved_emu = 1180000 - 300000 + title_extra_pt(
+        cv.get(f"title_{lang}") or cv.get("title", "")) * 12700
+    header_h = f"{reserved_emu / 6858000 * 100:.2f}%"
     return f"""
 <section class="slide-wrap" aria-label="{tag}">
   <div class="slide-meta">{tag}</div>
-  <article class="slide">
+  <article class="slide" style="--header-h:{header_h}">
     <aside class="sidebar">
       {header_html}
       <div class="sidebar-inner">{_render_sidebar(sidebar_payload, labels)}</div>
@@ -428,6 +432,10 @@ body {{
   position: relative;
   min-height: 0;
 }}
+.content-header {{
+  height: var(--header-h);     /* hauteur réservée, comme dans le PPT */
+  overflow: visible;           /* un titre trop long déborde (fidèle au PPT) */
+}}
 .content-header h1 {{
   margin: 0;
   padding-right: 160px;        /* reserve for the horizontal logo */
@@ -453,7 +461,7 @@ body {{
   font-size: 18px;
 }}
 .content-inner {{
-  margin-top: 10px;
+  margin-top: 0;
   font-size: 15.5px;
   line-height: 1.35;
   flex: 1;
@@ -526,7 +534,8 @@ def render_html(cv: dict, langs: list[str] | None = None) -> str:
     langs = langs or [source_lang(cv)]
     slides, n = [], 0
     for lang in langs:
-        for page in paginate(cv.get(lang, cv)):
+        title_src = cv.get(f"title_{lang}") or cv.get("title", "")
+        for page in paginate(cv.get(lang, cv), title=title_src):
             n += 1
             slides.append(_render_slide(cv, lang, logo_uri, page, n))
     body = "\n".join(slides)

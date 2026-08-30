@@ -43,8 +43,14 @@ SECTION_PT = 19           # titre de section + filet
 PARA_GAP_PT = 1
 
 AVAIL_MAIN = (SLIDE_H - HEADER_H - FOOTER_H - 160000) / 12700
-AVAIL_SIDEBAR = AVAIL_MAIN - 10
+# Calibré sur le rendu réel : la colonne de gauche rend plus haut que
+# l'estimation (interlignes des titres de section et des listes), d'où une
+# capacité effective nettement inférieure à celle de la colonne principale.
+AVAIL_SIDEBAR = AVAIL_MAIN - 90
 SAFETY_PT = 20            # marge : l'estimateur peut sous-évaluer de quelques pt
+
+CPL_TITLE = 40            # caractères par ligne du titre (24pt gras)
+TITLE_LINE_PT = 29        # hauteur d'une ligne de titre
 
 MAX_PAGES_PER_LANG = 5    # plafond demandé : 5 slides par langue
 
@@ -55,6 +61,15 @@ def source_lang(cv: dict) -> str:
     """Langue du document source — seule langue produite par défaut."""
     lang = (cv.get("source_lang") or DEFAULT_SOURCE_LANG).lower()
     return lang if lang in ("fr", "en") else DEFAULT_SOURCE_LANG
+
+
+def title_extra_pt(title: str) -> float:
+    """Hauteur supplémentaire consommée par un titre qui passe sur
+    plusieurs lignes. Sans cela, le titre déborde sur la première section."""
+    lines = max(1, (len(title or "") + CPL_TITLE - 1) // CPL_TITLE)
+    if lines <= 1:
+        return 0.0
+    return (lines - 1) * TITLE_LINE_PT + 8   # + marge de sécurité
 
 
 def wrapped_lines(text: str, cpl: int) -> int:
@@ -189,13 +204,50 @@ def _page(sidebar: dict, main: dict, continued: bool) -> dict:
     return {"sidebar": sidebar, "main": main, "continued": continued}
 
 
-def _pack_sidebar(all_side: dict, n_pages: int, warn=None) -> list[dict]:
-    """Répartit les blocs de sidebar sur les pages, dans l'ordre canonique.
+def build_sidebar(all_side: dict, warn=None) -> dict:
+    """Construit LA colonne de gauche, identique sur tous les slides.
 
-    Une page de suite ne doit jamais avoir une colonne de gauche vide : si
-    tous les blocs ont déjà été placés, on y rappelle les domaines
-    d'expertise (et les langues), comme un bandeau de rappel.
+    Elle compile les informations clés du profil (expertise, langues,
+    formation & certifications, engagements, centres d'intérêt). Si elle ne
+    tient pas sur une page, on retire des éléments entiers par ordre de
+    priorité croissante : centres d'intérêt, puis descriptions
+    d'engagements, puis engagements, puis les entrées de formation et
+    d'expertise les plus anciennes / les moins structurantes.
     """
+    def _w(msg):
+        if warn:
+            warn(msg)
+
+    side = {k: list(all_side.get(k) or []) for k in SIDEBAR_ORDER}
+    if sidebar_pt(side) <= AVAIL_SIDEBAR:
+        return side
+
+    if side["hobbies"]:
+        side["hobbies"] = []
+        _w("centres d'intérêt retirés du bandeau de gauche (place insuffisante)")
+    if sidebar_pt(side) <= AVAIL_SIDEBAR:
+        return side
+
+    if side["engagements"]:
+        side["engagements"] = [
+            ({**e, "description": ""} if isinstance(e, dict) else e)
+            for e in side["engagements"]
+        ]
+        _w("descriptions d'engagements retirées du bandeau de gauche")
+    if sidebar_pt(side) <= AVAIL_SIDEBAR:
+        return side
+
+    for key in ("engagements", "education", "expertise"):
+        while side[key] and sidebar_pt(side) > AVAIL_SIDEBAR:
+            side[key].pop()
+            _w(f"{key} réduit dans le bandeau de gauche")
+        if sidebar_pt(side) <= AVAIL_SIDEBAR:
+            break
+    return side
+
+
+def _pack_sidebar_unused(all_side: dict, n_pages: int, warn=None) -> list[dict]:
+    """(conservé pour référence — remplacé par build_sidebar)"""
     pages = [_empty_sidebar() for _ in range(n_pages)]
     idx, used = 0, 0.0
     for key in SIDEBAR_ORDER:
@@ -231,8 +283,9 @@ def _pack_sidebar(all_side: dict, n_pages: int, warn=None) -> list[dict]:
     return pages
 
 
-def _hard_budgets(n: int, summary_h: float, refs_h: float) -> list[float]:
-    hard = [AVAIL_MAIN - SAFETY_PT - SECTION_PT for _ in range(n)]
+def _hard_budgets(n: int, summary_h: float, refs_h: float,
+                  extra: float = 0.0) -> list[float]:
+    hard = [AVAIL_MAIN - SAFETY_PT - SECTION_PT - extra for _ in range(n)]
     hard[0] -= summary_h
     hard[-1] -= refs_h
     return hard
@@ -264,8 +317,8 @@ def _fill(exps: list[dict], hard: list[float], cap: float
     return pages
 
 
-def _pack_balanced(exps: list[dict], summary_h: float, refs_h: float
-                   ) -> list[list[dict]] | None:
+def _pack_balanced(exps: list[dict], summary_h: float, refs_h: float,
+                   extra: float = 0.0) -> list[list[dict]] | None:
     """Répartit `exps` sur le plus petit nombre de pages possible, puis
     équilibre la charge entre ces pages (on minimise la page la plus remplie).
     """
@@ -277,7 +330,7 @@ def _pack_balanced(exps: list[dict], summary_h: float, refs_h: float
     # 1) plus petit nombre de pages qui tienne
     n_min = None
     for n in range(1, MAX_PAGES_PER_LANG + 1):
-        hard = _hard_budgets(n, summary_h, refs_h)
+        hard = _hard_budgets(n, summary_h, refs_h, extra)
         if min(hard) <= 0:
             continue
         pages = _fill(exps, hard, total)
@@ -290,7 +343,7 @@ def _pack_balanced(exps: list[dict], summary_h: float, refs_h: float
     # 2) équilibrage : découpe en n_min tranches contiguës qui égalise le
     #    remplissage (on minimise la somme des carrés de l'espace libre, ce qui
     #    évite à la fois les pages surchargées et les pages presque vides).
-    hard = _hard_budgets(n_min, summary_h, refs_h)
+    hard = _hard_budgets(n_min, summary_h, refs_h, extra)
     hs = [experience_pt(e) for e in exps]
     n_items = len(hs)
     INF = float("inf")
@@ -330,7 +383,7 @@ def _pack_balanced(exps: list[dict], summary_h: float, refs_h: float
     return pages
 
 
-def paginate(payload: dict, warn=None) -> list[dict]:
+def paginate(payload: dict, warn=None, title: str = "") -> list[dict]:
     """Découpe un payload de langue en 1 à MAX_PAGES_PER_LANG pages."""
     def _w(msg):
         if warn:
@@ -338,20 +391,21 @@ def paginate(payload: dict, warn=None) -> list[dict]:
 
     p = apply_caps(payload, warn)
     all_side = {k: p.get(k) or [] for k in SIDEBAR_ORDER}
+    sidebar = build_sidebar(all_side, warn)
+    extra = title_extra_pt(title)          # titre sur 2 lignes → moins de place
     summary = (p.get("summary") or "").strip()
     exps = list(p.get("experiences") or [])
     refs = list(p.get("references") or [])
 
     # ── Cas 1 : tout tient sur un seul slide → rendu historique inchangé.
     single = {"summary": summary, "experiences": exps, "references": refs}
-    if (main_pt(single) <= AVAIL_MAIN - SAFETY_PT
-            and sidebar_pt(all_side) <= AVAIL_SIDEBAR):
-        return [_page(all_side, {**single, "continued": False}, False)]
+    if main_pt(single) <= AVAIL_MAIN - SAFETY_PT - extra:
+        return [_page(sidebar, {**single, "continued": False}, False)]
 
     # ── Cas 2 : découpe des expériences sur plusieurs pages, ÉQUILIBRÉE.
     # On cherche le plus petit nombre de pages qui tienne, puis on répartit le
     # contenu à hauteur égale entre les pages pour éviter les grands vides.
-    groups = _pack_balanced(exps, summary_pt(summary), references_pt(refs))
+    groups = _pack_balanced(exps, summary_pt(summary), references_pt(refs), extra)
     if groups is None:
         # Même au plafond de pages, tout ne tient pas : on retire les
         # expériences les plus anciennes (jamais de coupe à l'intérieur).
@@ -361,16 +415,15 @@ def paginate(payload: dict, warn=None) -> list[dict]:
             _w(f"plafond de {MAX_PAGES_PER_LANG} slides atteint — "
                f"expérience retirée : {dropped.get('employer','?')}")
             groups = _pack_balanced(kept, summary_pt(summary),
-                                    references_pt(refs))
+                                    references_pt(refs), extra)
         if groups is None:
             groups = [exps[:1]]
 
-    side_pages = _pack_sidebar(all_side, len(groups), warn)
     pages = []
     for i, group in enumerate(groups):
         is_last = i == len(groups) - 1
         pages.append(_page(
-            side_pages[i],
+            sidebar,
             {"summary": summary if i == 0 else "",
              "experiences": group,
              "references": refs if is_last else [],
